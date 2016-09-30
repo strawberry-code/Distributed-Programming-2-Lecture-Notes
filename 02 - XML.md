@@ -133,7 +133,21 @@ Inizialmente usato per pubblicazione di testo e basi di dati, una delle sue magg
 - _**Applicazione SGML**_: è un linguaggio marcatore (*markup*) che segue le specifiche SGML.
 
 
-### Esempio di riferimento a un documento HTML (DTD)
+
+## DTD: document type definition
+
+Il Document Type Definition (definizione del tipo di documento) è uno strumento utilizzato dai programmatori il cui scopo è quello di definire le componenti ammesse nella costruzione di un documento XML.
+
+Il termine non è utilizzato soltanto per i documenti XML ma anche per tutti i documenti derivati dall'SGML (di cui peraltro XML vuole essere una semplificazione che ne mantiene la potenza riducendone la complessità) tra cui celeberrimo è l'HTML.
+
+In SGML un DTD è necessario per la validazione del documento. Anche in XML un documento è valido se presenta un DTD ed è possibile validarlo usando il DTD.
+
+Tuttavia XML permette anche documenti ben formati, ovvero documenti che, pur essendo privi diDTD, presentano una struttura sufficientemente regolare e comprensibile da poter essere controllata.
+
+Il DTD si può dichiarare all'interno di uno stesso documento XML (dichiarazione inline).
+
+
+
 
 
 
