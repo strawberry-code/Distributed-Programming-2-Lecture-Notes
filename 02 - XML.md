@@ -268,6 +268,15 @@ La sintassi di un documento XML segue la sintassi generale SGML. Un docuemnto di
 
 ### Strutture sintattiche XML
 
+Il principio di ogni documento XML è che i **dati** sono una sequenza di caratteri e sono caratterizzati da dei **markups**, i quali possono essere:
+
+- i **tag delimitatori** (ad es.: `<elem>...</elem>`)
+- il riferimento ad una entità
+- un commento
+- una dichiarazione DTD
+- una dichiarazione XML
+- una istruzione di processing
+
 
 
 ### Markups specifici di XML
