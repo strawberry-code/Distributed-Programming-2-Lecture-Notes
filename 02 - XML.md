@@ -249,6 +249,10 @@ La corrispondente rappresentazione concettuale di tale documento è:
 
 ### Organizzazione fisica di un documento XML
 
+I documenti XML vengono distribuiti sotto forma di files chiamati **entità** (**entities**). Un'entità può fare riferimento (includere) altre entità, quindi si parla di *modularizzazione XML*. In questi casi, si individua una **entità radice** (**root entity**) la quale include le sotto entità a cui fa riferimento.
+
+Per semplicità in questo corso considereremo solo entità semplici e indipendenti.
+
 
 
 ### Sintassi generale di un documento XML
