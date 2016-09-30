@@ -109,6 +109,31 @@ Un esempio di package diagram:
 
 ## Object Diagrams
 
+L'Object Diagram o Diagramma degli oggetti è un diagramma di tipo statico previsto dall'UML per descrivere un sistema in termini di oggetti e relative relazioni.
+Il diagramma è molto simile a quello del Class diagram e descrive gli oggetti e le relative relazioni che sono istanziate in un determinato tempo t+1.
 
 
-## Sequence Diagrams
+
+##### Object
+
+L'object, l'oggetto, è l'istanza di una classe rappresentata dal modello.
+Mentre la classe rappresenta un modello di una entità, l'oggetto è la sua determinata istanza, identificabile tramite i valori assunti dai suoi parametri o attributi. Data una classe, al tempo t+1 possono "esistere" molteplici istanze, ossia oggetti, di quella classe.
+
+
+
+##### Relazione
+
+Anche per gli oggetti si possono descrivere le relazioni, ma in questo caso non si disegnano le molteplici relazioni realizzabili, ma quelle e solo quelle che si sono realizzate, o istanziate, in un determinato momento.
+
+
+
+##### Diagramma
+
+Esempio di Object Diagram:
+
+
+Il diagramma descrive nella parte superiore i diversi modi in cui possono essere descritti gli oggetti. In questo caso l'Automobile è l'istanza della classe Veicolo.
+
+Nella parte inferiore è riportato un esempio di istanze di due classi diverse, la classe Progetto e quella Utente, e la relazione che esiste tra l'istanza Wikipedia e l'istanziazione di tre determinati utenti.
+
+
