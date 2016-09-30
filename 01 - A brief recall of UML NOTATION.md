@@ -103,6 +103,7 @@ Quando si organizzano modelli funzionali (use case, workflow, ecc.) si usano i p
 
 Un esempio di package diagram:
 
+![](immagini/lezione-01/02.png)
 
 
 
