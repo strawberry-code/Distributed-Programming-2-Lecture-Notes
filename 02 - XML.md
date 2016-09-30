@@ -173,6 +173,10 @@ Il DTD si può dichiarare all'interno di uno stesso documento XML (dichiarazione
 
 ### Relazioni tra SGML, HTML e documenti XML
 
+La seguente figura mostra i gradi di relazione che sussistono tra i concetti sopra spiegati:
+
+![](immagini/lezione-02/01.png)
+
 
 
 ## Un semplice documento XML
