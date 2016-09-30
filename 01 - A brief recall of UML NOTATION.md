@@ -160,5 +160,5 @@ Un messaggio, in cui il ricevente è nello stesso tempo l'emittente, è detto *r
 
 Un esempio di sequence diagram:
 
-
+![](immagini/lezione-01/04.png)
 
