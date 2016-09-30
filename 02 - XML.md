@@ -257,6 +257,13 @@ Per semplicità in questo corso considereremo solo entità semplici e indipenden
 
 ### Sintassi generale di un documento XML
 
+La sintassi di un documento XML segue la sintassi generale SGML. Un docuemnto di testo è un documento XML si esso segue le regole generali SGML e obbedisce ad alcune regole aggiuntive. Le regole principali sono:
+
+- ciascuno elemento _non vuoto_ deve essere delimitato da un **tag iniziale** e un **tag finale**.
+- c'è **un solo** elemento radice che contiene tuttli gli altri
+- i valori degli attributi sono sempre racchiusi tra **apici**
+- i nomi degli attributi devono essere unici all'interno di ogni elemento (si noti che XML è case-sensitive)
+
 
 
 ### Strutture sintattiche XML
