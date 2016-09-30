@@ -148,6 +148,26 @@ Il DTD si può dichiarare all'interno di uno stesso documento XML (dichiarazione
 
 
 
+### Esempio di riferimento allo schema DTD (documento HTML)
+
+```html
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <head>
+    <title>LOGIN</title>
+    <meta http-equiv=content-type content="text/html;
+                                           charset=iso-8859-1">
+    <meta content="mshtml 6.00.2800.1170" name=generator>
+    <link <link
+    <link
+          href="/images/_site/swas.css" type=text/css rel=stylesheet > href="/images/_site/Show_TableDef.css" type=text/css rel=stylesheet >
+    href="/_library/styles.css" rel="stylesheet" title="styles" type="text/css">
+  </head>
+  <body marginheight=1 align=top border=0 topmargin=1 >
+    ...
+  </body>
+</html>
+```
 
 
 
