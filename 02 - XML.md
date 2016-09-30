@@ -95,6 +95,13 @@ Ecco un esempio tipico di file XML, visualizzabile all'interno di un browser qua
 
 ## Principali caratteristiche di XML
 
+Le principali caratteristiche del linguaggio XML possono essere riassunte nei tre seguenti punti:
+
+1. la rappresentazione dei dati è sia *leggibile da un essere umano* sia *leggibile dalla macchina*, il che però, non lo rende ottimale per l'occupazione di memoria e larghezza di banda.
+2. I dati assumono la forma di *documenti formali*, che ricordano molto i documenti HTML.
+3. I dati includono la definizione dei tipi di se stessi, il che è utile, poichè il ricevente non ha bisogno di sapere in anticipo che tipo di dati sta per ricevere.
+
+
 
 ## SGML
 
