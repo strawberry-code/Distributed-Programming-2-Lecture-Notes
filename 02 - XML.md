@@ -129,6 +129,8 @@ Inizialmente usato per pubblicazione di testo e basi di dati, una delle sue magg
 
 ### Terminologia SGML
 
+- _**Documento SGML**_: è un oggetto di dati che può essere descritto utilizzando un linguaggio di markup generico, prendendo le regole di un generico documento di testo (paragrafi, dati testuali e riferimenti a DTD).
+- _**Applicazione SGML**_: è un linguaggio marcatore (*markup*) che segue le specifiche SGML.
 
 
 ### Esempio di riferimento a un documento HTML (DTD)
