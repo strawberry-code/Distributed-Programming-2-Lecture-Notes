@@ -207,6 +207,15 @@ La seguente figura mostra i gradi di relazione che sussistono tra gli standard c
 
 ## Schema concettuale di un documento XML
 
+Un **documento XML** include due aspetti:
+
+- il _contenuto_ del documento,
+- lo _stile di presentazione_ del documento.
+
+Per _contenuto_ si intende inoltre la **sintassi **(organizzazione e formato dei contenuti) e la **semantica** (significato del contenuto).
+
+Con i documenti **CSS** posso tenere separati il _contenuto_ dallo _stile_. In un documento XML il _contenuto_ può essere descritto in modo esplicito.
+
 
 
 ### Organizzazione logica di un documento XML
