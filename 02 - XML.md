@@ -39,19 +39,19 @@ In particolare **XML** e **JSON** sono quelli che attualmente stanno avendo larg
 
 
 
-## Principali caratteristiche di XML
-
-
-
 ## XML (eXtensible Markup Language)
 
 
 
-### SGML
+## Principali caratteristiche di XML
 
 
 
-#### Terminologia SGML
+## SGML
+
+
+
+### Terminologia SGML
 
 
 
