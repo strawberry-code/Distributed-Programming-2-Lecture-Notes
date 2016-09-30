@@ -162,3 +162,18 @@ Un esempio di sequence diagram:
 
 ![](immagini/lezione-01/04.png)
 
+
+
+## State diagram
+
+Lo State Chart Diagram o Diagramma degli stati è un diagramma previsto dall'UML per descrivere il comportamento di entità o di classi in termini di stato (macchina a stati).
+Il diagramma mostra gli stati che sono assunti dall'entità o dalla classe in risposta ad eventi esterni.
+Il concetto di stato è spesso posto in relazione a ciclo di vita; l'insieme completo di stati che un'entità o una classe può assumere, dallo stato iniziale a quello finale, ne rappresenta il ciclo di vita.
+Gli elementi rappresentati da uno State Chart Diagram sono lo stato (distinguendo tra iniziale, intermedio e finale), l'evento, l'azione e la guardia.
+
+Lo stato descrive una qualità dell'entità o classe che si sta rappresentando (pratica aperta, in lavorazione, sospesa, chiusa); l'evento è la descrizione dell'azione che comporta il cambiamento di stato, l'azione è l'evento che ne consegue, la guardia è l'eventuale condizione che si deve verificare perché si possa compiere l'azione.
+
+Il seguente è un esempio di state diagram:
+
+
+Mentre i seguenti sono i simboli che si possono usare in uno state diagram:
