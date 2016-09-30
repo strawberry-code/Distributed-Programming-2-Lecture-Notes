@@ -55,6 +55,7 @@ Due classi possono essere legate da una relazione di generalizzazione, che indic
 
 Esempio di *Class Diagram*:
 
+![alt text](immagini/lezione-01/01.png)
 
 Il diagramma descrive due entità (i rettangoli), Cliente e Reclamo, e le relative relazioni (il segmento che li unisce).
 
