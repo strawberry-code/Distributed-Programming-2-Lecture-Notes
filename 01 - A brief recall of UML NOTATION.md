@@ -131,9 +131,9 @@ Anche per gli oggetti si possono descrivere le relazioni, ma in questo caso non 
 
 Esempio di Object Diagram:
 
+![](immagini/lezione-01/03.png)
 
 Il diagramma descrive nella parte superiore i diversi modi in cui possono essere descritti gli oggetti. In questo caso l'Automobile è l'istanza della classe Veicolo.
 
 Nella parte inferiore è riportato un esempio di istanze di due classi diverse, la classe Progetto e quella Utente, e la relazione che esiste tra l'istanza Wikipedia e l'istanziazione di tre determinati utenti.
-
 
