@@ -175,5 +175,8 @@ Lo stato descrive una qualità dell'entità o classe che si sta rappresentando (
 
 Il seguente è un esempio di state diagram:
 
+![](immagini/lezione-01/06.png)
 
 Mentre i seguenti sono i simboli che si possono usare in uno state diagram:
+
+![](immagini/lezione-01/07.png)
