@@ -220,6 +220,31 @@ Con i documenti **CSS** posso tenere separati il _contenuto_ dallo _stile_. In u
 
 ### Organizzazione logica di un documento XML
 
+La struttura di un documento XML è piuttosto semplice: ogni *nodo* o *sotto albero* si chiama **elemento**, il quale può avere degli **attributi**. Tutti gli elementi devono contenere dei **dati**. Per esempio:
+
+```xml
+<!DOCTYPE simple SYSTEM “simple.dtd”>
+<elemento1>
+  <!-- Questo è un commento -->
+  <elemento2 attributoX="45">
+    Dato A
+  </elemento2>
+  <elemento3 attributoY="May 1988">
+    Dato B
+  </elemento3>
+</elemento1>
+```
+
+Un documento XML può contenere anche altre componenti, quali:
+
+- **dichiarazioni**, ad esempio: `<!DOCTYPE simple SYSTEM “simple.dtd”>` 
+- **istruzioni di processing**
+- **commenti**, ad esempio. `<!-- Questo è un commento -->`
+
+La corrispondente rappresentazione concettuale di tale documento è:
+
+![](immagini/lezione-02/02.png)
+
 
 
 ### Organizzazione fisica di un documento XML
