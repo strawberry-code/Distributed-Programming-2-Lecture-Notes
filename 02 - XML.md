@@ -181,6 +181,28 @@ La seguente figura mostra i gradi di relazione che sussistono tra gli standard c
 
 ## Un semplice documento XML
 
+```XML
+<?xml version="1.0"?>
+<bibliography>
+  <article>
+    <author> J. W. Cooley </author>
+    <author> J. A. Tukey </author>
+    <title> An Algorithm for Machine Computation of Complex FFT </title>
+    <journal volume="19" number="April 1965"> Math. Computation </journal>
+  </article>
+  <article>
+    <author> T. G. Stockham </author>
+    <title> High speed convolution and correlation </title>
+    <proc year="1966"> Spring Joint Computer Conference </proc>
+  </article>
+  <book>
+    <author> D. A. Chappel </author> <author> T. Jewell </author>
+    <title> Java Web Services </title>
+    <publisher> Hops Libri </publisher>
+  </book>
+</bibliography>
+```
+
 
 
 ## Schema concettuale di un documento XML
