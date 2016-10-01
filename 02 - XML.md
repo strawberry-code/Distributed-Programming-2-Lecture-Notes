@@ -520,6 +520,14 @@ invece non sarebbero validi, per esempio, le seguenti dichiarazioni:
 
 ## Esercizio
 
+```
+<!DOCTYPE data_bank_account [
+	<!ELEMENT account 	(account_number, holder+, operation(year, ...))>
+	<!ELEMENT operation (date, amount, description?)>
+	<!ELEMENT holder	(name, address)>
+]>
+```
+
 
 
 ## Come viene processato un documento XML?
