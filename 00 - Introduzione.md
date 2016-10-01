@@ -91,7 +91,7 @@ In questo corso studieremo l'**IoT**? No. Studieremo in modo ragionevolmente app
 
 
 
-Un primo modo per connettere i dispositivi tra di loro è passare per un "service" o meglio dire un server che fornisca a loro un servizio. ![Schermata 2016-10-01 alle 22.16.06](/Users/Fenix/Desktop/Schermata 2016-10-01 alle 22.16.06.png)
+Un primo modo per connettere i dispositivi tra di loro è passare per un "service" o meglio dire un server che fornisca a loro un servizio.  ![01](immagini/lezione-00/01.png)
 
 
 
@@ -99,11 +99,7 @@ Un primo modo per connettere i dispositivi tra di loro è passare per un "servic
 
 Oppure fare in modo che si parlino a vicenda senza l'intervento di un umano o di un altro computer.
 
- ![Schermata 2016-10-01 alle 22.20.01](/Users/Fenix/Desktop/Schermata 2016-10-01 alle 22.20.01.png)
-
-
-
-
+  ![02](immagini/lezione-00/02.png)
 
 Un altra tecnologia per IoT è IPV6. Quindi ai giorni nostri molte applicazioni hanno la compatibilità con ipv6 o meglio dire si cerca la compatibilità con IpV6 come fa apple.
 
@@ -125,15 +121,11 @@ Come esempio di cloud computing non si deve solo pensare ad una nuvola che da po
 
 Nella nuvola si hanno dei server che devono parlare tra di loro per svolgere dei servizi.
 
-![Schermata 2016-10-01 alle 22.28.50](/Users/Fenix/Desktop/Schermata 2016-10-01 alle 22.28.50.png)
-
-Più specificatamente le tecniche che studieremmo in questo corso sono alla base per tutti questi ambienti. 
+ ![03](immagini/lezione-00/03.png)Più specificatamente le tecniche che studieremmo in questo corso sono alla base per tutti questi ambienti. 
 
 Nel primo corso avemamo studiato la parte che c'è tra l'omino e la macchina (web-server) tra lasciando ciò che accadeva dietro le quinte.
 
-Qui andremmo a vedere l'iterazione tra i vari server che stanno dietro alle quinte come si può vedere con le freccie rosse nel disegno sotto.  In questo modo ogni server da un contributo diverso ed in più.![Schermata 2016-10-01 alle 22.13.34](/Users/Fenix/Desktop/Schermata 2016-10-01 alle 22.13.34.png)
-
-
+Qui andremmo a vedere l'iterazione tra i vari server che stanno dietro alle quinte come si può vedere con le freccie rosse nel disegno sotto.  In questo modo ogni server da un contributo diverso ed in più. ![04](immagini/lezione-00/04.png)
 
 
 
@@ -144,7 +136,7 @@ Qui andremmo a vedere l'iterazione tra i vari server che stanno dietro alle quin
 Quattro grandi argomenti sono necessari per affrontare con serenità questo corso:
 
 - [ ] come funziona un **sistema operativo** e le basi per interagire con esso
-- [ ] le reti telematiche, in particolare è richiesta la conoscenza dei protocolli **TCP/IP** e **HTTP**. Si userà molto il paradigma *restful*, ovvero: GET, UPDATE, DELETE, … .
+- [ ] le reti telematiche, in particolare è richiesta la conoscenza dei protocolli **TCP/IP** e **HTTP** (sapere molto bene http). Si userà molto il paradigma *restful*, ovvero: GET, UPDATE, DELETE, … .
 - [ ] ciò che abbiamo imparato in **DP1**.
 - [ ] infine bisognerà saper usare ragionavolmente bene il linguaggio **Java**.
 
