@@ -327,6 +327,20 @@ in cui è possibile definire l’elemento radice, l’uri della DTD associata al
 
 ### Validità di un documento XML
 
+I documenti XML possono essere:
+
+- ben formati quando rispettano un insieme minimo di regole: non ci sono limitazioni sui tag che possono essere utilizzati e su come questi sono posti in relazione fra loro.
+- validi quando oltre ad essere ben formati rispettano un modello ovvero una serie di regole che definiscono i tag utilizzabili, le relazioni fra questi, l’ordine con il quale appaiono all’interno del documento, gli attributi che possono contenere ...
+
+Affinché un documento possa essere dichiarato valido occorre che il processo di validazione del documento secondo un determinato modello non restituisca errori.
+
+Attualmente esistono due modi per definire il Document Model associato ad un documento XML:
+
+- mediante una DTD (Document Type Definition) che definisce quali tag possono essere utilizzati e cosa possono contenere...
+- mediante XSD (Xml Schema Definition) che è a sua volta un documento XML (rispetta quindi un determinato modello) che permette di definire dei template.
+
+Qualsiasi linguaggio di markup che viene creato utilizzando delle regole xml costituisce un’applicazione xml (ad esempio XHTML).
+
 
 
 ## DTD
