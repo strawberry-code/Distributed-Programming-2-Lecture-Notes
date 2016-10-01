@@ -486,6 +486,13 @@ Per ciascun attributo posso specificare: **nome**, **tipo di valore** e ***dichi
 
 ### Dichiarazioni di default
 
+Ci sono quattro modi per dichiarare se un attributo può essere obbligatorio (richiesto) oppure quale sia il suo valore di default:
+
+- `#REQUIRED` indica che l'attributo è obbligatorio ma non viene indicato un valore di default.
+- `default` l'attributo è opzionale; nel caso in cui non sia stato specificato, allora viene utilizzato un valore di default.
+- `#IMPLIED` l'attributo è ancora opzionale e il suo lavore non è definito. Potrà essere utilizzato qualsiasi valore nel caso in cui l'attributo sia assente.
+- `#FIXED default` anche qui l'attributo è opzionale, ma se definito sarà non modificabile: nel senso che c'è un valore di default che può essere solo quello, ma se voglio posso non mettere nulla.
+
 
 
 ### Esempio
