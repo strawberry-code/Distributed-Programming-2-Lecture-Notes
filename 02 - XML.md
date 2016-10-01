@@ -532,6 +532,19 @@ invece non sarebbero validi, per esempio, le seguenti dichiarazioni:
 
 ## Come viene processato un documento XML?
 
+La seguente figura mostra lo schema _generico_ di elaborazione di un documento XML:
+
+![](immagini/lezione-02/05.png)
+
+Le API sono importanti, perché vengono fornite dal sistema che sta utilizzando in quel momento l'XML. Per esempio, un server scritto in Java fornisce API diverse da un client che vuol tradurre l'XML in DOM magari scirtto in un altro linguaggio.
+
+Ci sono due tipi di **XML processors**:
+
+- *non validating processor*, chiamato anche *parser_, controlla solamente la corretta forma del documento,
+- _validating processor_ controlla sia la corretta forma del documentosia la sua validità interna.
+
+Il tool **msxml** è un esempio di *non validating processor*, mentre **JAXP** è un esempio di *validating processor*.
+
  ### Schema di processamento di un documento XML
 
 
