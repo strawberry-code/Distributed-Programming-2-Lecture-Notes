@@ -702,6 +702,23 @@ StAX è comodo in quanto permette sia di **leggere** sia di **scrivere** dal/sul
 
 ## Presentazione di un documento XML
 
+La _presentazione_ (ovvero la _grafica_ detto beceramente) di un documento XML viene specificata separatamente utilizzando uno dei due modi:
+
+- CSS: Cascading Style Sheet
+- EXtensible Stylesheel Language (XLS)
+
+Gli stili di rpesentazione vengono scritti su un documento a parte e poi inclusi all'inizio del file XML, ad esempio se ho due file di stile `mystyle.css` e `mystyle.xsl`potrò includerli nel seguente modo:
+
+```
+<?xml:stylesheet type=“text/css” href=“mystyle.css”?>
+```
+
+e l'altro:
+
+```
+<?xml:stylesheet type=“text/xsl” href=“mystyle.xsl”?>
+```
+
 
 
 ## XSL: eXtensible Stylesheet Language
