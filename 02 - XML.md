@@ -545,6 +545,12 @@ Ci sono due tipi di **XML processors**:
 
 Il tool **msxml** è un esempio di *non validating processor*, mentre **JAXP** è un esempio di *validating processor*.
 
+#### SAX parsing
+
+SAX è un'API di basso livello il cui principale punto di forza è l'efficienza.
+
+
+ Quando un documento viene parsato usando SAX, una serie di eventi vengono generati e passati all'applicazione tramite l'utilizzo di callback handlers che implementano l'handler delle API SAX. Gli eventi generati sono di livello molto basso e devono essere gestiti dallo sviluppatore che, inoltre, deve mantenere le informazioni necessarie durante il processo di parsing. Oltre ad un utilizzo piuttosto complicato, SAX soffre di due limitazioni di rilievo: non può modificare il documento che sta elaborando e può procedere alla lettura solo "in avanti": non può tornare indietro. Quindi, quello che è stato letto è perso e non è possibile recuperarlo.
  ### Schema di processamento di un documento XML
 
 
