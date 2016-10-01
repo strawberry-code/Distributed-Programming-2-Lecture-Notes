@@ -378,6 +378,19 @@ Il DTD è una sequenza di regole che descrivono componenti come _elementi_, _dic
 
 ### Dichiarazione di un elemento
 
+La **dichiarazione di un elemento** si scompone in **nome dell'elemento** e in **modello del contenuto**. La _sintassi_ è la seguente:
+
+```xml
+<!ELEMENT nome_elemento modello_contenuto>
+```
+
+Le tipologie di modelli possono essere:
+
+- **EMPTY**: vuol dire che l'elemento deve essere vuoto,
+- **ANY**: non viene effettuato alcun controllo sul contenuto dell'elemento, qualsiasi cosa andrà bene,
+- **Element**: significa che tale elemento dovrà contenere a sua volta altri elementi (relazioni),
+- **Mixed Content**: tale elemento potrà contenere indifferentemente sia dati che altri elementi.
+
 
 
 ### Modelli di elementi
