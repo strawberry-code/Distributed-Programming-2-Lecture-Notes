@@ -411,6 +411,29 @@ La **molteplicità** può essere specificata usando gli operatori con la notazio
 
 ### Esempi di modelli di elementi
 
+Un esempio di DTD che utilizza modelli semplici:
+
+```xml
+<!ELEMENT meal (course*)>
+<!ELEMENT course (first|second|dessert)>
+<!ELEMENT fixedPriceMeal (first,second,dessert)>
+<!ELEMENT first EMPTY>
+<!ELEMENT second EMPTY>
+<!ELEMENT dessert EMPTY>
+```
+
+L'elemento `course` può essere uno o più dei tre specificati. Mentre l'elemento `meal` può essere presente 0, 1, 2, 3… volte e così via.
+
+Questo è un esempio di DTD in cui c'è un elemento con modelli composti:
+
+```
+<!ELEMENT laboratory ( name, location, secretary?, (technician|operator)+)>
+```
+
+L'elemento `laboratory` ha una sequenza di attributi, dei quali `secretary` è opzionale e può avere uno o più tra `technician`oppure `operator`. In altre parole, nel linguaggio umano, diremmo:
+
+> In un **laboratorio** di nome __name__ che si trova in __location__ può esserci come non esserci una __segretaria__. Ma deve avere un gruppo di soli __operatori__ o di soli __tecnici__, oppure un solo __operatore__ o un solo __tecnico__.
+
 
 
 ### Mixed models
