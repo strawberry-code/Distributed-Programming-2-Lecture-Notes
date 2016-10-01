@@ -446,7 +446,29 @@ Nei modelli misti, possono essere specificati solo i nomi degli elementi ammessi
 
 ##### Esempi
 
-### Dichiarazione di un attributo
+```xml
+<!ELEMENT onlyData (#PCDATA)>
+<!ELEMENT DataAndFonts (#PCDATA | font)*>
+<!ELEMENT DataFontsAndColors (#PCDATA | font | color)*>
+```
+
+
+
+### Dichiarazione di attributi
+
+Ciascuna dichiarazione specifica una caratteristica di uno o più attributi su di un tipo di elemento. La sintassi è simile a quella vista per i **models**:
+
+```
+<!ATTLIST nome_elemento lista_attributi >
+```
+
+Per ciascun attributo posso specificare: **nome**, **tipo di valore** e ***dichiarazione di default***. Ad esempio:
+
+```
+<!ATTLIST	solo_dati
+			id		ID				#REQUIRED
+			type	(vector|matrix)	"vector">
+```
 
 
 
