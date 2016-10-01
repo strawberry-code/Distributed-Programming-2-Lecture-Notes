@@ -15,12 +15,27 @@ Il corso viene tenuto dal prof. Riccardo Sisto in collaborazione con l'assistent
 
 L'obiettivo principale del corso è quello di concludere la consocenza degli argomenti trattati nei corsi di *Distributed programming I* e di *Object oriented programming*.
 
+In particolare nel primo corso ci si era posti come obiettivi:
+
+1. `network programming` ossia programmare i socket.
+2. `web application`  ossia siti web.
+
+In questo corso invece andremmo verso la parte di web-application ma ci si foccalizzerà su B2B interazione.
+
 In particolare ci si focalizzerà su tre concetti chiave:
 
-1. conoscere le principali tecniche di sviluppo di software distribuito, cioè **applicazioni B2B** (Business to Business)
+1. conoscere le principali tecniche di sviluppo di software distribuito, cioè **applicazioni B2B** (Business to Business) ossia `machine to machine iteration`  in contraposizione (del primo corso) con con l'iterazione tra utente e machine. In altre parole nel primo corso si aveva una iterazione tra l'utente e le macchine mentre qui si vuole avere come unici attori due  o più macchine.
+
+   E per fare ciò si andrà ad utilizzare XML programming e web service programing.
 2. imparare a programmare utilizzando **XML** e a sviluppare **servizi Web**.
 
 Tutto questo tenendo conto degli aspetti della *robustezza*, *sicurezza*, *portabilità* ed *interoperabilità* delle applicazioni che impareremo a sviluppare.
+
+
+
+XML è un metodo per rapresentare i dati sul web. Si potrebbe dire che è simile a XDR. XML serve per rappresentare qualsiasi dati e ed è "cariental oriented".
+
+Web-service sono i programmi che interagiscono tra di loro nel web e andremmo ad usare il java per fare ciò.
 
 ### Cosa ci sarà di nuovo rispetto al corso di DP1?
 
@@ -118,7 +133,6 @@ I principali argomenti inclusi in questo corso sono:
 
 4. altre cose, come *ant* per il supporto automatizzato dello sviluppo, le *annotazioni Java* e così via...
 
-    
 
 ## Esercizi e laboratori
 
@@ -132,6 +146,8 @@ Lo svolgimento dei laboratori si tiene sempre di lunedì ma è diviso in due squ
 - **GROUP 2**: studenti dalla *L* alla *Z* e dalle 14:30 alle 16:00.
 
 I laboratori inizieranno già il **10 ottobre 2016**.
+
+Una parte dei laboratori ci sarà la Serena mentre l'altra parte ci sarà Sisto. 
 
 
 
