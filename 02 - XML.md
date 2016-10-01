@@ -646,7 +646,9 @@ consiste in 6 specifiche differenti:
 
 ### L'elemento <\<interface>>
 
+![](immagini/lezione-02/10.png)
 
+![](immagini/lezione-02/11.png)
 
 ## Semplici API per XML (SAX)
 
