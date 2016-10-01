@@ -696,6 +696,8 @@ StAX è comodo in quanto permette sia di **leggere** sia di **scrivere** dal/sul
 
 ## Confronto tra DOM/SAX/StAX
 
+![](immagini/lezione-02/12.png)
+
 
 
 ## Presentazione di un documento XML
