@@ -395,6 +395,18 @@ Le tipologie di modelli possono essere:
 
 ### Modelli di elementi
 
+Grazie ai modelli degli elementi possiamo definire con una grammatica molto semplice il **nome**, **ordine**, **opzionalità** e **molteplicità** degli elementi annidati. Un modello può essere tre cose:
+
+- un _elemento_
+- una _sequenza di elementi_ (separati da una virgola)
+- un'_alternativa di modelli_ (identificata con una barra verticale)
+
+La **molteplicità** può essere specificata usando gli operatori con la notazione postfissa:
+
+- `+` indica che il modello ha un'occorrenza di una o più volte
+- `*` indica che il modello ha un'occorrenza di nessuna o più volte
+- `?` indica **opzionalità**, cioè che può essere presente _nessuna_ o _una volta sola_ (c'è o non c'è).
+
 
 
 ### Esempi di modelli di elementi
