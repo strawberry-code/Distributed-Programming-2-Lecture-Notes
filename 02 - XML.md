@@ -283,6 +283,24 @@ Il principio di ogni documento XML è che i **dati** sono una sequenza di caratt
 
 #### Le dichiarazioni XML
 
+Tutti i documenti xml iniziano con un prologo che contiene la dichiarazione xml, la Document Type Declaration che contiene la definizione del Document Model (se si vuole ottenere un documento valido oltre che ben formato) ed un set di dichiarazioni, a questi segue l’elemento radice del documento.
+
+La dichiarazione xml rispetta la seguente sintassi:
+
+```xml
+<?xml version="..." encoding="..." standalone="..." ?>
+
+...
+```
+
+e comunica al processore xml:
+
+- la versione di XML utilizzata mediante l’attributo version
+- la codifica di caratteri utilizzata mediante l’attributo encoding
+- se ci sono altri file da caricare (entità esterne o DTD) mediante l’attributo standalone
+
+
+
 #### Le dichiarazioni DTD
 
 
