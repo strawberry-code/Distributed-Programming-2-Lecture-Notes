@@ -731,8 +731,43 @@ XSL è certamente uno dei più importanti linguaggi standard del W3C. Esso risul
 
 
 
+### Esempio di XSL
 
+![](immagini/lezione-02/13.png)
 
 ## XSLT
 
+L'XSLT (eXtensible Stylesheet Language Transformations) è il linguaggio di trasformazione dell'XML, diventato uno standard web con una direttiva (Recommendation) W3C del 16 novembre 1999.
+
+L'obiettivo principale per cui l'XSLT è stato creato è rendere possibile la trasformazione di un documento XML in un altro documento. Deriva direttamente dal linguaggio XSL, infatti i file di questo formato sono essenzialmente file di testo, contengono elementi ed attributi ed hanno l'estensione ".xsl".
+
+Ci possono essere due casi specifici di trasformazione: da un documento XML a un altro documento XML (adatto a specifiche applicazioni), oppure da un documento XML ad un altro formato (ad esempio HTML, XHTML, WML e RTF, ma anche in qualsiasi altro formato di solo testo). L'XSLT può essere usato per entrambi i casi.
+
+Per generare una trasformazione XSLT occorrono due file: il documento da trasformare (in XML) ed un documento contenente il foglio di stile XSL, che fornisce la semantica per la trasformazione. Il foglio di stile XSLT vede un documento XML come una serie di nodi strutturati ad albero. È formato da un insieme di modelli (template) che contengono le regole di trasformazione dei tag del documento XML. Nella sintassi XSL, i template sono elementi, a ciascuno dei quali corrisponde l'attributo match, associato al nodo che verrà trasformato. In termini strutturali quindi il foglio di stile XSL specifica la trasformazione di un albero di nodi in un altro albero di nodi.
+
+È possibile anche aggiungere al documento trasformato elementi completamente nuovi o non prendere in considerazione determinati elementi del documento origine, riordinare gli elementi, fare elaborazioni in base al risultato di determinate condizioni, ecc.
+
+![](immagini/lezione-02/14.png)
+
 ### Esempio di XSLT
+
+```xml
+<?xml version="1.0" encoding="ISO-8859-1"?> <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"> <xsl:template match="/">
+  <html>
+    <head><link rel="stylesheet" href="style.css"/></head> <body>
+    <h2>My Articles</h2>
+    <table>
+      <tr>
+        <th>Title</th>
+      </tr>
+      <xsl:for-each select="bibliography/article">
+        <tr>
+          <td><xsl:value-of select="title"/></td>
+        </tr>
+      </xsl:for-each>
+    </table>
+    </body></html>
+  </xsl:template>
+</xsl:stylesheet>
+```
+
