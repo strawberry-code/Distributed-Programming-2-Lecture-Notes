@@ -474,9 +474,13 @@ Per ciascun attributo posso specificare: **nome**, **tipo di valore** e ***dichi
 
 ### Specificare il tipo dei valori
 
+![](immagini/lezione-02/03.png)
+
 
 
 ### Significato dei vari tipi di *tokens*
+
+![](immagini/lezione-02/04.png)
 
 
 
