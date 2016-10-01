@@ -618,6 +618,32 @@ DOM non pone limitazioni alla struttura dei dati di un documento. DOM permette d
 
 ### Organizzazione delle specifiche del DOM
 
+Le specifiche DOM elaborate da W3C sono suddivise in livelli, ciascuno dei quali contiene moduli obbligatori o opzionali. Per sostenere di appartenere ad un certo 'livello', un'applicazione deve soddisfare tutti i requisiti di tale livello e dei livelli inferiori. La specifica attuale di DOM è al Livello 2, tuttavia alcune delle specifiche del Livello 3 ora sono già raccomandazioni del W3C.
+
+##### Livello 0
+
+include tutto quello che viene fornito a DOM per la creazione del Livello 1, per esempio: document.images, document.forms, document.layers, e document.all. Nota, questa non è una specifica convenzionale pubblicata dal W3C ma piuttosto dà un riferimento a che cosa esisteva prima del processo di standardizzazione.
+
+##### Livello 1
+
+navigazione di un documento DOM e manipolazione del contenuto.
+
+##### Livello 2
+
+supporto al Namespace XML, viste filtrate e Eventi DOM. Incluso quindi elaborazione documenti CSS.
+
+##### Livello 3
+
+consiste in 6 specifiche differenti:
+
+1. il nucleo del Livello 3;
+2. caricamento e salvataggio del Livello 3;
+3. XPath del Livello 3;
+4. viste e formattazione del Livello 3;
+5. requisiti del Livello 3;
+6. validazione del Livello 3, che potenzia ulteriormente DOM.
+7. ​
+
 ### Interfacce DOM di livello 1
 
 ### L'elemento <\<interface>>
