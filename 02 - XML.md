@@ -771,4 +771,3 @@ Per generare una trasformazione XSLT occorrono due file: il documento da trasfor
 </xsl:stylesheet>
 ```
 
-test GitHub
