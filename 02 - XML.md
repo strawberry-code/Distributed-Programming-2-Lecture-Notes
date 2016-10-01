@@ -438,7 +438,13 @@ L'elemento `laboratory` ha una sequenza di attributi, dei quali `secretary` è o
 
 ### Mixed models
 
+Nei modelli misti, possono essere specificati solo i nomi degli elementi ammessi ma non viene specificato nulla circa il loro ordine (non sequenzialità) e sulla loro molteplicità. Per cui, l'unica forma ammessa nei **mixed models** è la seguente:
 
+```xml
+(#PCDATA | name1 | name2)*
+```
+
+##### Esempi
 
 ### Dichiarazione di un attributo
 
