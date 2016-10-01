@@ -91,6 +91,24 @@ In questo corso studieremo l'**IoT**? No. Studieremo in modo ragionevolmente app
 
 
 
+Un primo modo per connettere i dispositivi tra di loro è passare per un "service" o meglio dire un server che fornisca a loro un servizio. ![Schermata 2016-10-01 alle 22.16.06](/Users/Fenix/Desktop/Schermata 2016-10-01 alle 22.16.06.png)
+
+
+
+
+
+Oppure fare in modo che si parlino a vicenda senza l'intervento di un umano o di un altro computer.
+
+ ![Schermata 2016-10-01 alle 22.20.01](/Users/Fenix/Desktop/Schermata 2016-10-01 alle 22.20.01.png)
+
+
+
+
+
+Un altra tecnologia per IoT è IPV6. Quindi ai giorni nostri molte applicazioni hanno la compatibilità con ipv6 o meglio dire si cerca la compatibilità con IpV6 come fa apple.
+
+
+
 #### Che cos'è il cloud computing?
 
 > #### Cloud computing
@@ -100,6 +118,24 @@ In questo corso studieremo l'**IoT**? No. Studieremo in modo ragionevolmente app
 > Le risorse non vengono pienamente configurate e messe in opera dal fornitore apposta per l'utente, ma gli sono assegnate, rapidamente e convenientemente, grazie a procedure automatizzate, a partire da un insieme di risorse condivise con altri utenti lasciando all'utente parte dell'onere della configurazione. Quando l'utente rilascia la risorsa, essa viene similmente riconfigurata nello stato iniziale e rimessa a disposizione nel pool condiviso delle risorse, con altrettanta velocità ed economia per il fornitore.
 
 In questo corso studieremo il **cloud computing**? No. Studieremo i meccanismi interni ai sistemi basati sul cloud, ovvero apriremo la nuvola e guarderemo com'è fatta dentro.
+
+
+
+Come esempio di cloud computing non si deve solo pensare ad una nuvola che da potenza di calcolo ma anche per mettere i dati con Icloud. Quindi nella nuvola si può anche  virtualizare le cose e poi si accede  tramite intenert. 
+
+Nella nuvola si hanno dei server che devono parlare tra di loro per svolgere dei servizi.
+
+![Schermata 2016-10-01 alle 22.28.50](/Users/Fenix/Desktop/Schermata 2016-10-01 alle 22.28.50.png)
+
+Più specificatamente le tecniche che studieremmo in questo corso sono alla base per tutti questi ambienti. 
+
+Nel primo corso avemamo studiato la parte che c'è tra l'omino e la macchina (web-server) tra lasciando ciò che accadeva dietro le quinte.
+
+Qui andremmo a vedere l'iterazione tra i vari server che stanno dietro alle quinte come si può vedere con le freccie rosse nel disegno sotto.  In questo modo ogni server da un contributo diverso ed in più.![Schermata 2016-10-01 alle 22.13.34](/Users/Fenix/Desktop/Schermata 2016-10-01 alle 22.13.34.png)
+
+
+
+
 
 
 
