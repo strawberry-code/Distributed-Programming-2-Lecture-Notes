@@ -345,6 +345,8 @@ Qualsiasi linguaggio di markup che viene creato utilizzando delle regole xml cos
 
 ## DTD
 
+Il DTD è una sequenza di regole che descrivono componenti come _elementi_, _dichiarazioni_ e _dichiarazioni di attributi_. Le regole, come già detto, seguono la sintassi SGML con alcune restrizioni ed anche delle estensioni.
+
 
 
 ### Esempio di DTD
