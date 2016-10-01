@@ -575,6 +575,47 @@ A differenza di SAX, che è un push parser, non riceve passivamente i segnali in
 
 ## Document Object Model (DOM)
 
+**DOM** ovvero: *modello a oggetti del documento*, è una forma di rappresentazione dei documenti strutturati come modello orientato agli oggetti.
+
+DOM è lo standard ufficiale del W3C per la rappresentazione di documenti strutturati in maniera da essere neutrali sia per la lingua che per la piattaforma. DOM è inoltre la base per una vasta gamma di interfacce di programmazione delle applicazioni; alcune di esse sono standardizzate dal W3C.
+
+#### Esempio con HTML
+
+Un classico esempio di albero DOM è quello generato da un browser web nell'interpretazione di un documento HTML.
+
+Il seguente documento HTML:
+
+```html
+<!-- My document -->
+<html>
+  <head>
+    <title>My Document</title>
+  </head>
+  <body>
+    = Header =
+    <p>
+      Paragraph
+    </p>
+  </body>
+</html>
+```
+
+avrebbe il seguente albero DOM:
+
+![](immagini/lezione-02/09.png)
+
+È da notare che in questo esempio anche i cosiddetti caratteri blank (spazi, tabulazioni, ecc.) sono considerati elementi dell'albero, nonostante questi non vengano poi mostrati dal browser (a meno che non si trovino all'interno di un tag `pre`).
+
+
+
+### Caratteristiche
+
+Nativamente supportato dai browser per modificare gli elementi di un documento HTML. DOM è un modo per accedere e aggiornare dinamicamente il contenuto, la struttura e lo stile dei documenti. Per le numerose incompatibilità dovute al diverso tipo di gestione di DOM dai vari browser, il W3C ha stabilito delle specifiche standard.
+
+DOM non pone limitazioni alla struttura dei dati di un documento. DOM permette di visualizzare un documento ben formato sotto forma di albero: la maggior parte dei parser XML (come Xerces) e i processori XSL (per esempio Xalan) sono stati sviluppati per usare la struttura ad albero. Questa implementazione richiede che l'intero contenuto di un documento venga analizzato e salvato in memoria. DOM è utilizzato principalmente per recuperare informazioni da documenti con una strutturazione non standard, cioè dove gli elementi devono essere trovati in modo casuale. Per le applicazioni basate su XML che usano un processo di lettura e scrittura per analisi, DOM presenta un grande spreco di memoria; per questo tipo di applicazioni si consiglia di usare il modello SAX.
+
+
+
 ### Organizzazione delle specifiche del DOM
 
 ### Interfacce DOM di livello 1
