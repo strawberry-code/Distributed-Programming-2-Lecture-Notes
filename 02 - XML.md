@@ -650,7 +650,32 @@ consiste in 6 specifiche differenti:
 
 ![](immagini/lezione-02/11.png)
 
-## Semplici API per XML (SAX)
+
+
+## Semplice API per XML (SAX)
+
+Simple API for XML o SAX è un'API per numerosi linguaggi di programmazione che permette di leggere ed elaborare dei documenti XML.
+
+Contrariamente al DOM, il SAX processa i documenti linea per linea. Il flusso di dati XML è unidirezionale, così che dati a cui si è acceduto in precedenza non possono essere riletti senza la rielaborazione dell'intero documento.
+
+SAX fornisce un’interfaccia event-based per il pasring di documenti XML; il documento viene scandito sequenzialmente e viene generato un evento quando:
+
+- inizia e finisce un documento
+- inizia e finisce un elemento
+- la presenza del contenuto di un elemento
+- la presenza di Processing Instruction
+- errori di sintassi XML di vario genere
+
+Per ognuno di questi eventi occorre pertanto specificare le azioni da compiere: ovvero definire dei gestori che operino in risposta agli eventi generati.
+
+Un’applicazione generalmente instanzia un parser, provvede a registrare i necessari Handler presso il parser stesso ed avvia l’elaborazione del documento XML.
+
+Tipicamente SAX si utilizza quando:
+
+- si stanno cercando pochi elementi
+- la struttura del documento non è importante per l’applicazione
+- non si stanno cercando elementi dipendenti dal contesto
+- la risorsa memoria è critica
 
 
 
