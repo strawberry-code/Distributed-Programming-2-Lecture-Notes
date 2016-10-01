@@ -656,6 +656,17 @@ consiste in 6 specifiche differenti:
 
 ## API di tipo streaming per XML (StAX)
 
+Queste API sono state sviluppate dopo le SAX. Se SAX è push parser, StAX è invece pull parser, cioè richiede gli elementi XML al parser solo quando servono, cioè all'accadere di certi eventi. Alcuni esempi di questi eventi sono:
+
+- **setDocumentLocator** che indica l'inizio del parsing,
+- **startDocument** che indica l'inizio di un documento XML
+- **endDocument**
+- **startElement** rappresenta l'inizio di un elemento XML
+- **endElement**
+- **characters** quando si sta leggendo del testo
+
+StAX è comodo in quanto permette sia di **leggere** sia di **scrivere** dal/sul documento XML. Con SAX posso solo leggere. Per cui la programmazione risulta più semplice con StAX che con SAX.
+
 
 
 ## Confronto tra DOM/SAX/StAX
