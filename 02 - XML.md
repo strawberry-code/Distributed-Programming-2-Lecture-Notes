@@ -303,6 +303,26 @@ e comunica al processore xml:
 
 #### Le dichiarazioni DTD
 
+La document type declaration permette di indicare DTD esterne, eventuali definizioni di entità e l’elemento radice del documento XML: la Document Type Definition in particolare viene utilizzata durante la fase di validazione mediante un confronto fra il documento xml ed il modello di riferimento descritto dalla DTD.
+
+La document type declaration rispetta la seguente sintassi:
+
+```xml
+<!DOCTYPE element root
+uri della DTD
+[
+
+...
+
+dichiarazioni...
+
+...
+
+]>
+```
+
+in cui è possibile definire l’elemento radice, l’uri della DTD associata al documento ed una serie di ulteriori dichiarazioni (di entità o parti di DTD) utilizzate all’interno del documento stesso.
+
 
 
 ### Validità di un documento XML
