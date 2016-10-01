@@ -723,7 +723,13 @@ e l'altro:
 
 ## XSL: eXtensible Stylesheet Language
 
-### Esempio di XSL
+XSL è certamente uno dei più importanti linguaggi standard del W3C. Esso risulta composto di tre parti, ciascuna delle quali rientra nella specifica XSL 1.0, pu bblicata nell’ottobre 2001:
+
+1. **XSLT**: è un linguaggio che consente di trasformare documenti XML in altri formati (vedi la Guida a XSLT di HTML.it)
+2. **Xpath**: definisce espressioni e metodi per accedere ai nodi di un documento XML
+3. **XSL FO** (Formatting object): usato per formattare in maniera precisa un oggetto trasformato
+
+
 
 
 
