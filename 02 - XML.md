@@ -497,6 +497,25 @@ Ci sono quattro modi per dichiarare se un attributo può essere obbligatorio (ri
 
 ### Esempio
 
+```
+<!ATTLIST	course
+			code	ID	#REQUIRED
+			name	CDATA	#IMPLIED
+			double	(yes|no)	"no"
+>
+```
+
+Dunque, secondo questo schema, potrei scrivere:
+
+- ```<course code="A10" name="spaghetti">```
+- ``````<course code="A10" double="yes">```
+
+invece non sarebbero validi, per esempio, le seguenti dichiarazioni:
+
+- ```<course name="Steak">``` _(manca l'attributo **code**!)_
+- ```<course code="A10" double="nes">``` _(il valore **nes** per l'attributo **double** non è tra quelli selezionabili!)_
+- ```<course>``` _(l'elemento **course** deve avere almeno l'attributo **code** definito!)_
+
 
 
 ## Esercizio
