@@ -569,8 +569,6 @@ StAX è un pull parser.
 
 A differenza di SAX, che è un push parser, non riceve passivamente i segnali inviati all'handler per elaborarli, ma è l'utente a controllare il flusso degli eventi. Questo significa che il client richiede (pull) i dati XML quando ne ha bisogno e nel momento in cui può gestirli, a differenza del modello push, dove è il parser a inviare i dati non appena li ha disponibili a prescindere che l'utente ne abbia bisogno o sia in grado di elaborarli. Le librerie pull parsing sono molto può semplici delle push parsing e questo permette di semplificare il lavoro dei programmatori, anche per documenti molto complessi. Inoltre è bidirezionale, nel senso che oltre a leggere dati XML è anche in grado di produrli. Rimane il limite di poter procedere solo "in avanti" nell'elaborazione del documento XML.
 
- ### Schema di processamento di un documento XML
-
 
 
 ## Document Object Model (DOM)
