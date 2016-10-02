@@ -185,6 +185,13 @@ Il DTD si può dichiarare all'interno di uno stesso documento XML (dichiarazione
 
 
 
+Analisi documento:
+
+`<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">`
+è il reference del DTD e si ha la versione e si mette anche il link. Lo si mette all'inizio cosi che il parsing diventa semplice.
+
+
+
 ### Relazioni tra SGML, HTML e documenti XML
 
 La seguente figura mostra i gradi di relazione che sussistono tra gli standard che sono stati descritti:
