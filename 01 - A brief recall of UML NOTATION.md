@@ -245,7 +245,23 @@ Un esempio di sequence diagram:
 
 
 
-## State diagram
+In questo diagramma l'omino è semplicemente qualche d'uno che svolge un attività e non deve essere per forza un essere umano. I nomi dentro i rettangoli che  sono sottlienati sono degli oggetti.
+
+Le liene verticali rappresentano la vita dell'oggetto. In particolare si può vedere come `x:Remote`vive più a lungo di tutti gli altri.
+
+Al punto 1 si vede che quel rettangolo rappresenta l'attività svolta dall'oggetto `Local`.
+
+Inoltre si vede come `getRemoteRef()`venga chiamato come metodo e poi viene ritornato una `x`come valore di ritorno.
+
+Nel punto 2 si vede come la chiamata al metodo è su se stesso. Quindi si chiama un metodo dell'ogetto stesso per ritornare all'oggetto stesso un valore di ritorno.
+
+Nel punto 3 si vede come un oggetto venga distrutto.
+
+
+
+
+
+## State diagram (Non è stato fatto)
 
 Lo State Chart Diagram o Diagramma degli stati è un diagramma previsto dall'UML per descrivere il comportamento di entità o di classi in termini di stato (macchina a stati).
 Il diagramma mostra gli stati che sono assunti dall'entità o dalla classe in risposta ad eventi esterni.
