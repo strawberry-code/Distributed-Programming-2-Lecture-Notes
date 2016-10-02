@@ -148,6 +148,18 @@ Un package nell'Unified Modeling Language è usato *"per raggruppare elementi e 
 
 Praticamente *tutti gli elementi UML possono essere raggruppati in package*. Così classi, oggetti, use case, componenti, nodi, istanze di nodi, ecc. possono essere tutti organizzati come package, consentendo così una maneggevole organizzazione delle miriadi di elementi che un modello UML comporta.
 
+
+
+##### Esempio di package:
+
+Dentro al package `Widgets`si ha `Window class`e cosi via.
+
+ ![11](immagini/lezione-01/11.png)
+
+
+
+
+
 ##### Utilizzo
 
 Quando si organizzano modelli funzionali (use case, workflow, ecc.) si usano i package per modellare la struttura modulare del sistema da applicare nel mondo reale. Quando si organizza il codice sorgente, si usano i package per rappresentare i differenti strati di un codice sorgente. 
@@ -188,11 +200,29 @@ Il diagramma descrive nella parte superiore i diversi modi in cui possono essere
 
 Nella parte inferiore è riportato un esempio di istanze di due classi diverse, la classe Progetto e quella Utente, e la relazione che esiste tra l'istanza Wikipedia e l'istanziazione di tre determinati utenti.
 
+Si rammenti che i nomi nelle classi nel object diagram è sempre sottolineato in modo da riccordare che non è una rappresentazione delle classi ma degli oggetti. 
+
+Ad esempio da `d1` si può andare a `d2`ma non viceversa.
+
+1)Rappresenta un oggetto e non una classe. `d1`è il nome dell'ogetto.
+
+2) `DirectoryEntry`è il tipo della classe che appartiene a `d2`.
+
+3)`FileEntry`è la classe dell'ogetto ma non si specifica il nome. Ergo si ha l'oggetto `FileEntry`senza il nome.
+
+4) E' un oggetto remoto.
+
+
+
+![12](immagini/lezione-01/12.png)
+
 
 
 ## Sequence Diagrams
 
 Un **Sequence Diagram** (in italiano: Diagramma di sequenza) è un diagramma previsto dall'UML utilizzato per descrivere uno scenario.
+
+Il diagramma si legge dall'alto verso il basso e da sinistra verso destra insomma come quando si legge.
 
 
 Uno scenario è una determinata sequenza di azioni in cui tutte le scelte sono state già effettuate; in pratica nel diagramma non compaiono scelte, né flussi alternativi.
