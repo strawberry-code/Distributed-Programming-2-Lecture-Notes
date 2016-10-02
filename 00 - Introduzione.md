@@ -180,7 +180,15 @@ Una parte dei laboratori ci sarà la Serena mentre l'altra parte ci sarà Sisto.
 
 ## Materiale di supporto
 
-Tutto il materiale utile può essere trovato nella [pagina del corso](https://pad.polito.it:8080/enginframe/dp2/dp2.xml?_uri=//dp2/material). Il corso è anche videoregistrato.
+Tutto il materiale utile può essere trovato nella [pagina del corso](https://pad.polito.it:8080/enginframe/dp2/dp2.xml?_uri=//dp2/material). Il corso è anche videoregistrato (sulla nostra pagina personale).
+
+Dentro al campus si deve usare un link:
+https://pad.polito.it:8080
+
+Fuori dal campus:
+https://pad.polito.it
+
+
 
 
 
@@ -190,21 +198,37 @@ L'esame consiste in tre punti:
 
 1. valutazione degli **assignments**
 2. prova scritta ai LABINF (possibile esonero se gli assignments sono stati svolti brillantemente)
-3. facoltativo un orale finale
+3. facoltativo un orale finale che potrebbe essere chiesto dallo studento (se il voto non è quello che vorebbe avere) o dal professore se ci sono dei dubbi.
 
 
 
 ##### Gli assignments
 
-Ciascun assignment verrà proposto ad ogni laboratorio e dovranno essere consegnati entro una data prestabilita, se qualche assignments verrà consegnato oltre tale data, l'assignment non verrà considerato nella valutazione.
+Ciascun assignment verrà proposto ad ogni laboratorio e dovranno essere consegnati entro una data prestabilita che è relativa all'appello d'esame in cui si vuole passare, se qualche assignments verrà consegnato oltre tale data, l'assignment non verrà considerato nella valutazione.
 
 Inoltre, ogni assignment deve essere svolto individualmente. Se il docente scopre che qualcuno ha copiato o hanno lavorato insieme, verranno **entrambi** segnalati alla commissione disciplinare. Bisogna quindi stare molto attenti anche a far si che la propria soluzione rimanga al sicuro e che nessuno ce la copi.
+
+La data di consegna di solito sono due giorni lavorativi prima dell'esame in cui si vuole sostenere.
+
+Si consegnano gli assegnaments come quando di faceva DP1 con il sito.
+
+Quando si consegnato i laboratori ci sono dei test che vengono fatti in automatico dal sistema e il laboratorio deve passare i mandatory test. Se non gli passa allora si deve ri-caricare il laboratorio con le opportune modifiche. Ci sarà anche la possibilità di provare i nostri laboratori in locale, tuttavia è buona norma mandare i laboratori non all'ultima ora ma ben prima in modo da verificare e corregere eventuali errori se non passa i tests.
 
 
 
 ##### Ammissione al test finale
 
 Si può essere ammessi solo se ogni assignment superi almeno i test di base. Si noti che si possono consegnare gli assignment (anche tutti assieme) solo entro due giorni **lavorativi** prima dell'inizio della prova scritta ai LABINF. Quindi, se l'esame è di lunedì, bisogna consegnare gli assignment entro mercoledì! Poiché sabato e domenica non sono due giorni lavorativi.
+
+Possiamo anche essere esonerati se i laboratori sono molto buoni e molto diverrsi l'uno dall'altro.
+
+Inoltre per sapere se non dobbiamo andare all'esame finale lo sapremmo solo 1 giorno prima rispetto all'esame stesso. Perché per valutarli deve aspettare che tutti abbiano consegnato e visto che la scadenza è per l'appunto due giorni lavoratori va da se che lo sapremmo solo dopo. Quindi è meglio prepararsi e poi la più non si va perché si ha avuto una buona sorpresa.
+
+
+
+Un altro modo per non sostenere  l'esame è di fare una tesi o una "tesina" (progetto speciale) tutto relativo al corso. I numeri di progetti sono limitati quindi ci sarà una selezione se ci sono tanti studenti che richiedono una.
+
+In alcuni casi si può fare un progetto (tesi o tesina) assieme ma solo perché mettendo a ssieme il tutto si ottiene una gorssa cosa quindi è come se ci fossero molte tesi o tesine.
 
 
 
@@ -216,7 +240,11 @@ Fare molta attenzione ai propri elaborati, perchè il docente, con il supporto d
 
 ##### La prova scritta ai LABINF
 
-La prova finale è facoltativa. Dipende da come sono stati fatti gli assignments. Se sono di buona qualità non ci sarà bisogno di fare la prova finale. Tale prova consiste nello svolgimento di un nuovo assignment più una domanda aperta, il tutto da svolgersi nell'arco di due ore oppure due ore e mezza. Questa prova verrà considerata superata se l'elaborato scritto supererà i test obbligatori. Faremo una simulazione di questa prova verso la fine del corso: è **importante** esserci!
+La prova finale è facoltativa. Dipende da come sono stati fatti gli assignments. Se sono di buona qualità non ci sarà bisogno di fare la prova finale e molto diversi dai nostri compagni. Tale prova consiste nello svolgimento di un nuovo assignment più una domanda aperta (relativa ai nostri laboratori su come abbiamo svolto gli  assignmen), il tutto da svolgersi nell'arco di due ore oppure due ore e mezza. Questa prova verrà considerata superata se l'elaborato scritto supererà i test obbligatori. Faremo una simulazione di questa prova verso la fine del corso: è **importante** esserci!
+
+
+
+Per passare la prova scritta si deve passare i test obbligatori se no non si passa la prova. In alcuni casi se non si passa l'esame ma l'errore è cosi piccolo allora il professore potrebbe fare passare l'esame.
 
 
 
@@ -224,9 +252,15 @@ La prova finale è facoltativa. Dipende da come sono stati fatti gli assignments
 
 I punti assegnati verranno calcolati nel seguente modo:
 
-- gli assignment verranno valutati con un punteggio minimo di 16 e un massimo di 20 punti,
+- gli assignment verranno valutati con un punteggio minimo di 16 (solo se si passa  i test obbligatori) e un massimo di 20 punti (se si passa anche i test non obbligatori quindi extra-test),
 - la prova scritta ha un range da 0 a 6 punti,
 - la domanda aperta vale da 0 a 4 punti.
+
+
+
+Il professore ci darà un voto finale se ci piace bene se no in casi speciali si può richiedere un orale.
+
+Durante l'orale può chiedere delle cose e andranno ad influire sulla notazione finale sia in positivo sia in negativo.
 
 Per avere la lode è necessario fare l'orale.
 
