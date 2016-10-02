@@ -109,7 +109,7 @@ Le principali caratteristiche del linguaggio XML possono essere riassunte nei tr
 
 1. la rappresentazione dei dati è sia *leggibile da un essere umano* sia *leggibile dalla macchina*, il che però, non lo rende ottimale per l'occupazione di memoria e larghezza di banda. Questo è detto come "character-oriented". Essendo che è "character-oriented" ha bisogno di più banda e più memoria per poter trasmettere i dati. 
 
-   Ai giorni nostri si preferice il "character-oriented" perché è più semplice da leggere rispetto al binario e perché c'è molta potenza nei calcolatori e quindi non si deve risparmiare perché di potenza ne abbiamo cosi da avere anche dei meccanismi facili da debbuggare.
+   Ai giorni nostri si preferice il "character-oriented" perché è più semplice da leggere rispetto al binario e perché c'è molta potenza nei calcolatori e quindi non si deve risparmiare perché di potenza ne abbiamo cosi da avere anche dei meccanismi facili da debbuggare. 
 
 2. I dati assumono la forma di *documenti formali*, che ricordano molto i documenti HTML.
 
@@ -200,6 +200,8 @@ La seguente figura mostra i gradi di relazione che sussistono tra gli standard c
 
 
 
+Come si vede dal diagramma si potrebbero avere dei documenti XML non validi per XHTML e via discorendo. Ad esempio alcuni documenti HTLM sono conformi allo stantard XML e altri no. A causa delle regole che seguono.
+
 ## Un semplice documento XML
 
 ```XML
@@ -225,6 +227,13 @@ La seguente figura mostra i gradi di relazione che sussistono tra gli standard c
 ```
 
 
+
+Analisi:
+
+Si hanno i tags `<bibliography>` simile all HTML ma la differenza è che in questo caso si può usare qualsiasi tags che si vuole, tuttavia deve essere presente nel DTD che è una sorta di dizionario.
+
+In questo caso dentro a `<bibliography>`si hanno degli elementi:
+` <article>`,`<book>` come se fossimo in una pagina HTLM. E dentro ad ogni tags si hanno altri tags.
 
 ## Schema concettuale di un documento XML
 
