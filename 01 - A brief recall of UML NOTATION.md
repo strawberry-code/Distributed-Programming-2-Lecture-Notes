@@ -10,6 +10,7 @@
 4. Sequence Diagrams
 
 
+Questa parte è solo un richiamo per avere la stessa "base"/linguaggio/idea del professore sul UML onde evitare pastici di comprensione in futuro. 
 
 ## Richiami su UML
 
@@ -36,6 +37,18 @@ Uno degli assunti fondamentali del paradigma a oggetti è che il concetto di cla
 ##### Classe
 
 L'elemento di modello principale dei diagrammi delle classi è la classe. Una classe rappresenta una categoria di entità (istanze), nel caso particolare dette oggetti; il nome della classe indica la categoria di entità descritta dalla classe. Ogni classe è corredata da un insieme di attributi (che descrivono le caratteristiche o lo stato degli oggetti della classe) e operazioni (che descrivono il comportamento della classe). Il simbolo grafico che rappresenta le classi UML è un rettangolo suddiviso in tre scomparti, rispettivamente dedicati al nome della classe, agli attributi e alle operazioni.
+
+Si possono rappresenatare le classi in vario modo:
+
+1. Una classe senza altri dettagli.
+2. Oppure con attributi e metodi.
+3. Oppure dando ancora più dettagli come public, protect ecc… Con anche dei "static metodi".
+4. Ci possono anche essere metodi astratti.
+5. Se un metodo ha un eccezione si può usare una "throws relazione" in cui si punta alla classe a cui è collegata l'eccezione.
+
+Si può avere  una classe senza altri dettagli. ![08](immagini/lezione-01/08.png)
+
+
 
 
 
