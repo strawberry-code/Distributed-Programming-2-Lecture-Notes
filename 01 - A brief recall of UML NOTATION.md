@@ -76,7 +76,7 @@ Due classi possono essere legate da una relazione di generalizzazione, che indic
 
 
 
-##### Esempio di diagramma
+##### Esempio di diagramma 1
 
 Esempio di *Class Diagram*:
 
@@ -91,6 +91,31 @@ I comportamenti, o **metodi**, compaiono nella parte inferiore del rettangolo e 
 La relazione indica anche una **cardinalità** (i numeri posti vicino alle Classi) del tipo 1 a molti e in questo caso si leggono "ad 1 Cliente corrispondono 1 o n Reclami" e "ad 1 Reclamo corrisponde 1 Cliente".
 
 
+
+##### Esempio di diagramma 2
+
+1. L'ereditarietà:
+
+   In questo caso si ha l'ereditarietà: In questo caso `FileEntry` e `DirectoryEntry` ereditano da `DirectoryComponent` che è una classe astratta. Quindi `disaplay` è astratta sotto `DirectoryComponent`ma è non-astratta in `FileEntry`e `DirectoryEntry`.
+
+2. Aggregation relationship:
+
+   Un altro importante link è "aggregation relationship"  e si va a specificare che `DirecotoryEntry` object include `DirectoryComponent` oggetto. In questo modo si può specificare che dentro a `DirectoryEntry`si ha `DirectoryComponent` reference (link).
+
+3. Navigation relationship: 
+
+   Significa che si navigare da un oggetto di una classe ad un oggetto di un altra classe. In particolare in questo caso da `FileEntry object` a `File obejct`.
+
+4. General relationship:
+
+   In questo caso si può anche mettere un'ettichetta (label) con la loro molteplicità. Ad esempio un `File obejct`ha uno o più `DiskSector object`. E viceversa un `DisckSector object`ha un solo `File object`.
+   In altre parole un `File object` è mappato su uno o più `DiskSector Objcet`mentre un `DisckSector Objcet`è mappato solo su un `File object`.
+
+5. "Use" relationship:
+
+   Esso è un generico link. Quando un metodo sta per qualche motivo fuori dalla classe.
+
+![09](immagini/lezione-01/09.png)
 
 ##### Interfacce
 
