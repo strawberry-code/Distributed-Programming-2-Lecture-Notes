@@ -146,21 +146,20 @@ Quattro grandi argomenti sono necessari per affrontare con serenità questo cors
 
 I principali argomenti inclusi in questo corso sono:
 
-1. il linguaggio **XML** e i relativi strumenti Java per utilizzarlo:
+1. il linguaggio **XML** e i relativi strumenti Java per utilizzarlo o meglio dire frameworks:
 
    1. `JAXP`
    2. `JAXB`
-
 2. conosceremo l'architettura delle applicazioni distribuite nel senso di applicazioni sviluppate secondo i seguenti paradigmi:
 
    1. object-oriented
    2. component-oriented
-   3. service-oriented
-
+   3. service-oriented (soprattutto)
 3. i *Web services* (quelli visti poco fa, **non** le Web applications) e il relativo strumenti per svilupparli, ovvero `JAX-RS`
-
 4. altre cose, come *ant* per il supporto automatizzato dello sviluppo, le *annotazioni Java* e così via...
 
+
+Negli anni passati si vedeva anche sop web-services e rest-full, quest'anno ci concentriamo di più su rest-full perché il trend generale lo usa maggiormente.
 
 ## Esercizi e laboratori
 
