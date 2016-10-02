@@ -15,7 +15,7 @@ Ci sono degli standard che definiscono dei linguaggi che possono essere utilizza
 Le due principali caratteristiche di ciascuno di questi standard sono:
 
 1. essere un linguaggio in grado di definire **tipi di dati astratti**,
-2. **rappresentare i dati in modo neutrale** cioè, come detto, indipendenti dai sistemi con i quali stanno interagendo.
+2. **rappresentare i dati in modo neutrale**  cioè, come detto, indipendenti dai sistemi con i quali stanno interagendo. 
 
 Lo scambio di dati può avvenire, per esempio, tra un server basato su Java Spring e un client basato su JavaScript e i dati sono codificati tramite **JSON**. Tra le due piattaforme ci sarà un minimo di elaborazione per la *codifica/decodifica* di tali dati.
 
@@ -43,6 +43,11 @@ I seguenti standard sono in binary rappresentazione:
 Mentre `XML` e `JSON` sono carattere oriented.
 
 XML è molto più complicato rispetto a JSON.
+
+Alcune volte quando si inviano i dati, non si ricevono i dati veri e propri ma prima si riceve un qualche cosa simile ad un dizionario che ci fa capire come decodificare i dati che ci arriveranno. Questo avviene ad esempio in XDR. Sta di fatto che il ricevente non sa che tipo di dato che arriverà. Quindi non sarebbe in grado di decodificare i dati senza avere prima il modo di farlo.
+Mentre in XML si ha un altro sistema perché si può far in modo che dentro all'informazione c'è anche l'informazione del tipo di dato, quindi chi riceve non ha bisogno di altro, ma deve solo  decodificarla. Questo accade anche per JSON.
+
+
 
 ## XML (eXtensible Markup Language)
 
@@ -102,8 +107,12 @@ Ecco un esempio tipico di file XML, visualizzabile all'interno di un browser qua
 
 Le principali caratteristiche del linguaggio XML possono essere riassunte nei tre seguenti punti:
 
-1. la rappresentazione dei dati è sia *leggibile da un essere umano* sia *leggibile dalla macchina*, il che però, non lo rende ottimale per l'occupazione di memoria e larghezza di banda.
+1. la rappresentazione dei dati è sia *leggibile da un essere umano* sia *leggibile dalla macchina*, il che però, non lo rende ottimale per l'occupazione di memoria e larghezza di banda. Questo è detto come "character-oriented". Essendo che è "character-oriented" ha bisogno di più banda e più memoria per poter trasmettere i dati. 
+
+   Ai giorni nostri si preferice il "character-oriented" perché è più semplice da leggere rispetto al binario e perché c'è molta potenza nei calcolatori e quindi non si deve risparmiare perché di potenza ne abbiamo cosi da avere anche dei meccanismi facili da debbuggare.
+
 2. I dati assumono la forma di *documenti formali*, che ricordano molto i documenti HTML.
+
 3. I dati includono la definizione dei tipi di se stessi, il che è utile, poichè il ricevente non ha bisogno di sapere in anticipo che tipo di dati sta per ricevere.
 
 
