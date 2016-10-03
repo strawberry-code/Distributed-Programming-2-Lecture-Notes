@@ -10,7 +10,7 @@
 4. Sequence Diagrams
 
 
-Questa parte è solo un richiamo per avere la stessa "base"/linguaggio/idea del professore sul UML onde evitare pastici di comprensione in futuro. 
+Questa parte è solo un richiamo per avere la stessa **base**/**linguaggio**/**idea** del professore sull'UML questo per evitare incomprensioni in futuro. 
 
 ## Richiami su UML
 
