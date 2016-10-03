@@ -204,7 +204,7 @@ Nella parte inferiore è riportato un esempio di istanze di due classi diverse, 
 
 Si rammenti che i nomi nelle classi nell'**object diagram** è sempre sottolineato in modo da ricordare che non è una rappresentazione delle classi ma degli oggetti. 
 
-Ad esempio da `d1` si può andare a `d2`ma non viceversa.
+Ad esempio da `d1` si può andare a `d2` ma non viceversa.
 
 1)Rappresenta un oggetto e non una classe. `d1`è il nome dell'ogetto.
 
