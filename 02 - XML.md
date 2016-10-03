@@ -15,7 +15,7 @@ Ci sono degli standard che definiscono dei linguaggi che possono essere utilizza
 Le due principali caratteristiche di ciascuno di questi standard sono:
 
 1. essere un linguaggio in grado di definire **tipi di dati astratti**,
-2. **rappresentare i dati in modo neutrale**  cioè, come detto, indipendenti dai sistemi con i quali stanno interagendo. 
+2. **rappresentare i dati in modo neutrale** cioè, come detto, indipendenti dai sistemi con i quali stanno interagendo. 
 
 Lo scambio di dati può avvenire, per esempio, tra un server basato su Java Spring e un client basato su JavaScript e i dati sono codificati tramite **JSON**. Tra le due piattaforme ci sarà un minimo di elaborazione per la *codifica/decodifica* di tali dati.
 
