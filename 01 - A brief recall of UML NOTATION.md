@@ -154,7 +154,7 @@ Praticamente *tutti gli elementi UML possono essere raggruppati in package*. Cos
 
 ##### Esempio di package:
 
-Dentro al package `Widgets`si ha `Window class`e cosi via.
+Dentro al package `Widgets` c'è la `Window class` e cosi via.
 
  ![11](immagini/lezione-01/11.png)
 
