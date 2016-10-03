@@ -28,6 +28,7 @@ Questo corso sarà orientato vero la parte di _Web application_ focalizzandoci s
 
 Tutto questo tenendo conto degli aspetti della *robustezza*, *sicurezza*, *portabilità* ed *interoperabilità* delle applicazioni che impareremo a sviluppare.
 
+**XML** è uno standard che viene utilizzato per rapresentare i dati sul web (sopratuttto per lo scambio di dati tra piattaforme diverse). Si potrebbe dire che è simile a XDR. XML serve per rappresentare qualsiasi dato e ed è "charater oriented", cioè utilizzeremo solo stringhe.
 
 
 XML è un metodo per rapresentare i dati sul web. Si potrebbe dire che è simile a XDR. XML serve per rappresentare qualsiasi dati e ed è "cariental oriented".
