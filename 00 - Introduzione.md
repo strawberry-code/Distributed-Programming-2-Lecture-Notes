@@ -112,7 +112,7 @@ Quando si parla di **cloud computing** non si deve pensare ai sistemi di calcolo
 
 Nella nuvola si hanno dei server che devono parlare tra di loro per svolgere dei servizi.
 
- ![03](immagini/lezione-00/03.png)Più specificatamente le tecniche che studieremmo in questo corso sono alla base per tutti questi ambienti. 
+ ![03](immagini/lezione-00/03.png)
 
 Nel primo corso avemamo studiato la parte che c'è tra l'omino e la macchina (web-server) tra lasciando ciò che accadeva dietro le quinte.
 
