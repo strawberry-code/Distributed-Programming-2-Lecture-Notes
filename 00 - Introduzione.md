@@ -183,8 +183,6 @@ https://pad.polito.it
 
 
 
-
-
 ## Regole d'esame e assignments
 
 L'esame consiste in tre punti:
