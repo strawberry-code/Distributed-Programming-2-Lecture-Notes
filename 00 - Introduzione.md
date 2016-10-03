@@ -213,8 +213,9 @@ Si può essere ammessi solo se ogni assignment superi almeno i test di base. Si 
 
 Possiamo anche essere esonerati se i laboratori sono molto buoni e molto diversi l'uno dall'altro.
 
-Inoltre per sapere se non dobbiamo andare all'esame finale lo sapremmo solo 1 giorno prima rispetto all'esame stesso. Perché per valutarli deve aspettare che tutti abbiano consegnato e visto che la scadenza è per l'appunto due giorni lavoratori va da se che lo sapremmo solo dopo. Quindi è meglio prepararsi e poi la più non si va perché si ha avuto una buona sorpresa.
+Inoltre per sapere se non dobbiamo andare all'esame finale lo sapremmo solo 1 giorno prima rispetto all'esame stesso. Perché per valutarli deve aspettare che tutti abbiano consegnato e visto che la scadenza è per l'appunto due giorni lavoratori va da se che lo sapremmo solo dopo. Quindi è meglio prepararsi in ogni caso.
 
+C'è un altro modo per essere esonerato dall'esame: fare una tesi o una "tesina" (progetto speciale) tutto relativo al corso. I numeri di progetti sono limitati quindi ci sarà una selezione se ci sono tanti studenti che ne richiedono una.
 
 
 Un altro modo per non sostenere  l'esame è di fare una tesi o una "tesina" (progetto speciale) tutto relativo al corso. I numeri di progetti sono limitati quindi ci sarà una selezione se ci sono tanti studenti che richiedono una.
