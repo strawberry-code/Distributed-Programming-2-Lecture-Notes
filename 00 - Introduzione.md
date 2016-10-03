@@ -24,10 +24,7 @@ In questo corso invece andremmo verso la parte di web-application ma ci si focca
 
 In particolare ci si focalizzerà su tre concetti chiave:
 
-1. conoscere le principali tecniche di sviluppo di software distribuito, cioè **applicazioni B2B** (Business to Business) ossia `machine to machine iteration`  in contraposizione (del primo corso) con con l'iterazione tra utente e machine. In altre parole nel primo corso si aveva una iterazione tra l'utente e le macchine mentre qui si vuole avere come unici attori due  o più macchine.
-
-   E per fare ciò si andrà ad utilizzare XML programming e web service programing.
-2. imparare a programmare utilizzando **XML** e a sviluppare **servizi Web**.
+2. per fare quanto detto nel precedente punto, impareremo l'**XML** e a sviluppare **servizi Web**.
 
 Tutto questo tenendo conto degli aspetti della *robustezza*, *sicurezza*, *portabilità* ed *interoperabilità* delle applicazioni che impareremo a sviluppare.
 
