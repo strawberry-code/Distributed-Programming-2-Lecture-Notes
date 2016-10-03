@@ -211,7 +211,7 @@ Quando si consegnato i laboratori ci sono dei test che vengono fatti in automati
 
 Si può essere ammessi solo se ogni assignment superi almeno i test di base. Si noti che si possono consegnare gli assignment (anche tutti assieme) solo entro due giorni **lavorativi** prima dell'inizio della prova scritta ai LABINF. Quindi, se l'esame è di lunedì, bisogna consegnare gli assignment entro mercoledì! Poiché sabato e domenica non sono due giorni lavorativi.
 
-Possiamo anche essere esonerati se i laboratori sono molto buoni e molto diverrsi l'uno dall'altro.
+Possiamo anche essere esonerati se i laboratori sono molto buoni e molto diversi l'uno dall'altro.
 
 Inoltre per sapere se non dobbiamo andare all'esame finale lo sapremmo solo 1 giorno prima rispetto all'esame stesso. Perché per valutarli deve aspettare che tutti abbiano consegnato e visto che la scadenza è per l'appunto due giorni lavoratori va da se che lo sapremmo solo dopo. Quindi è meglio prepararsi e poi la più non si va perché si ha avuto una buona sorpresa.
 
