@@ -22,7 +22,7 @@ In particolare nel primo corso ci si era posti come obiettivi:
 
 Questo corso sarà orientato vero la parte di _Web application_ focalizzandoci sulle interazioni B2B. I principali concetti chiave di questo corso sono:
 
-In particolare ci si focalizzerà su tre concetti chiave:
+1. conoscere le principali tecniche di sviluppo di software distribuito, cioè **applicazioni B2B** (Business to Business) ossia *machine to machine iteration*  in contraposizione (rispetto a DP1) con con l'iterazione tra utente e servizio web. In DP2 gestiremo le interazioni tra due o più servizi web.
 
 2. per fare quanto detto nel precedente punto, impareremo l'**XML** e a sviluppare **servizi Web**.
 
