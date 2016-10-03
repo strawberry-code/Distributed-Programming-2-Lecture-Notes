@@ -206,7 +206,7 @@ Si rammenti che i nomi nelle classi nell'**object diagram** è sempre sottolinea
 
 Ad esempio da `d1` si può andare a `d2` ma non viceversa.
 
-1)Rappresenta un oggetto e non una classe. `d1`è il nome dell'ogetto.
+1) Rappresenta un oggetto e non una classe. `d1`è il nome dell'ogetto.
 
 2) `DirectoryEntry`è il tipo della classe che appartiene a `d2`.
 
