@@ -20,7 +20,7 @@ In particolare nel primo corso ci si era posti come obiettivi:
 1. `network programming` ossia programmare i socket.
 2. `web application`  ossia siti web.
 
-In questo corso invece andremmo verso la parte di web-application ma ci si foccalizzerà su B2B interazione.
+Questo corso sarà orientato vero la parte di _Web application_ focalizzandoci sulle interazioni B2B. I principali concetti chiave di questo corso sono:
 
 In particolare ci si focalizzerà su tre concetti chiave:
 
