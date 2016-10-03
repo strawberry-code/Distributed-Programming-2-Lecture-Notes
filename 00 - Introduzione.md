@@ -92,14 +92,11 @@ Ci sono due modo di pensare le connessioni tra i vari elementi dell'IoT. Il prim
 
 
 
+Il secondo modo è quello in cui tali elementi comunichino tra di loro in maniera distribuita, con o senza la presenza di un server principale. Questo tende a dare un carattere più indipendente a ciascun dispositivo.
 
-Oppure fare in modo che si parlino a vicenda senza l'intervento di un umano o di un altro computer.
+![02](immagini/lezione-00/02.png)
 
-  ![02](immagini/lezione-00/02.png)
-
-Un altra tecnologia per IoT è IPV6. Quindi ai giorni nostri molte applicazioni hanno la compatibilità con ipv6 o meglio dire si cerca la compatibilità con IpV6 come fa apple.
-
-
+Un altra tecnologia per IoT è **IPv6**. Quindi ai giorni nostri molte applicazioni hanno la compatibilità con questo protocollo anche se non è ancora pienamente sfruttato, le aziende all'avanguardia spingono molto per _"abbandonare"_ IPv4 in favore di IPv6.
 
 #### Che cos'è il cloud computing?
 
