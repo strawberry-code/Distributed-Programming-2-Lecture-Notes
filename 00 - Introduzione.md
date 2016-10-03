@@ -84,9 +84,10 @@ In questo corso studieremo le Web applications? No, quelle le abbiamo già fatte
 
 In questo corso studieremo l'**IoT**? No. Studieremo in modo ragionevolmente approfondito come avvengono alcuen itnerazioni tra i dispositivi coinvolti nell'**IoT** e dal un punto di vista distribuito e non centralizzato.
 
+Ci sono due modo di pensare le connessioni tra i vari elementi dell'IoT. Il primo è quello di connettere i dispositivi tra di loro utilizzando un solo "Web service" centrale o meglio dire un server che fornisca a loro i vari servizi.
 
+![01](immagini/lezione-00/01.png)
 
-Un primo modo per connettere i dispositivi tra di loro è passare per un "service" o meglio dire un server che fornisca a loro un servizio.  ![01](immagini/lezione-00/01.png)
 
 
 
