@@ -46,7 +46,9 @@ Si possono rappresenatare le classi in vario modo:
 4. Ci possono anche essere metodi astratti.
 5. Se un metodo ha un eccezione si può usare una "throws relazione" in cui si punta alla classe a cui è collegata l'eccezione.
 
-Si può avere  una classe senza altri dettagli. ![08](immagini/lezione-01/08.png)
+Si può avere  una classe senza altri dettagli. 
+
+![08](immagini/lezione-01/08.png)
 
 
 
