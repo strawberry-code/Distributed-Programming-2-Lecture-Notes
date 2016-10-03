@@ -247,7 +247,7 @@ Un esempio di sequence diagram:
 
 
 
-In questo diagramma l'omino è semplicemente qualche d'uno che svolge un attività e non deve essere per forza un essere umano. I nomi dentro i rettangoli che  sono sottlienati sono degli oggetti.
+L'omino presente in questo diagramma è semplicemente qualcuno o qualcosa che svolge un attività e non deve essere per necessariamente un essere umano. I nomi dentro i rettangoli che  sono sottlienati sono degli oggetti.
 
 Le liene verticali rappresentano la vita dell'oggetto. In particolare si può vedere come `x:Remote`vive più a lungo di tutti gli altri.
 
