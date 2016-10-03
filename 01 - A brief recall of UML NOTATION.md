@@ -202,7 +202,7 @@ Il diagramma descrive nella parte superiore i diversi modi in cui possono essere
 
 Nella parte inferiore è riportato un esempio di istanze di due classi diverse, la classe Progetto e quella Utente, e la relazione che esiste tra l'istanza Wikipedia e l'istanziazione di tre determinati utenti.
 
-Si rammenti che i nomi nelle classi nel object diagram è sempre sottolineato in modo da riccordare che non è una rappresentazione delle classi ma degli oggetti. 
+Si rammenti che i nomi nelle classi nell'**object diagram** è sempre sottolineato in modo da ricordare che non è una rappresentazione delle classi ma degli oggetti. 
 
 Ad esempio da `d1` si può andare a `d2`ma non viceversa.
 
