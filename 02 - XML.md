@@ -39,7 +39,7 @@ In particolare **XML** e **JSON** sono quelli che attualmente stanno avendo larg
 
 I seguenti standard sono in rappresentazione binaria: `ASN.1`, `XDR`,  `CORBA CDR`.
 
-Mentre `XML` e `JSON` sono carattere oriented.
+Mentre `XML` e `JSON` sono **character oriented**.
 
 XML è molto più complicato rispetto a JSON.
 
