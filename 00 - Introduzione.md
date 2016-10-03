@@ -116,7 +116,7 @@ Nella nuvola si hanno dei server che devono parlare tra di loro per svolgere dei
 
 Più specificatamente, le tecniche che studieremmo in questo corso sono alla base per tutti questi ambienti. 
 
-Qui andremmo a vedere l'iterazione tra i vari server che stanno dietro alle quinte come si può vedere con le freccie rosse nel disegno sotto.  In questo modo ogni server da un contributo diverso ed in più. ![04](immagini/lezione-00/04.png)
+Nel primo corso avevamo studiato la parte che c'è tra l'utente e la macchina (web-server) tra lasciando ciò che accadeva **dietro le quinte** (ovvero B2B).
 
 
 
