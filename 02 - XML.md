@@ -231,8 +231,7 @@ Come si vede dal diagramma si potrebbero avere dei documenti XML non validi per 
 
 Si hanno i tags `<bibliography>` simile all HTML ma la differenza è che in questo caso si può usare qualsiasi tags che si vuole, tuttavia deve essere presente nel DTD che è una sorta di dizionario.
 
-In questo caso dentro a `<bibliography>`si hanno degli elementi:
-` <article>`,`<book>` come se fossimo in una pagina HTLM. E dentro ad ogni tags si hanno altri tags.
+In questo caso, all'interno di `<bibliography>` ci sono altri due elementi:` <article>` e `<book>`, si ha una certa familiarità con le già ben conosciute pagine HTML.
 
 ## Schema concettuale di un documento XML
 
