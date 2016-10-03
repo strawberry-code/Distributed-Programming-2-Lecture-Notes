@@ -227,7 +227,7 @@ Come si vede dal diagramma si potrebbero avere dei documenti XML non validi per 
 
 
 
-Analisi:
+**Analisi**:
 
 Si hanno i tags `<bibliography>` simile all HTML ma la differenza è che in questo caso si può usare qualsiasi tags che si vuole, tuttavia deve essere presente nel DTD che è una sorta di dizionario.
 
