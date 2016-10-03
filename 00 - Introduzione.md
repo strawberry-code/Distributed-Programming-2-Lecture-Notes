@@ -217,10 +217,7 @@ Inoltre per sapere se non dobbiamo andare all'esame finale lo sapremmo solo 1 gi
 
 C'è un altro modo per essere esonerato dall'esame: fare una tesi o una "tesina" (progetto speciale) tutto relativo al corso. I numeri di progetti sono limitati quindi ci sarà una selezione se ci sono tanti studenti che ne richiedono una.
 
-
-Un altro modo per non sostenere  l'esame è di fare una tesi o una "tesina" (progetto speciale) tutto relativo al corso. I numeri di progetti sono limitati quindi ci sarà una selezione se ci sono tanti studenti che richiedono una.
-
-In alcuni casi si può fare un progetto (tesi o tesina) assieme ma solo perché mettendo a ssieme il tutto si ottiene una gorssa cosa quindi è come se ci fossero molte tesi o tesine.
+In alcuni casi si può fare un progetto (tesi o tesina) assieme ma solo perché mettendo assieme il tutto si ottiene una grossa cosa quindi è come se ci fossero molte tesi o tesine.
 
 
 
