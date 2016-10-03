@@ -231,9 +231,7 @@ Fare molta attenzione ai propri elaborati, perchè il docente, con il supporto d
 
 La prova finale è facoltativa. Dipende da come sono stati fatti gli assignments. Se sono di buona qualità non ci sarà bisogno di fare la prova finale e molto diversi dai nostri compagni. Tale prova consiste nello svolgimento di un nuovo assignment più una domanda aperta (relativa ai nostri laboratori su come abbiamo svolto gli  assignmen), il tutto da svolgersi nell'arco di due ore oppure due ore e mezza. Questa prova verrà considerata superata se l'elaborato scritto supererà i test obbligatori. Faremo una simulazione di questa prova verso la fine del corso: è **importante** esserci!
 
-
-
-Per passare la prova scritta si deve passare i test obbligatori se no non si passa la prova. In alcuni casi se non si passa l'esame ma l'errore è cosi piccolo allora il professore potrebbe fare passare l'esame.
+Per passare la prova scritta si devono passare i test obbligatori altrimenti non si supera la prova. In alcuni casi se non si passa l'esame ma l'errore è cosi piccolo allora il professore potrebbe valutare comunque positivamente l'esame.
 
 
 
