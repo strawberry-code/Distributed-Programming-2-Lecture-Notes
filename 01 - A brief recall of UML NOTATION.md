@@ -131,7 +131,7 @@ Le interfacce si identificano nel seguente modo: `<<interface name>>`.
 
 ##### Esempio di interfaccia:
 
-1. In una interfiaccia classe la parte di attributi deve essere vuota. Ma si hanno dei metodi e i metodi devono essere astratti. 
+1. In una classe interfaccia la parte di attributi deve essere vuota, ma si hanno dei metodi dichiarati cioè sono astratti (non implementati). 
 2. Altro modo per rapresentare un interfaccia senza dettagli è usare un cerchietto mettendo solo il nome.
    Quindi le due interfaccie (1 e 2) sono uguali a parte per i metodi che in uno ci sono mentre nell'altro non ci sono.
 3. Questo link è simile all'ereditarietà ma rappresenta una classe che implementa un'interfaccia. Quindi `Bibliography`implementa `BigSearch`. Come per il cerchietto in cui `BigSearch`è attacato alla classe che implementa quella interfaccia. Quindi `Bibliography`implementa `BigSearch`. 
