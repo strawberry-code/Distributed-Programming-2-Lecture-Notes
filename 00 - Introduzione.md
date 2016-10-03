@@ -118,7 +118,9 @@ Più specificatamente, le tecniche che studieremmo in questo corso sono alla bas
 
 Nel primo corso avevamo studiato la parte che c'è tra l'utente e la macchina (web-server) tra lasciando ciò che accadeva **dietro le quinte** (ovvero B2B).
 
+Qui andremmo a vedere l'iterazione tra i vari server che stanno dietro alle quinte come si può vedere con le frecce rosse nel disegno sotto.  In questo modo, ogni server da un contributo diverso ed in più. 
 
+![04](immagini/lezione-00/04.png)
 
 
 
