@@ -261,9 +261,7 @@ Nel punto `3` si vede come un oggetto venga distrutto.
 
 
 
-
-
-## State diagram (Non è stato fatto)
+## State diagram 
 
 Lo State Chart Diagram o Diagramma degli stati è un diagramma previsto dall'UML per descrivere il comportamento di entità o di classi in termini di stato (macchina a stati).
 Il diagramma mostra gli stati che sono assunti dall'entità o dalla classe in risposta ad eventi esterni.
