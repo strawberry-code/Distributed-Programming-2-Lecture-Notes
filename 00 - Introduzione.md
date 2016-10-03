@@ -175,7 +175,7 @@ Una parte dei laboratori sarà tenuta dall'ing. Spinoso, l'altra parte dal prof.
 
 Tutto il materiale utile può essere trovato nella [pagina del corso](https://pad.polito.it:8080/enginframe/dp2/dp2.xml?_uri=//dp2/material). Il corso è anche videoregistrato (sulla nostra pagina personale).
 
-Dentro al campus si deve usare un link:
+Per accedere alla pagina del corso si deve usare il seguente link se si è connessi direttamente alla rete del campus:
 https://pad.polito.it:8080
 
 Fuori dal campus:
