@@ -10,6 +10,7 @@
 4. Sequence Diagrams
 
 
+Questa parte è solo un richiamo per avere la stessa "base"/linguaggio/idea del professore sul UML onde evitare pastici di comprensione in futuro. 
 
 ## Richiami su UML
 
@@ -37,6 +38,18 @@ Uno degli assunti fondamentali del paradigma a oggetti è che il concetto di cla
 
 L'elemento di modello principale dei diagrammi delle classi è la classe. Una classe rappresenta una categoria di entità (istanze), nel caso particolare dette oggetti; il nome della classe indica la categoria di entità descritta dalla classe. Ogni classe è corredata da un insieme di attributi (che descrivono le caratteristiche o lo stato degli oggetti della classe) e operazioni (che descrivono il comportamento della classe). Il simbolo grafico che rappresenta le classi UML è un rettangolo suddiviso in tre scomparti, rispettivamente dedicati al nome della classe, agli attributi e alle operazioni.
 
+Si possono rappresenatare le classi in vario modo:
+
+1. Una classe senza altri dettagli.
+2. Oppure con attributi e metodi.
+3. Oppure dando ancora più dettagli come public, protect ecc… Con anche dei "static metodi".
+4. Ci possono anche essere metodi astratti.
+5. Se un metodo ha un eccezione si può usare una "throws relazione" in cui si punta alla classe a cui è collegata l'eccezione.
+
+Si può avere  una classe senza altri dettagli. ![08](immagini/lezione-01/08.png)
+
+
+
 
 
 ##### Relazione
@@ -63,7 +76,7 @@ Due classi possono essere legate da una relazione di generalizzazione, che indic
 
 
 
-##### Esempio di diagramma
+##### Esempio di diagramma 1
 
 Esempio di *Class Diagram*:
 
@@ -79,6 +92,31 @@ La relazione indica anche una **cardinalità** (i numeri posti vicino alle Class
 
 
 
+##### Esempio di diagramma 2
+
+1. L'ereditarietà:
+
+   In questo caso si ha l'ereditarietà: In questo caso `FileEntry` e `DirectoryEntry` ereditano da `DirectoryComponent` che è una classe astratta. Quindi `disaplay` è astratta sotto `DirectoryComponent`ma è non-astratta in `FileEntry`e `DirectoryEntry`.
+
+2. Aggregation relationship:
+
+   Un altro importante link è "aggregation relationship"  e si va a specificare che `DirecotoryEntry` object include `DirectoryComponent` oggetto. In questo modo si può specificare che dentro a `DirectoryEntry`si ha `DirectoryComponent` reference (link).
+
+3. Navigation relationship: 
+
+   Significa che si navigare da un oggetto di una classe ad un oggetto di un altra classe. In particolare in questo caso da `FileEntry object` a `File obejct`.
+
+4. General relationship:
+
+   In questo caso si può anche mettere un'ettichetta (label) con la loro molteplicità. Ad esempio un `File obejct`ha uno o più `DiskSector object`. E viceversa un `DisckSector object`ha un solo `File object`.
+   In altre parole un `File object` è mappato su uno o più `DiskSector Objcet`mentre un `DisckSector Objcet`è mappato solo su un `File object`.
+
+5. "Use" relationship:
+
+   Esso è un generico link. Quando un metodo sta per qualche motivo fuori dalla classe.
+
+![09](immagini/lezione-01/09.png)
+
 ##### Interfacce
 
 Nel modellamento UML, le interfacce sono elementi di modello che definiscono serie di operazioni che altri elementi, ad esempio le classi, o componenti devono implementare. Un elemento del modello di implementazione realizza un'interfaccia sostituendo ogni operazione dichiarata dall'interfaccia.
@@ -89,6 +127,19 @@ Le interfacce supportano la non visualizzazione di informazioni e la protezione 
 
 Le interfacce si identificano nel seguente modo: `<<interface name>>`.
 
+##### Esempio di interfaccia:
+
+1. In una interfiaccia classe la parte di attributi deve essere vuota. Ma si hanno dei metodi e i metodi devono essere astratti. 
+2. Altro modo per rapresentare un interfaccia senza dettagli è usare un cerchietto mettendo solo il nome.
+   Quindi le due interfaccie (1 e 2) sono uguali a parte per i metodi che in uno ci sono mentre nell'altro non ci sono.
+3. Questo link è simile all'ereditarietà ma rappresenta una classe che implementa un'interfaccia. Quindi `Bibliography`implementa `BigSearch`. Come per il cerchietto in cui `BigSearch`è attacato alla classe che implementa quella interfaccia. Quindi `Bibliography`implementa `BigSearch`. 
+4. In particolare si può vedere come ci siano due cerchietti che sono due interfaccie (`BigSearch`e `Update`) che vengono implementati da `Bibliography`.
+5. Si può anche fare in modo che è possibile specificare che qualche classi usano le interfaccie. O alcune classi chiamano i metodi delle interfaccie. Ad esempio  `SearchRobot class`usa l'interfaccia `BigSearch interface` e quindi `SearchRobot class` può chiamare le operazioni di `searchByTitle()`o altre di quella interfaccia.
+
+
+
+![10](immagini/lezione-01/10.png)
+
 
 
 ## Package Diagrams
@@ -96,6 +147,18 @@ Le interfacce si identificano nel seguente modo: `<<interface name>>`.
 Un package nell'Unified Modeling Language è usato *"per raggruppare elementi e fornire un namespace per gli elementi raggruppati"*. Un package può contenere altri package, fornendo così un'**organizzazione gerarchica** dei package.
 
 Praticamente *tutti gli elementi UML possono essere raggruppati in package*. Così classi, oggetti, use case, componenti, nodi, istanze di nodi, ecc. possono essere tutti organizzati come package, consentendo così una maneggevole organizzazione delle miriadi di elementi che un modello UML comporta.
+
+
+
+##### Esempio di package:
+
+Dentro al package `Widgets`si ha `Window class`e cosi via.
+
+ ![11](immagini/lezione-01/11.png)
+
+
+
+
 
 ##### Utilizzo
 
@@ -137,11 +200,29 @@ Il diagramma descrive nella parte superiore i diversi modi in cui possono essere
 
 Nella parte inferiore è riportato un esempio di istanze di due classi diverse, la classe Progetto e quella Utente, e la relazione che esiste tra l'istanza Wikipedia e l'istanziazione di tre determinati utenti.
 
+Si rammenti che i nomi nelle classi nel object diagram è sempre sottolineato in modo da riccordare che non è una rappresentazione delle classi ma degli oggetti. 
+
+Ad esempio da `d1` si può andare a `d2`ma non viceversa.
+
+1)Rappresenta un oggetto e non una classe. `d1`è il nome dell'ogetto.
+
+2) `DirectoryEntry`è il tipo della classe che appartiene a `d2`.
+
+3)`FileEntry`è la classe dell'ogetto ma non si specifica il nome. Ergo si ha l'oggetto `FileEntry`senza il nome.
+
+4) E' un oggetto remoto.
+
+
+
+![12](immagini/lezione-01/12.png)
+
 
 
 ## Sequence Diagrams
 
 Un **Sequence Diagram** (in italiano: Diagramma di sequenza) è un diagramma previsto dall'UML utilizzato per descrivere uno scenario.
+
+Il diagramma si legge dall'alto verso il basso e da sinistra verso destra insomma come quando si legge.
 
 
 Uno scenario è una determinata sequenza di azioni in cui tutte le scelte sono state già effettuate; in pratica nel diagramma non compaiono scelte, né flussi alternativi.
@@ -164,7 +245,23 @@ Un esempio di sequence diagram:
 
 
 
-## State diagram
+In questo diagramma l'omino è semplicemente qualche d'uno che svolge un attività e non deve essere per forza un essere umano. I nomi dentro i rettangoli che  sono sottlienati sono degli oggetti.
+
+Le liene verticali rappresentano la vita dell'oggetto. In particolare si può vedere come `x:Remote`vive più a lungo di tutti gli altri.
+
+Al punto 1 si vede che quel rettangolo rappresenta l'attività svolta dall'oggetto `Local`.
+
+Inoltre si vede come `getRemoteRef()`venga chiamato come metodo e poi viene ritornato una `x`come valore di ritorno.
+
+Nel punto 2 si vede come la chiamata al metodo è su se stesso. Quindi si chiama un metodo dell'ogetto stesso per ritornare all'oggetto stesso un valore di ritorno.
+
+Nel punto 3 si vede come un oggetto venga distrutto.
+
+
+
+
+
+## State diagram (Non è stato fatto)
 
 Lo State Chart Diagram o Diagramma degli stati è un diagramma previsto dall'UML per descrivere il comportamento di entità o di classi in termini di stato (macchina a stati).
 Il diagramma mostra gli stati che sono assunti dall'entità o dalla classe in risposta ad eventi esterni.

@@ -15,12 +15,27 @@ Il corso viene tenuto dal prof. Riccardo Sisto in collaborazione con l'assistent
 
 L'obiettivo principale del corso è quello di concludere la consocenza degli argomenti trattati nei corsi di *Distributed programming I* e di *Object oriented programming*.
 
+In particolare nel primo corso ci si era posti come obiettivi:
+
+1. `network programming` ossia programmare i socket.
+2. `web application`  ossia siti web.
+
+In questo corso invece andremmo verso la parte di web-application ma ci si foccalizzerà su B2B interazione.
+
 In particolare ci si focalizzerà su tre concetti chiave:
 
-1. conoscere le principali tecniche di sviluppo di software distribuito, cioè **applicazioni B2B** (Business to Business)
+1. conoscere le principali tecniche di sviluppo di software distribuito, cioè **applicazioni B2B** (Business to Business) ossia `machine to machine iteration`  in contraposizione (del primo corso) con con l'iterazione tra utente e machine. In altre parole nel primo corso si aveva una iterazione tra l'utente e le macchine mentre qui si vuole avere come unici attori due  o più macchine.
+
+   E per fare ciò si andrà ad utilizzare XML programming e web service programing.
 2. imparare a programmare utilizzando **XML** e a sviluppare **servizi Web**.
 
 Tutto questo tenendo conto degli aspetti della *robustezza*, *sicurezza*, *portabilità* ed *interoperabilità* delle applicazioni che impareremo a sviluppare.
+
+
+
+XML è un metodo per rapresentare i dati sul web. Si potrebbe dire che è simile a XDR. XML serve per rappresentare qualsiasi dati e ed è "cariental oriented".
+
+Web-service sono i programmi che interagiscono tra di loro nel web e andremmo ad usare il java per fare ciò.
 
 ### Cosa ci sarà di nuovo rispetto al corso di DP1?
 
@@ -76,6 +91,20 @@ In questo corso studieremo l'**IoT**? No. Studieremo in modo ragionevolmente app
 
 
 
+Un primo modo per connettere i dispositivi tra di loro è passare per un "service" o meglio dire un server che fornisca a loro un servizio.  ![01](immagini/lezione-00/01.png)
+
+
+
+
+
+Oppure fare in modo che si parlino a vicenda senza l'intervento di un umano o di un altro computer.
+
+  ![02](immagini/lezione-00/02.png)
+
+Un altra tecnologia per IoT è IPV6. Quindi ai giorni nostri molte applicazioni hanno la compatibilità con ipv6 o meglio dire si cerca la compatibilità con IpV6 come fa apple.
+
+
+
 #### Che cos'è il cloud computing?
 
 > #### Cloud computing
@@ -88,12 +117,26 @@ In questo corso studieremo il **cloud computing**? No. Studieremo i meccanismi i
 
 
 
+Come esempio di cloud computing non si deve solo pensare ad una nuvola che da potenza di calcolo ma anche per mettere i dati con Icloud. Quindi nella nuvola si può anche  virtualizare le cose e poi si accede  tramite intenert. 
+
+Nella nuvola si hanno dei server che devono parlare tra di loro per svolgere dei servizi.
+
+ ![03](immagini/lezione-00/03.png)Più specificatamente le tecniche che studieremmo in questo corso sono alla base per tutti questi ambienti. 
+
+Nel primo corso avemamo studiato la parte che c'è tra l'omino e la macchina (web-server) tra lasciando ciò che accadeva dietro le quinte.
+
+Qui andremmo a vedere l'iterazione tra i vari server che stanno dietro alle quinte come si può vedere con le freccie rosse nel disegno sotto.  In questo modo ogni server da un contributo diverso ed in più. ![04](immagini/lezione-00/04.png)
+
+
+
+
+
 ## Prerequisiti del corso
 
 Quattro grandi argomenti sono necessari per affrontare con serenità questo corso:
 
 - [ ] come funziona un **sistema operativo** e le basi per interagire con esso
-- [ ] le reti telematiche, in particolare è richiesta la conoscenza dei protocolli **TCP/IP** e **HTTP**. Si userà molto il paradigma *restful*, ovvero: GET, UPDATE, DELETE, … .
+- [ ] le reti telematiche, in particolare è richiesta la conoscenza dei protocolli **TCP/IP** e **HTTP** (sapere molto bene http). Si userà molto il paradigma *restful*, ovvero: GET, UPDATE, DELETE, … .
 - [ ] ciò che abbiamo imparato in **DP1**.
 - [ ] infine bisognerà saper usare ragionavolmente bene il linguaggio **Java**.
 
@@ -103,22 +146,20 @@ Quattro grandi argomenti sono necessari per affrontare con serenità questo cors
 
 I principali argomenti inclusi in questo corso sono:
 
-1. il linguaggio **XML** e i relativi strumenti Java per utilizzarlo:
+1. il linguaggio **XML** e i relativi strumenti Java per utilizzarlo o meglio dire frameworks:
 
    1. `JAXP`
    2. `JAXB`
-
 2. conosceremo l'architettura delle applicazioni distribuite nel senso di applicazioni sviluppate secondo i seguenti paradigmi:
 
    1. object-oriented
    2. component-oriented
-   3. service-oriented
-
+   3. service-oriented (soprattutto)
 3. i *Web services* (quelli visti poco fa, **non** le Web applications) e il relativo strumenti per svilupparli, ovvero `JAX-RS`
-
 4. altre cose, come *ant* per il supporto automatizzato dello sviluppo, le *annotazioni Java* e così via...
 
-    
+
+Negli anni passati si vedeva anche sop web-services e rest-full, quest'anno ci concentriamo di più su rest-full perché il trend generale lo usa maggiormente.
 
 ## Esercizi e laboratori
 
@@ -133,11 +174,21 @@ Lo svolgimento dei laboratori si tiene sempre di lunedì ma è diviso in due squ
 
 I laboratori inizieranno già il **10 ottobre 2016**.
 
+Una parte dei laboratori ci sarà la Serena mentre l'altra parte ci sarà Sisto. 
+
 
 
 ## Materiale di supporto
 
-Tutto il materiale utile può essere trovato nella [pagina del corso](https://pad.polito.it:8080/enginframe/dp2/dp2.xml?_uri=//dp2/material). Il corso è anche videoregistrato.
+Tutto il materiale utile può essere trovato nella [pagina del corso](https://pad.polito.it:8080/enginframe/dp2/dp2.xml?_uri=//dp2/material). Il corso è anche videoregistrato (sulla nostra pagina personale).
+
+Dentro al campus si deve usare un link:
+https://pad.polito.it:8080
+
+Fuori dal campus:
+https://pad.polito.it
+
+
 
 
 
@@ -147,21 +198,37 @@ L'esame consiste in tre punti:
 
 1. valutazione degli **assignments**
 2. prova scritta ai LABINF (possibile esonero se gli assignments sono stati svolti brillantemente)
-3. facoltativo un orale finale
+3. facoltativo un orale finale che potrebbe essere chiesto dallo studento (se il voto non è quello che vorebbe avere) o dal professore se ci sono dei dubbi.
 
 
 
 ##### Gli assignments
 
-Ciascun assignment verrà proposto ad ogni laboratorio e dovranno essere consegnati entro una data prestabilita, se qualche assignments verrà consegnato oltre tale data, l'assignment non verrà considerato nella valutazione.
+Ciascun assignment verrà proposto ad ogni laboratorio e dovranno essere consegnati entro una data prestabilita che è relativa all'appello d'esame in cui si vuole passare, se qualche assignments verrà consegnato oltre tale data, l'assignment non verrà considerato nella valutazione.
 
 Inoltre, ogni assignment deve essere svolto individualmente. Se il docente scopre che qualcuno ha copiato o hanno lavorato insieme, verranno **entrambi** segnalati alla commissione disciplinare. Bisogna quindi stare molto attenti anche a far si che la propria soluzione rimanga al sicuro e che nessuno ce la copi.
+
+La data di consegna di solito sono due giorni lavorativi prima dell'esame in cui si vuole sostenere.
+
+Si consegnano gli assegnaments come quando di faceva DP1 con il sito.
+
+Quando si consegnato i laboratori ci sono dei test che vengono fatti in automatico dal sistema e il laboratorio deve passare i mandatory test. Se non gli passa allora si deve ri-caricare il laboratorio con le opportune modifiche. Ci sarà anche la possibilità di provare i nostri laboratori in locale, tuttavia è buona norma mandare i laboratori non all'ultima ora ma ben prima in modo da verificare e corregere eventuali errori se non passa i tests.
 
 
 
 ##### Ammissione al test finale
 
 Si può essere ammessi solo se ogni assignment superi almeno i test di base. Si noti che si possono consegnare gli assignment (anche tutti assieme) solo entro due giorni **lavorativi** prima dell'inizio della prova scritta ai LABINF. Quindi, se l'esame è di lunedì, bisogna consegnare gli assignment entro mercoledì! Poiché sabato e domenica non sono due giorni lavorativi.
+
+Possiamo anche essere esonerati se i laboratori sono molto buoni e molto diverrsi l'uno dall'altro.
+
+Inoltre per sapere se non dobbiamo andare all'esame finale lo sapremmo solo 1 giorno prima rispetto all'esame stesso. Perché per valutarli deve aspettare che tutti abbiano consegnato e visto che la scadenza è per l'appunto due giorni lavoratori va da se che lo sapremmo solo dopo. Quindi è meglio prepararsi e poi la più non si va perché si ha avuto una buona sorpresa.
+
+
+
+Un altro modo per non sostenere  l'esame è di fare una tesi o una "tesina" (progetto speciale) tutto relativo al corso. I numeri di progetti sono limitati quindi ci sarà una selezione se ci sono tanti studenti che richiedono una.
+
+In alcuni casi si può fare un progetto (tesi o tesina) assieme ma solo perché mettendo a ssieme il tutto si ottiene una gorssa cosa quindi è come se ci fossero molte tesi o tesine.
 
 
 
@@ -173,7 +240,11 @@ Fare molta attenzione ai propri elaborati, perchè il docente, con il supporto d
 
 ##### La prova scritta ai LABINF
 
-La prova finale è facoltativa. Dipende da come sono stati fatti gli assignments. Se sono di buona qualità non ci sarà bisogno di fare la prova finale. Tale prova consiste nello svolgimento di un nuovo assignment più una domanda aperta, il tutto da svolgersi nell'arco di due ore oppure due ore e mezza. Questa prova verrà considerata superata se l'elaborato scritto supererà i test obbligatori. Faremo una simulazione di questa prova verso la fine del corso: è **importante** esserci!
+La prova finale è facoltativa. Dipende da come sono stati fatti gli assignments. Se sono di buona qualità non ci sarà bisogno di fare la prova finale e molto diversi dai nostri compagni. Tale prova consiste nello svolgimento di un nuovo assignment più una domanda aperta (relativa ai nostri laboratori su come abbiamo svolto gli  assignmen), il tutto da svolgersi nell'arco di due ore oppure due ore e mezza. Questa prova verrà considerata superata se l'elaborato scritto supererà i test obbligatori. Faremo una simulazione di questa prova verso la fine del corso: è **importante** esserci!
+
+
+
+Per passare la prova scritta si deve passare i test obbligatori se no non si passa la prova. In alcuni casi se non si passa l'esame ma l'errore è cosi piccolo allora il professore potrebbe fare passare l'esame.
 
 
 
@@ -181,9 +252,15 @@ La prova finale è facoltativa. Dipende da come sono stati fatti gli assignments
 
 I punti assegnati verranno calcolati nel seguente modo:
 
-- gli assignment verranno valutati con un punteggio minimo di 16 e un massimo di 20 punti,
+- gli assignment verranno valutati con un punteggio minimo di 16 (solo se si passa  i test obbligatori) e un massimo di 20 punti (se si passa anche i test non obbligatori quindi extra-test),
 - la prova scritta ha un range da 0 a 6 punti,
 - la domanda aperta vale da 0 a 4 punti.
+
+
+
+Il professore ci darà un voto finale se ci piace bene se no in casi speciali si può richiedere un orale.
+
+Durante l'orale può chiedere delle cose e andranno ad influire sulla notazione finale sia in positivo sia in negativo.
 
 Per avere la lode è necessario fare l'orale.
 
