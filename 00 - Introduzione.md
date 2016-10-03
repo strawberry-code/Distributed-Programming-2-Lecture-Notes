@@ -108,9 +108,7 @@ Un altra tecnologia per IoT è **IPv6**. Quindi ai giorni nostri molte applicazi
 
 In questo corso studieremo il **cloud computing**? No. Studieremo i meccanismi interni ai sistemi basati sul cloud, ovvero apriremo la nuvola e guarderemo com'è fatta dentro.
 
-
-
-Come esempio di cloud computing non si deve solo pensare ad una nuvola che da potenza di calcolo ma anche per mettere i dati con Icloud. Quindi nella nuvola si può anche  virtualizare le cose e poi si accede  tramite intenert. 
+Quando si parla di **cloud computing** non si deve pensare ai sistemi di calcolo distribuito, per esempio servizi che forniscono potenza di calcolo, infatti, la maggior parte dei servizi di _cloud computing_ sono basati sulla **condivisione** dei dati, buona parte sull'offerta di servizi (si pensi a _GitHub_, _Trello_, _Zapier_ e via dicendo). Quindi nella _"nuvola"_ si può trovare (per così dire) _di tutto_, il fattore caratterizzante del cloud computing è che è accessibile attraverso _Internet_. 
 
 Nella nuvola si hanno dei server che devono parlare tra di loro per svolgere dei servizi.
 
