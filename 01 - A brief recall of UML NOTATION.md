@@ -133,7 +133,7 @@ Le interfacce si identificano nel seguente modo: `<<interface name>>`.
 
 1. In una classe interfaccia la parte di attributi deve essere vuota, ma si hanno dei metodi dichiarati cioè sono astratti (non implementati). 
 2. Altro modo per rapresentare un interfaccia senza dettagli è usare un cerchietto mettendo solo il nome.
-   Quindi le due interfaccie (1 e 2) sono uguali a parte per i metodi che in uno ci sono mentre nell'altro non ci sono.
+   Quindi le due interfacce (1 e 2) sono uguali a parte per i metodi che in uno ci sono mentre nell'altro non ci sono.
 3. Questo link è simile all'ereditarietà ma rappresenta una classe che implementa un'interfaccia. Quindi `Bibliography`implementa `BigSearch`. Come per il cerchietto in cui `BigSearch`è attacato alla classe che implementa quella interfaccia. Quindi `Bibliography`implementa `BigSearch`. 
 4. In particolare si può vedere come ci siano due cerchietti che sono due interfaccie (`BigSearch`e `Update`) che vengono implementati da `Bibliography`.
 5. Si può anche fare in modo che è possibile specificare che qualche classi usano le interfaccie. O alcune classi chiamano i metodi delle interfaccie. Ad esempio  `SearchRobot class`usa l'interfaccia `BigSearch interface` e quindi `SearchRobot class` può chiamare le operazioni di `searchByTitle()`o altre di quella interfaccia.
