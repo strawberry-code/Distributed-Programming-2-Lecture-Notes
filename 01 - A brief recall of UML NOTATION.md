@@ -251,7 +251,7 @@ L'omino presente in questo diagramma è semplicemente qualcuno o qualcosa che sv
 
 Le linee verticali rappresentano la vita dell'oggetto. In particolare si può vedere come `x:Remote` vive più a lungo di tutti gli altri.
 
-Al punto 1 si vede che quel rettangolo rappresenta l'attività svolta dall'oggetto `Local`.
+Al punto `1` si vede che quel rettangolo rappresenta l'attività svolta dall'oggetto `Local`.
 
 Inoltre si vede come `getRemoteRef()`venga chiamato come metodo e poi viene ritornato una `x`come valore di ritorno.
 
