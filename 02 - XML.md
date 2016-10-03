@@ -37,8 +37,7 @@ Di questi standard citiamo:
 
 In particolare **XML** e **JSON** sono quelli che attualmente stanno avendo larga diffusione e grande popolarità.
 
-I seguenti standard sono in binary rappresentazione:
-`ASN.1`, `XDR`,  `CORBA CDR`
+I seguenti standard sono in rappresentazione binaria: `ASN.1`, `XDR`,  `CORBA CDR`.
 
 Mentre `XML` e `JSON` sono carattere oriented.
 
