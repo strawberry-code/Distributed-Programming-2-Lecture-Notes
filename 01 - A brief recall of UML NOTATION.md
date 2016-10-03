@@ -210,7 +210,7 @@ Ad esempio da `d1` si può andare a `d2` ma non viceversa.
 
 2) `DirectoryEntry` è il tipo della classe che appartiene a `d2`.
 
-3)`FileEntry`è la classe dell'ogetto ma non si specifica il nome. Ergo si ha l'oggetto `FileEntry`senza il nome.
+3) `FileEntry` è la classe dell'oggetto ma non si specifica il nome. Ergo si ha l'oggetto `FileEntry` senza il nome.
 
 4) E' un oggetto remoto.
 
