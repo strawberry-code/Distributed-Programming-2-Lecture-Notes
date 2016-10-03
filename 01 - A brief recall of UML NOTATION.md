@@ -255,7 +255,7 @@ Al punto `1` si vede che quel rettangolo rappresenta l'attività svolta dall'ogg
 
 Inoltre si vede come `getRemoteRef()`venga chiamato come metodo e poi viene ritornato una `x`come valore di ritorno.
 
-Nel punto 2 si vede come la chiamata al metodo è su se stesso. Quindi si chiama un metodo dell'ogetto stesso per ritornare all'oggetto stesso un valore di ritorno.
+Nel punto `2` si vede come la chiamata al metodo è su se stesso. Quindi si chiama un metodo dell'ogetto stesso per ritornare all'oggetto stesso un valore di ritorno.
 
 Nel punto 3 si vede come un oggetto venga distrutto.
 
