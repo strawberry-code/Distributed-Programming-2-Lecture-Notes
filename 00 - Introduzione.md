@@ -167,7 +167,7 @@ Lo svolgimento dei laboratori si tiene sempre di lunedì ma è diviso in due squ
 
 I laboratori inizieranno già il **10 ottobre 2016**.
 
-Una parte dei laboratori ci sarà la Serena mentre l'altra parte ci sarà Sisto. 
+Una parte dei laboratori sarà tenuta dall'ing. Spinoso, l'altra parte dal prof. Sisto. 
 
 
 
