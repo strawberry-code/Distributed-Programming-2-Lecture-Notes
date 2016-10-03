@@ -203,7 +203,7 @@ La data di consegna di solito sono due giorni lavorativi prima dell'esame in cui
 
 Si consegnano gli assegnaments come quando di faceva DP1 con il sito.
 
-Quando si consegnato i laboratori ci sono dei test che vengono fatti in automatico dal sistema e il laboratorio deve passare i mandatory test. Se non gli passa allora si deve ri-caricare il laboratorio con le opportune modifiche. Ci sarà anche la possibilità di provare i nostri laboratori in locale, tuttavia è buona norma mandare i laboratori non all'ultima ora ma ben prima in modo da verificare e corregere eventuali errori se non passa i tests.
+Quando si consegnato i laboratori ci sono dei test che vengono fatti in automatico dal sistema e il laboratorio deve passare i mandatory test. Se quest'ultimi non venissero superati allora si deve ricaricare il laboratorio con le opportune modifiche. Ci sarà anche la possibilità di provare i nostri laboratori in locale, tuttavia è buona norma mandare i laboratori non all'ultima ora ma ben prima in modo da verificare e correggere eventuali errori se non passa i tests.
 
 
 
