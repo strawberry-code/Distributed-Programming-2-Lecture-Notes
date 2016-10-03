@@ -259,7 +259,7 @@ Per avere la lode è necessario fare l'orale.
   - [email](riccardo.sisto@polito.it)
   - telefono ufficio: 011 090 7073
   - riceve su appuntamento
-- Ing. Serena Spinoso
+- ing. Serena Spinoso
   - [email](serena.spinoso@polito.it)
   - telefono ufficio: 011 090 7098
   - riceve su appuntamento
