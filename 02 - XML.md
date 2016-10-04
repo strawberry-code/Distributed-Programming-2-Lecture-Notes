@@ -233,6 +233,14 @@ Si hanno i tags `<bibliography>` simile all HTML ma la differenza è che in ques
 
 In questo caso, all'interno di `<bibliography>` ci sono altri due elementi:` <article>` e `<book>`, si ha una certa familiarità con le già ben conosciute pagine HTML.
 
+Con XML l'utente può creare dei tags `<article>` di sua immaginazione non come accade invece per html che si doveva seguire uno standard.
+
+Inoltre ci sono degli atributi quali ad esempio: `volume`ai quali viene assoaciato un dato. 
+
+**Esempio**:
+
+![15](immagini/lezione-02/15.png)
+
 ## Schema concettuale di un documento XML
 
 Un **documento XML** include due aspetti:
@@ -265,13 +273,21 @@ La struttura di un documento XML è piuttosto semplice: ogni *nodo* o *sotto alb
 
 Un documento XML può contenere anche altre componenti, quali:
 
-- **dichiarazioni**, ad esempio: `<!DOCTYPE simple SYSTEM “simple.dtd”>` 
-- **istruzioni di processing**
-- **commenti**, ad esempio. `<!-- Questo è un commento -->`
+- **dichiarazioni**, ad esempio: `<!DOCTYPE simple SYSTEM “simple.dtd”>`  può essere inclusa.
+- **istruzioni di processing** per processare i dati simile al html.
+- **commenti**, ad esempio. `<!-- Questo è un commento -->` nello stesso formato del html.
 
 La corrispondente rappresentazione concettuale di tale documento è:
 
 ![](immagini/lezione-02/02.png)
+
+
+
+Inoltre un documento XML ha un'organizazione fisica e logica. E sono in qualche modo collegate.
+
+**Logica vista:**
+
+Ogni documento parte da un nodo chiamato **root**. Quindi si ha una root, poi ogni nodo ha degli attributi. Il dato finale è associato sia all **atributo** che al **nodo**.
 
 
 
@@ -304,6 +320,19 @@ Il principio di ogni documento XML è che i **dati** sono una sequenza di caratt
 - una dichiarazione DTD
 - una dichiarazione XML
 - una istruzione di processing
+
+
+
+
+**Esempio**
+
+ ![16](immagini/lezione-02/16.png)
+
+
+
+**Analisi**
+
+La bliografia contine un articolo il quale contiene degli attori, un titilo e un giornale. Quest'ultimo il giornale ha dei attributi che sono associati a dei dati.
 
 
 
