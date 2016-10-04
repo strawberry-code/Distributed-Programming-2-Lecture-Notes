@@ -693,19 +693,17 @@ Passo 1: Creare un albero
 
 
 
-Passo 2: Mettere la molteplicità
-
- ![19](immagini/lezione-02/19.png)
+Passo 2: Mettere la molteplicità![19](immagini/lezione-02/19.png)
 
 
 
-Passo 3: Decidere se sono elementi o attributi
+Passo 3: Decidere se sono elementi o attributi ![20](immagini/lezione-02/20.png)
 
 
 
+Passo 4: Decidere il tipo se è un ID o altro ad esempio.
 
-
-
+Passo 5: Scrivere il file se guendo il disegno:
 
 ```
 <!DOCTYPE data_bank_account [
