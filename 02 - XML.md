@@ -741,6 +741,12 @@ La seguente figura mostra lo schema _generico_ di elaborazione di un documento X
 
 ![](immagini/lezione-02/05.png)
 
+Di solito si legge e si scrive un XML document per passarsi delle informazioni. Per fare ciò si ha un XML processor esso può essere ad esempio una libreria. Inoltre offrono sia la parte di lettura che di scrittura dei dati. Per lettura si intende quando si decodifica un XML ossia si estrae le informazioni. Mentre per scrittura si intende quando si serializa le informazioni.
+
+Quindi si ha che il file XML arriva al processore XML e viene decodificato e passato all API che lo passa all'aplicazione.
+
+Se XML document non è valido allora di solito viene scartato. In questo caso (nella figura) si genera un error-message.
+
 Le API sono importanti, perché vengono fornite dal sistema che sta utilizzando in quel momento l'XML. Per esempio, un server scritto in Java fornisce API diverse da un client che vuol tradurre l'XML in DOM magari scirtto in un altro linguaggio.
 
 Ci sono due tipi di **XML processors**:
@@ -749,6 +755,22 @@ Ci sono due tipi di **XML processors**:
 - _validating processor_ controlla sia la corretta forma del documentosia la sua validità interna.
 
 Il tool **msxml** è un esempio di *non validating processor*, mentre **JAXP** è un esempio di *validating processor*.
+
+Ogni browser ha un processor XML per poter visualizare qualche cosa di carino. Inoltre se ci sono degli errori potrebbe comunicarceli e via discorendo.
+
+Come sempio di applicazione si guardi le due figure successive:
+
+ ![24](immagini/lezione-02/24.png)
+
+ma si può contrare:
+
+ ![25](immagini/lezione-02/25.png)
+
+
+
+Questo perché il browser non solamente ha un parser ma ha anche un applicazione che capisce e ci va vedere qualche cosa di più carino.
+
+
 
 #### SAX parsing
 
