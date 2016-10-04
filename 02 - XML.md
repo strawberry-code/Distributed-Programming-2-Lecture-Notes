@@ -523,6 +523,10 @@ La **molteplicità** può essere specificata usando gli operatori con la notazio
 
 
 
+
+Inoltre si possono usare le parentesi per ragruppare in sotto gruppi e fare cose più complesse.
+
+
 ### Esempi di modelli di elementi
 
 Un esempio di DTD che utilizza modelli semplici:
@@ -536,13 +540,19 @@ Un esempio di DTD che utilizza modelli semplici:
 <!ELEMENT dessert EMPTY>
 ```
 
-L'elemento `course` può essere uno o più dei tre specificati. Mentre l'elemento `meal` può essere presente 0, 1, 2, 3… volte e così via.
+L'elemento `course` può essere uno o più dei tre specificati (ossia può essere `first`o `second`o `dessert`). Mentre l'elemento `meal` può essere presente 0, 1, 2, 3… volte e così via.
+
+L'elemento ha senso dichiararlo vuoto quando si associa l'informazione all'attributo. Quindi si ha un elemento vuoto ma esso è un attributo. 
 
 Questo è un esempio di DTD in cui c'è un elemento con modelli composti:
 
 ```
 <!ELEMENT laboratory ( name, location, secretary?, (technician|operator)+)>
 ```
+
+L'elemento `laboratory`include una senquenza di elementi: `name`element, ecc..
+
+Ossia
 
 L'elemento `laboratory` ha una sequenza di attributi, dei quali `secretary` è opzionale e può avere uno o più tra `technician`oppure `operator`. In altre parole, nel linguaggio umano, diremmo:
 
@@ -552,7 +562,7 @@ L'elemento `laboratory` ha una sequenza di attributi, dei quali `secretary` è o
 
 ### Mixed models
 
-Nei modelli misti, possono essere specificati solo i nomi degli elementi ammessi ma non viene specificato nulla circa il loro ordine (non sequenzialità) e sulla loro molteplicità. Per cui, l'unica forma ammessa nei **mixed models** è la seguente:
+Nei modelli misti, possono essere specificati solo i nomi degli elementi ammessi ma non viene specificato nulla circa il loro ordine (non sequenzialità) e sulla loro molteplicità e questo è un limite per i DTD. Per cui, l'unica forma ammessa nei **mixed models** è la seguente:
 
 ```xml
 (#PCDATA | name1 | name2)*
@@ -567,6 +577,8 @@ Nei modelli misti, possono essere specificati solo i nomi degli elementi ammessi
 ```
 
 
+
+`#PCDATA` significa che è possibile usare qualsiasi dato.
 
 ### Dichiarazione di attributi
 
