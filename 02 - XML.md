@@ -660,6 +660,7 @@ Dunque, secondo questo schema, potrei scrivere:
 
 - ```<course code="A10" name="spaghetti">```
 - ``````<course code="A10" double="yes">```
+- `double`è assente quindi viene preso il valore di defualt che in questo caso è "no".
 
 invece non sarebbero validi, per esempio, le seguenti dichiarazioni:
 
