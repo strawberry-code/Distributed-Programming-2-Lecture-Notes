@@ -15,7 +15,7 @@ Ci sono degli standard che definiscono dei linguaggi che possono essere utilizza
 Le due principali caratteristiche di ciascuno di questi standard sono:
 
 1. essere un linguaggio in grado di definire **tipi di dati astratti**,
-2. **rappresentare i dati in modo neutrale** cioè, come detto, indipendenti dai sistemi con i quali stanno interagendo. 
+2. **rappresentare i dati in modo neutrale**  cioè, come detto, indipendenti dai sistemi con i quali stanno interagendo. 
 
 Lo scambio di dati può avvenire, per esempio, tra un server basato su Java Spring e un client basato su JavaScript e i dati sono codificati tramite **JSON**. Tra le due piattaforme ci sarà un minimo di elaborazione per la *codifica/decodifica* di tali dati.
 
@@ -25,7 +25,7 @@ Di questi standard citiamo:
 
 - **XDR** - Sviluppato nella metà del 1980 da Sun Microsystems e pubblicato per la prima volta nel 1987. È diventato uno standard IEFT nel 1995.
 
-- **CORBA CDR** - Common Data Representation (CDR) viene utilizzato per rappresentare dati strutturati o primitivi che vengono passati come argomenti o come valori di ritorno durante le invocazioni remote negli oggetti distribuiti CORBA (Common Object Request Broker Architecture). Ora non è cosi tanto popolare.
+- **COBRA CDR** - Common Data Representation (CDR) viene utilizzato per rappresentare dati strutturati o primitivi che vengono passati come argomenti o come valori di ritorno durante le invocazioni remote negli oggetti distribuiti CORBA (Common Object Request Broker Architecture). Ora non è cosi tanto popolare.
 
   Permette la comunicazione tra client e server che sonos tati scritti in linguaggi differenti tra loro. Per esempio, può tradurre in little-endian in big-endian e viceversa. 
 
@@ -37,9 +37,10 @@ Di questi standard citiamo:
 
 In particolare **XML** e **JSON** sono quelli che attualmente stanno avendo larga diffusione e grande popolarità.
 
-I seguenti standard sono in rappresentazione binaria: `ASN.1`, `XDR`,  `CORBA CDR`.
+I seguenti standard sono in binary rappresentazione:
+`ASN.1`, `XDR`,  `CORBA CDR`
 
-Mentre `XML` e `JSON` sono **character oriented**.
+Mentre `XML` e `JSON` sono carattere oriented.
 
 XML è molto più complicato rispetto a JSON.
 
@@ -227,11 +228,12 @@ Come si vede dal diagramma si potrebbero avere dei documenti XML non validi per 
 
 
 
-**Analisi**:
+Analisi:
 
 Si hanno i tags `<bibliography>` simile all HTML ma la differenza è che in questo caso si può usare qualsiasi tags che si vuole, tuttavia deve essere presente nel DTD che è una sorta di dizionario.
 
-In questo caso, all'interno di `<bibliography>` ci sono altri due elementi:` <article>` e `<book>`, si ha una certa familiarità con le già ben conosciute pagine HTML.
+In questo caso dentro a `<bibliography>`si hanno degli elementi:
+` <article>`,`<book>` come se fossimo in una pagina HTLM. E dentro ad ogni tags si hanno altri tags.
 
 ## Schema concettuale di un documento XML
 
