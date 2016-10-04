@@ -342,7 +342,7 @@ La bliografia contine un articolo il quale contiene degli attori, un titilo e un
 
 #### Le dichiarazioni XML
 
-Tutti i documenti xml iniziano con un prologo che contiene la dichiarazione xml, la Document Type Declaration che contiene la definizione del Document Model (se si vuole ottenere un documento valido oltre che ben formato) ed un set di dichiarazioni, a questi segue l’elemento radice del documento.
+Tutti i documenti xml iniziano con un prologo (che non è obbligatorio) che contiene la dichiarazione xml, la Document Type Declaration che contiene la definizione del Document Model (se si vuole ottenere un documento valido oltre che ben formato) ed un set di dichiarazioni, a questi segue l’elemento radice del documento.
 
 La dichiarazione xml rispetta la seguente sintassi:
 
@@ -405,6 +405,29 @@ Qualsiasi linguaggio di markup che viene creato utilizzando delle regole xml cos
 ## DTD
 
 Il DTD è una sequenza di regole che descrivono componenti come _elementi_, _dichiarazioni_ e _dichiarazioni di attributi_. Le regole, come già detto, seguono la sintassi SGML con alcune restrizioni ed anche delle estensioni.
+
+Un file DTD inizia con `<!DOCTYPE name DTD>` In questo caso si sta dicendo che il documento è un DTD e la root è  `name`  quindi ad esempio:
+`<!DOCTYPE simple SYSTEM “simple.dtd”>` si vuole dire che la root si chiama `simple`e che si ha un esterna definizione  e la parola `SYSTEM` significa `private` ossia non è in dominio publico e di solito si usa la parole `system` quando si vuole fare riferimento a documenti DTD che sono in locale, quindi la ULR per quel file non è una URL pubblica.
+
+Se invece il DTD è pubblico si deve usare la parola `PUBLIC` come in questo caso:
+`<!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01//EN” “http://www.w3.org/TR/html4/strict.dtd”>`
+
+E quindi i può inoltre inserire una riga per dichiarare a che cosa si riferisce il documento:
+`<!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01//EN” “http://www.w3.org/TR/html4/strict.dtd”>`
+
+Le due stringe significano respitivamente:
+
+1) `“-//W3C//DTD HTML 4.01//EN”` è il nome pubblico del DTD.
+
+2) `“http://www.w3.org/TR/html4/strict.dtd”`è la URL di dove si trova il file.
+
+Un altro modo è di avere un interna definizione. Ossia il DTD text è incluso dentro al DOCTYPE tag:
+`<!DOCTYPE simple [ <!ELEMENT item (#PCDATA)>]> >`
+
+E c'è una sola regola che specifica il DTD ossia:
+`<!ELEMENT item (#PCDATA)>`
+
+
 
 
 
