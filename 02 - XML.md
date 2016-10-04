@@ -297,6 +297,8 @@ I documenti XML vengono distribuiti sotto forma di files chiamati **entità** (*
 
 Per semplicità in questo corso considereremo solo entità semplici e indipendenti.
 
+In altre parole se il documento è memorizzato in più files allora l'organizazione logica ha una singola root con un singolo albero. Ma i dati vengono seperati in più files (pysical files). Questi files vengono chiamati **entity**. Quindi si ha un main entity (chiamato document entity) che punta ad altre entità in file separati. 
+
 
 
 ### Sintassi generale di un documento XML
