@@ -715,6 +715,24 @@ Passo 5: Scrivere il file se guendo il disegno:
 
 
 
+Se si prende un file XML e lo si mette in un browser (come ad esempio firefox) non si vedrà il file cosi com'è ma bensi un file strutturato dall'applicazione:
+
+ ![21](immagini/lezione-02/21.png)
+
+
+
+Il file DTD della figura sopra:
+
+
+
+ ![22](immagini/lezione-02/22.png)
+
+
+
+Da notare che `<holder name=… />`che `holder`finisce per un `/`quindi è un empty element. E dentro ad esso non c'è nulla a parte gli attributi.
+
+
+
 ## Come viene processato un documento XML?
 
 La seguente figura mostra lo schema _generico_ di elaborazione di un documento XML:
