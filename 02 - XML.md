@@ -772,6 +772,22 @@ Questo perché il browser non solamente ha un parser ma ha anche un applicazione
 
 
 
+Si può vedere il codice sorgente in questo modo:
+
+ ![26](immagini/lezione-02/26.png)
+
+
+
+codice sorgente:
+
+ ![27](immagini/lezione-02/27.png)
+
+
+
+In questo caso non ci sono particolari informazioni per la visualizazione (esempio il colore) quindi è il browser che per sua bontà ci fa vedere qualche colore.
+
+Tuttavia si vede come c'è sia il DTD del documento che il documento in se.
+
 #### SAX parsing
 
 SAX è un'API di basso livello il cui principale punto di forza è l'efficienza.
