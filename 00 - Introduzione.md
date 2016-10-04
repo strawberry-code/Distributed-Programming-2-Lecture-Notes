@@ -20,22 +20,17 @@ In particolare nel primo corso ci si era posti come obiettivi:
 1. `network programming` ossia programmare i socket.
 2. `web application`  ossia siti web.
 
-In questo corso invece andremmo verso la parte di web-application ma ci si foccalizzerà su B2B interazione.
+Questo corso sarà orientato vero la parte di _Web application_ focalizzandoci sulle interazioni B2B. I principali concetti chiave di questo corso sono:
 
-In particolare ci si focalizzerà su tre concetti chiave:
+1. conoscere le principali tecniche di sviluppo di software distribuito, cioè **applicazioni B2B** (Business to Business) ossia *machine to machine iteration*  in contraposizione (rispetto a DP1) con con l'iterazione tra utente e servizio web. In DP2 gestiremo le interazioni tra due o più servizi web.
 
-1. conoscere le principali tecniche di sviluppo di software distribuito, cioè **applicazioni B2B** (Business to Business) ossia `machine to machine iteration`  in contraposizione (del primo corso) con con l'iterazione tra utente e machine. In altre parole nel primo corso si aveva una iterazione tra l'utente e le macchine mentre qui si vuole avere come unici attori due  o più macchine.
-
-   E per fare ciò si andrà ad utilizzare XML programming e web service programing.
-2. imparare a programmare utilizzando **XML** e a sviluppare **servizi Web**.
+2. per fare quanto detto nel precedente punto, impareremo l'**XML** e a sviluppare **servizi Web**.
 
 Tutto questo tenendo conto degli aspetti della *robustezza*, *sicurezza*, *portabilità* ed *interoperabilità* delle applicazioni che impareremo a sviluppare.
 
+**XML** è uno standard che viene utilizzato per rapresentare i dati sul web (sopratuttto per lo scambio di dati tra piattaforme diverse). Si potrebbe dire che è simile a XDR. XML serve per rappresentare qualsiasi dato e ed è "charater oriented", cioè utilizzeremo solo stringhe.
 
-
-XML è un metodo per rapresentare i dati sul web. Si potrebbe dire che è simile a XDR. XML serve per rappresentare qualsiasi dati e ed è "cariental oriented".
-
-Web-service sono i programmi che interagiscono tra di loro nel web e andremmo ad usare il java per fare ciò.
+I **servizi Web** sono quei programmi (o daemons) che interagiscono tra di loro nel web, per svilupparli in questo corso utilizzeremo il linguaggio Java.
 
 ### Cosa ci sarà di nuovo rispetto al corso di DP1?
 
@@ -89,21 +84,19 @@ In questo corso studieremo le Web applications? No, quelle le abbiamo già fatte
 
 In questo corso studieremo l'**IoT**? No. Studieremo in modo ragionevolmente approfondito come avvengono alcuen itnerazioni tra i dispositivi coinvolti nell'**IoT** e dal un punto di vista distribuito e non centralizzato.
 
+Ci sono due modo di pensare le connessioni tra i vari elementi dell'IoT. Il primo è quello di connettere i dispositivi tra di loro utilizzando un solo "Web service" centrale o meglio dire un server che fornisca a loro i vari servizi.
+
+![01](immagini/lezione-00/01.png)
 
 
-Un primo modo per connettere i dispositivi tra di loro è passare per un "service" o meglio dire un server che fornisca a loro un servizio.  ![01](immagini/lezione-00/01.png)
 
 
 
+Il secondo modo è quello in cui tali elementi comunichino tra di loro in maniera distribuita, con o senza la presenza di un server principale. Questo tende a dare un carattere più indipendente a ciascun dispositivo.
 
+![02](immagini/lezione-00/02.png)
 
-Oppure fare in modo che si parlino a vicenda senza l'intervento di un umano o di un altro computer.
-
-  ![02](immagini/lezione-00/02.png)
-
-Un altra tecnologia per IoT è IPV6. Quindi ai giorni nostri molte applicazioni hanno la compatibilità con ipv6 o meglio dire si cerca la compatibilità con IpV6 come fa apple.
-
-
+Un altra tecnologia per IoT è **IPv6**. Quindi ai giorni nostri molte applicazioni hanno la compatibilità con questo protocollo anche se non è ancora pienamente sfruttato, le aziende all'avanguardia spingono molto per _"abbandonare"_ IPv4 in favore di IPv6.
 
 #### Che cos'è il cloud computing?
 
@@ -115,19 +108,19 @@ Un altra tecnologia per IoT è IPV6. Quindi ai giorni nostri molte applicazioni 
 
 In questo corso studieremo il **cloud computing**? No. Studieremo i meccanismi interni ai sistemi basati sul cloud, ovvero apriremo la nuvola e guarderemo com'è fatta dentro.
 
-
-
-Come esempio di cloud computing non si deve solo pensare ad una nuvola che da potenza di calcolo ma anche per mettere i dati con Icloud. Quindi nella nuvola si può anche  virtualizare le cose e poi si accede  tramite intenert. 
+Quando si parla di **cloud computing** non si deve pensare ai sistemi di calcolo distribuito, per esempio servizi che forniscono potenza di calcolo, infatti, la maggior parte dei servizi di _cloud computing_ sono basati sulla **condivisione** dei dati, buona parte sull'offerta di servizi (si pensi a _GitHub_, _Trello_, _Zapier_ e via dicendo). Quindi nella _"nuvola"_ si può trovare (per così dire) _di tutto_, il fattore caratterizzante del cloud computing è che è accessibile attraverso _Internet_. 
 
 Nella nuvola si hanno dei server che devono parlare tra di loro per svolgere dei servizi.
 
- ![03](immagini/lezione-00/03.png)Più specificatamente le tecniche che studieremmo in questo corso sono alla base per tutti questi ambienti. 
+ ![03](immagini/lezione-00/03.png)
 
-Nel primo corso avemamo studiato la parte che c'è tra l'omino e la macchina (web-server) tra lasciando ciò che accadeva dietro le quinte.
+Più specificatamente, le tecniche che studieremmo in questo corso sono alla base per tutti questi ambienti. 
 
-Qui andremmo a vedere l'iterazione tra i vari server che stanno dietro alle quinte come si può vedere con le freccie rosse nel disegno sotto.  In questo modo ogni server da un contributo diverso ed in più. ![04](immagini/lezione-00/04.png)
+Nel primo corso avevamo studiato la parte che c'è tra l'utente e la macchina (web-server) tra lasciando ciò che accadeva **dietro le quinte** (ovvero B2B).
 
+Qui andremmo a vedere l'iterazione tra i vari server che stanno dietro alle quinte come si può vedere con le frecce rosse nel disegno sotto.  In questo modo, ogni server da un contributo diverso ed in più. 
 
+![04](immagini/lezione-00/04.png)
 
 
 
@@ -174,7 +167,7 @@ Lo svolgimento dei laboratori si tiene sempre di lunedì ma è diviso in due squ
 
 I laboratori inizieranno già il **10 ottobre 2016**.
 
-Una parte dei laboratori ci sarà la Serena mentre l'altra parte ci sarà Sisto. 
+Una parte dei laboratori sarà tenuta dall'ing. Spinoso, l'altra parte dal prof. Sisto. 
 
 
 
@@ -182,13 +175,11 @@ Una parte dei laboratori ci sarà la Serena mentre l'altra parte ci sarà Sisto.
 
 Tutto il materiale utile può essere trovato nella [pagina del corso](https://pad.polito.it:8080/enginframe/dp2/dp2.xml?_uri=//dp2/material). Il corso è anche videoregistrato (sulla nostra pagina personale).
 
-Dentro al campus si deve usare un link:
+Per accedere alla pagina del corso si deve usare il seguente link se si è connessi direttamente alla rete del campus:
 https://pad.polito.it:8080
 
 Fuori dal campus:
 https://pad.polito.it
-
-
 
 
 
@@ -212,7 +203,7 @@ La data di consegna di solito sono due giorni lavorativi prima dell'esame in cui
 
 Si consegnano gli assegnaments come quando di faceva DP1 con il sito.
 
-Quando si consegnato i laboratori ci sono dei test che vengono fatti in automatico dal sistema e il laboratorio deve passare i mandatory test. Se non gli passa allora si deve ri-caricare il laboratorio con le opportune modifiche. Ci sarà anche la possibilità di provare i nostri laboratori in locale, tuttavia è buona norma mandare i laboratori non all'ultima ora ma ben prima in modo da verificare e corregere eventuali errori se non passa i tests.
+Quando si consegnato i laboratori ci sono dei test che vengono fatti in automatico dal sistema e il laboratorio deve passare i mandatory test. Se quest'ultimi non venissero superati allora si deve ricaricare il laboratorio con le opportune modifiche. Ci sarà anche la possibilità di provare i nostri laboratori in locale, tuttavia è buona norma mandare i laboratori non all'ultima ora ma ben prima in modo da verificare e correggere eventuali errori se non passa i tests.
 
 
 
@@ -220,15 +211,13 @@ Quando si consegnato i laboratori ci sono dei test che vengono fatti in automati
 
 Si può essere ammessi solo se ogni assignment superi almeno i test di base. Si noti che si possono consegnare gli assignment (anche tutti assieme) solo entro due giorni **lavorativi** prima dell'inizio della prova scritta ai LABINF. Quindi, se l'esame è di lunedì, bisogna consegnare gli assignment entro mercoledì! Poiché sabato e domenica non sono due giorni lavorativi.
 
-Possiamo anche essere esonerati se i laboratori sono molto buoni e molto diverrsi l'uno dall'altro.
+Possiamo anche essere esonerati se i laboratori sono molto buoni e molto diversi l'uno dall'altro.
 
-Inoltre per sapere se non dobbiamo andare all'esame finale lo sapremmo solo 1 giorno prima rispetto all'esame stesso. Perché per valutarli deve aspettare che tutti abbiano consegnato e visto che la scadenza è per l'appunto due giorni lavoratori va da se che lo sapremmo solo dopo. Quindi è meglio prepararsi e poi la più non si va perché si ha avuto una buona sorpresa.
+Inoltre per sapere se non dobbiamo andare all'esame finale lo sapremmo solo 1 giorno prima rispetto all'esame stesso. Perché per valutarli deve aspettare che tutti abbiano consegnato e visto che la scadenza è per l'appunto due giorni lavoratori va da se che lo sapremmo solo dopo. Quindi è meglio prepararsi in ogni caso.
 
+C'è un altro modo per essere esonerato dall'esame: fare una tesi o una "tesina" (progetto speciale) tutto relativo al corso. I numeri di progetti sono limitati quindi ci sarà una selezione se ci sono tanti studenti che ne richiedono una.
 
-
-Un altro modo per non sostenere  l'esame è di fare una tesi o una "tesina" (progetto speciale) tutto relativo al corso. I numeri di progetti sono limitati quindi ci sarà una selezione se ci sono tanti studenti che richiedono una.
-
-In alcuni casi si può fare un progetto (tesi o tesina) assieme ma solo perché mettendo a ssieme il tutto si ottiene una gorssa cosa quindi è come se ci fossero molte tesi o tesine.
+In alcuni casi si può fare un progetto (tesi o tesina) assieme ma solo perché mettendo assieme il tutto si ottiene una grossa cosa quindi è come se ci fossero molte tesi o tesine.
 
 
 
@@ -242,9 +231,7 @@ Fare molta attenzione ai propri elaborati, perchè il docente, con il supporto d
 
 La prova finale è facoltativa. Dipende da come sono stati fatti gli assignments. Se sono di buona qualità non ci sarà bisogno di fare la prova finale e molto diversi dai nostri compagni. Tale prova consiste nello svolgimento di un nuovo assignment più una domanda aperta (relativa ai nostri laboratori su come abbiamo svolto gli  assignmen), il tutto da svolgersi nell'arco di due ore oppure due ore e mezza. Questa prova verrà considerata superata se l'elaborato scritto supererà i test obbligatori. Faremo una simulazione di questa prova verso la fine del corso: è **importante** esserci!
 
-
-
-Per passare la prova scritta si deve passare i test obbligatori se no non si passa la prova. In alcuni casi se non si passa l'esame ma l'errore è cosi piccolo allora il professore potrebbe fare passare l'esame.
+Per passare la prova scritta si devono passare i test obbligatori altrimenti non si supera la prova. In alcuni casi se non si passa l'esame ma l'errore è cosi piccolo allora il professore potrebbe valutare comunque positivamente l'esame.
 
 
 
@@ -272,7 +259,7 @@ Per avere la lode è necessario fare l'orale.
   - [email](riccardo.sisto@polito.it)
   - telefono ufficio: 011 090 7073
   - riceve su appuntamento
-- Ing. Serena Spinoso
+- ing. Serena Spinoso
   - [email](serena.spinoso@polito.it)
   - telefono ufficio: 011 090 7098
   - riceve su appuntamento

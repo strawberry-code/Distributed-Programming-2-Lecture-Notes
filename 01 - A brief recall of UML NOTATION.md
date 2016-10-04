@@ -10,7 +10,7 @@
 4. Sequence Diagrams
 
 
-Questa parte è solo un richiamo per avere la stessa "base"/linguaggio/idea del professore sul UML onde evitare pastici di comprensione in futuro. 
+Questa parte è solo un richiamo per avere la stessa **base**/**linguaggio**/**idea** del professore sull'UML questo per evitare incomprensioni in futuro. 
 
 ## Richiami su UML
 
@@ -46,7 +46,9 @@ Si possono rappresenatare le classi in vario modo:
 4. Ci possono anche essere metodi astratti.
 5. Se un metodo ha un eccezione si può usare una "throws relazione" in cui si punta alla classe a cui è collegata l'eccezione.
 
-Si può avere  una classe senza altri dettagli. ![08](immagini/lezione-01/08.png)
+Si può avere  una classe senza altri dettagli. 
+
+![08](immagini/lezione-01/08.png)
 
 
 
@@ -129,12 +131,12 @@ Le interfacce si identificano nel seguente modo: `<<interface name>>`.
 
 ##### Esempio di interfaccia:
 
-1. In una interfiaccia classe la parte di attributi deve essere vuota. Ma si hanno dei metodi e i metodi devono essere astratti. 
+1. In una classe interfaccia la parte di attributi deve essere vuota, ma si hanno dei metodi dichiarati cioè sono astratti (non implementati). 
 2. Altro modo per rapresentare un interfaccia senza dettagli è usare un cerchietto mettendo solo il nome.
-   Quindi le due interfaccie (1 e 2) sono uguali a parte per i metodi che in uno ci sono mentre nell'altro non ci sono.
+   Quindi le due interfacce (1 e 2) sono uguali a parte per i metodi che in uno ci sono mentre nell'altro non ci sono.
 3. Questo link è simile all'ereditarietà ma rappresenta una classe che implementa un'interfaccia. Quindi `Bibliography`implementa `BigSearch`. Come per il cerchietto in cui `BigSearch`è attacato alla classe che implementa quella interfaccia. Quindi `Bibliography`implementa `BigSearch`. 
 4. In particolare si può vedere come ci siano due cerchietti che sono due interfaccie (`BigSearch`e `Update`) che vengono implementati da `Bibliography`.
-5. Si può anche fare in modo che è possibile specificare che qualche classi usano le interfaccie. O alcune classi chiamano i metodi delle interfaccie. Ad esempio  `SearchRobot class`usa l'interfaccia `BigSearch interface` e quindi `SearchRobot class` può chiamare le operazioni di `searchByTitle()`o altre di quella interfaccia.
+5. Si può anche fare in modo che è possibile specificare che qualche classi usano le interfaccie. O alcune classi chiamano i metodi delle interfaccie. Ad esempio `SearchRobot class` usa l'interfaccia `BigSearch interface` e quindi `SearchRobot class` può chiamare le operazioni di `searchByTitle()`o altre di quella interfaccia.
 
 
 
@@ -152,7 +154,7 @@ Praticamente *tutti gli elementi UML possono essere raggruppati in package*. Cos
 
 ##### Esempio di package:
 
-Dentro al package `Widgets`si ha `Window class`e cosi via.
+Dentro al package `Widgets` c'è la `Window class` e cosi via.
 
  ![11](immagini/lezione-01/11.png)
 
@@ -200,15 +202,15 @@ Il diagramma descrive nella parte superiore i diversi modi in cui possono essere
 
 Nella parte inferiore è riportato un esempio di istanze di due classi diverse, la classe Progetto e quella Utente, e la relazione che esiste tra l'istanza Wikipedia e l'istanziazione di tre determinati utenti.
 
-Si rammenti che i nomi nelle classi nel object diagram è sempre sottolineato in modo da riccordare che non è una rappresentazione delle classi ma degli oggetti. 
+Si rammenti che i nomi nelle classi nell'**object diagram** è sempre sottolineato in modo da ricordare che non è una rappresentazione delle classi ma degli oggetti. 
 
-Ad esempio da `d1` si può andare a `d2`ma non viceversa.
+Ad esempio da `d1` si può andare a `d2` ma non viceversa.
 
-1)Rappresenta un oggetto e non una classe. `d1`è il nome dell'ogetto.
+1) Rappresenta un oggetto e non una classe. `d1`è il nome dell'ogetto.
 
-2) `DirectoryEntry`è il tipo della classe che appartiene a `d2`.
+2) `DirectoryEntry` è il tipo della classe che appartiene a `d2`.
 
-3)`FileEntry`è la classe dell'ogetto ma non si specifica il nome. Ergo si ha l'oggetto `FileEntry`senza il nome.
+3) `FileEntry` è la classe dell'oggetto ma non si specifica il nome. Ergo si ha l'oggetto `FileEntry` senza il nome.
 
 4) E' un oggetto remoto.
 
@@ -245,23 +247,21 @@ Un esempio di sequence diagram:
 
 
 
-In questo diagramma l'omino è semplicemente qualche d'uno che svolge un attività e non deve essere per forza un essere umano. I nomi dentro i rettangoli che  sono sottlienati sono degli oggetti.
+L'omino presente in questo diagramma è semplicemente qualcuno o qualcosa che svolge un attività e non deve essere per necessariamente un essere umano. I nomi dentro i rettangoli che  sono sottlienati sono degli oggetti.
 
-Le liene verticali rappresentano la vita dell'oggetto. In particolare si può vedere come `x:Remote`vive più a lungo di tutti gli altri.
+Le linee verticali rappresentano la vita dell'oggetto. In particolare si può vedere come `x:Remote` vive più a lungo di tutti gli altri.
 
-Al punto 1 si vede che quel rettangolo rappresenta l'attività svolta dall'oggetto `Local`.
+Al punto `1` si vede che quel rettangolo rappresenta l'attività svolta dall'oggetto `Local`.
 
-Inoltre si vede come `getRemoteRef()`venga chiamato come metodo e poi viene ritornato una `x`come valore di ritorno.
+Inoltre si vede come `getRemoteRef()` venga chiamato come metodo e poi viene ritornato una `x`come valore di ritorno.
 
-Nel punto 2 si vede come la chiamata al metodo è su se stesso. Quindi si chiama un metodo dell'ogetto stesso per ritornare all'oggetto stesso un valore di ritorno.
+Nel punto `2` si vede come la chiamata al metodo è su se stesso. Quindi si chiama un metodo dell'ogetto stesso per ritornare all'oggetto stesso un valore di ritorno.
 
-Nel punto 3 si vede come un oggetto venga distrutto.
-
-
+Nel punto `3` si vede come un oggetto venga distrutto.
 
 
 
-## State diagram (Non è stato fatto)
+## State diagram 
 
 Lo State Chart Diagram o Diagramma degli stati è un diagramma previsto dall'UML per descrivere il comportamento di entità o di classi in termini di stato (macchina a stati).
 Il diagramma mostra gli stati che sono assunti dall'entità o dalla classe in risposta ad eventi esterni.
