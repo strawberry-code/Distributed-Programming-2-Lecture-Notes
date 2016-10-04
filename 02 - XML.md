@@ -441,11 +441,29 @@ E c'è una sola regola che specifica il DTD ossia:
 
 
 
+### Esempio di DTD numero 1
+
+ ![17](immagini/lezione-02/17.png)
 
 
 
+In questo caso si ha:
 
-### Esempio di DTD
+1) Element rules all'inizio del documento
+
+2) Regole per gli attributi che iniziano con `ATTLIST`.
+
+3)Ovviamente la prima riga è un commento.
+
+ 4) Ogni elemento viene specificato come viene chiamato e ad esempio si ha che nella seconda riga che l'elemento viene chiamto `directory` e a lato al il "contect model"  ossia `((user|contract)*)`Ossia quello che ci si aspetta dentro l'elemento. E più specificatamente significa qualche cosa con una sorta di espressione regolare. In questo caso dentro a `directory element`si ha ` user` o `contranct`element e questi possono essere ripetuti più volte a cause del simbolo `*` (zero o più elementi). Quindi si può avere 0 o 1 o più `user `oppure 0 o 1 o  più `contract `.
+
+5)`#PCDATA` sinifica che dentro l'elemento si ha solamente del testo.
+
+
+
+In agggiunta si possono anche dire se è obbligatorio inserire un elemento oppure no  `#REQUIRED`.
+
+### Esempio di DTD numero 2
 
 ```xml
 <!DOCTYPE NEWSPAPER [
