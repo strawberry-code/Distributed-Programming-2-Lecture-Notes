@@ -669,8 +669,23 @@ invece non sarebbero validi, per esempio, le seguenti dichiarazioni:
 - ```<course>``` _(l'elemento **course** deve avere almeno l'attributo **code** definito!)_
 
 
-
 ## Esercizio
+
+Testo:
+
+Write a DTD describing the structure of documents that can store the data of a bank account, using the following rules: 
+
+– Each account is characterized by 
+• One and only one account number
+ • One or more account holders 
+• A sequence of operations, grouped by year 
+– Each operation is characterized by 
+​	• date and amount 
+and, optionally, by a description 
+– Each account holder is characterized by 
+• a name and an address
+
+Soluzione:
 
 ```
 <!DOCTYPE data_bank_account [
