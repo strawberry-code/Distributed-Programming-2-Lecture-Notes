@@ -731,7 +731,9 @@ Il file DTD della figura sopra:
 
 Da notare che `<holder name=… />`che `holder`finisce per un `/`quindi è un empty element. E dentro ad esso non c'è nulla a parte gli attributi.
 
+**Esercizio da fare a casa**
 
+ ![23](immagini/lezione-02/23.png)
 
 ## Come viene processato un documento XML?
 
