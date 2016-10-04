@@ -596,13 +596,36 @@ Per ciascun attributo posso specificare: **nome**, **tipo di valore** e ***dichi
 			type	(vector|matrix)	"vector">
 ```
 
+Più in particolare si ha:
 
+- `id` ,`type` : sono i nomi degli attributi,
+
+- `ID`, ` (vector|matrix)` : sono il tipo degli attributi
+
+- `#REQUIRED`: sono opzionali e specificano altre cose.
+
+  ​
 
 ### Specificare il tipo dei valori
 
 ![](immagini/lezione-02/03.png)
 
+Più in particolare si ha:
 
+- String: sono le stringhe
+
+- Token: Sono delle parole e quindi sequenza di caretteri senza  spazio. I singoli token sono:
+  `ID`, `IDREF`, `ENTITY` e ` NMTOKEN`.   Poi si hanno degli altri token che corrispondono a delle sequenze di token :  ` IDREFS`,` ENTITIES` e ` NMTOKENS`.
+
+  - `ID` significa  che il valore dell'attributo è usato come un unico identificatore.
+  - `IDREF` è collegato a `ID ` significa che il valore dell'attributo è un link (reference) ad un elemento attraverso un identificatore univoco.
+  - `ENTITY`è un altro link e si collega ad una entità.
+  - `NMTOKEN`è un generico token senza speciali significati.
+
+  - `IDREFS`,`ENTITIES` e `NMTOKENS` si usano quando si hanno delle sequenze dei primi (
+    `ID`, `IDREF`, `ENTITY` e ` NMTOKEN`).
+
+- `#REQUIRED`: sono opzionali e specificano altre cose.
 
 ### Significato dei vari tipi di *tokens*
 
