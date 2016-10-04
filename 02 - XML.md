@@ -687,6 +687,26 @@ and, optionally, by a description
 
 Soluzione:
 
+Passo 1: Creare un albero
+
+ ![18](immagini/lezione-02/18.png)
+
+
+
+Passo 2: Mettere la molteplicità
+
+ ![19](immagini/lezione-02/19.png)
+
+
+
+Passo 3: Decidere se sono elementi o attributi
+
+
+
+
+
+
+
 ```
 <!DOCTYPE data_bank_account [
 	<!ELEMENT account 	(account_number, holder+, operation(year, ...))>
