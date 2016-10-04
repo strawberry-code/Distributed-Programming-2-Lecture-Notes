@@ -395,16 +395,28 @@ Affinché un documento possa essere dichiarato valido occorre che il processo di
 
 Attualmente esistono due modi per definire il Document Model associato ad un documento XML:
 
-- mediante una DTD (Document Type Definition) che definisce quali tag possono essere utilizzati e cosa possono contenere...
+- mediante una DTD (Document Type Definition) che definisce quali tag possono essere utilizzati e cosa possono contenere e se devo avere o no un elmento (ad esempio).
 - mediante XSD (Xml Schema Definition) che è a sua volta un documento XML (rispetta quindi un determinato modello) che permette di definire dei template.
 
 Qualsiasi linguaggio di markup che viene creato utilizzando delle regole xml costituisce un’applicazione xml (ad esempio XHTML).
+
+In altre parole (in soldoni) per avere un documento XML valido, esso deve seguire le specifiche che si trovano nel DTD.
+
+In alcune applicazione non c'è bisogno del DTD file per XML.
+
+Il DTD è assai molto lasco per specificare delle regole sta di fatto che non si può dire ad esempio se un certo dato è un intero o altro.
 
 
 
 ## DTD
 
 Il DTD è una sequenza di regole che descrivono componenti come _elementi_, _dichiarazioni_ e _dichiarazioni di attributi_. Le regole, come già detto, seguono la sintassi SGML con alcune restrizioni ed anche delle estensioni.
+
+Le regole si dividono in due grossi insiemi:
+1) regole che si riferiscono ad un elemento.
+2) regole che si riferiscono ad un attributo.
+
+
 
 Un file DTD inizia con `<!DOCTYPE name DTD>` In questo caso si sta dicendo che il documento è un DTD e la root è  `name`  quindi ad esempio:
 `<!DOCTYPE simple SYSTEM “simple.dtd”>` si vuole dire che la root si chiama `simple`e che si ha un esterna definizione  e la parola `SYSTEM` significa `private` ossia non è in dominio publico e di solito si usa la parole `system` quando si vuole fare riferimento a documenti DTD che sono in locale, quindi la ULR per quel file non è una URL pubblica.
@@ -426,6 +438,8 @@ Un altro modo è di avere un interna definizione. Ossia il DTD text è incluso d
 
 E c'è una sola regola che specifica il DTD ossia:
 `<!ELEMENT item (#PCDATA)>`
+
+
 
 
 
