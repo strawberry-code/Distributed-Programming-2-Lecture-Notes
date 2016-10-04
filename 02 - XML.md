@@ -625,7 +625,9 @@ Più in particolare si ha:
   - `IDREFS`,`ENTITIES` e `NMTOKENS` si usano quando si hanno delle sequenze dei primi (
     `ID`, `IDREF`, `ENTITY` e ` NMTOKEN`).
 
-- `#REQUIRED`: sono opzionali e specificano altre cose.
+- `ENUMERATION` si può specificare cosa si può mettere in questo elemento come nella tabella ad esempio è possibile mettere solo `MR` o `MRS` o `Miss` altri valori non sono ammessi.
+
+  ​
 
 ### Significato dei vari tipi di *tokens*
 
