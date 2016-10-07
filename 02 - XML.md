@@ -233,6 +233,14 @@ Si hanno i tags `<bibliography>` simile all HTML ma la differenza è che in ques
 
 In questo caso, all'interno di `<bibliography>` ci sono altri due elementi:` <article>` e `<book>`, si ha una certa familiarità con le già ben conosciute pagine HTML.
 
+Con XML l'utente può creare dei tags `<article>` di sua immaginazione non come accade invece per html che si doveva seguire uno standard.
+
+Inoltre ci sono degli atributi quali ad esempio: `volume`ai quali viene assoaciato un dato. 
+
+**Esempio**:
+
+![15](immagini/lezione-02/15.png)
+
 ## Schema concettuale di un documento XML
 
 Un **documento XML** include due aspetti:
@@ -265,13 +273,21 @@ La struttura di un documento XML è piuttosto semplice: ogni *nodo* o *sotto alb
 
 Un documento XML può contenere anche altre componenti, quali:
 
-- **dichiarazioni**, ad esempio: `<!DOCTYPE simple SYSTEM “simple.dtd”>` 
-- **istruzioni di processing**
-- **commenti**, ad esempio. `<!-- Questo è un commento -->`
+- **dichiarazioni**, ad esempio: `<!DOCTYPE simple SYSTEM “simple.dtd”>`  può essere inclusa.
+- **istruzioni di processing** per processare i dati simile al html.
+- **commenti**, ad esempio. `<!-- Questo è un commento -->` nello stesso formato del html.
 
 La corrispondente rappresentazione concettuale di tale documento è:
 
 ![](immagini/lezione-02/02.png)
+
+
+
+Inoltre un documento XML ha un'organizazione fisica e logica. E sono in qualche modo collegate.
+
+**Logica vista:**
+
+Ogni documento parte da un nodo chiamato **root**. Quindi si ha una root, poi ogni nodo ha degli attributi. Il dato finale è associato sia all **atributo** che al **nodo**.
 
 
 
@@ -280,6 +296,8 @@ La corrispondente rappresentazione concettuale di tale documento è:
 I documenti XML vengono distribuiti sotto forma di files chiamati **entità** (**entities**). Un'entità può fare riferimento (includere) altre entità, quindi si parla di *modularizzazione XML*. In questi casi, si individua una **entità radice** (**root entity**) la quale include le sotto entità a cui fa riferimento.
 
 Per semplicità in questo corso considereremo solo entità semplici e indipendenti.
+
+In altre parole se il documento è memorizzato in più files allora l'organizazione logica ha una singola root con un singolo albero. Ma i dati vengono seperati in più files (pysical files). Questi files vengono chiamati **entity**. Quindi si ha un main entity (chiamato document entity) che punta ad altre entità in file separati. 
 
 
 
@@ -307,11 +325,24 @@ Il principio di ogni documento XML è che i **dati** sono una sequenza di caratt
 
 
 
+
+**Esempio**
+
+ ![16](immagini/lezione-02/16.png)
+
+
+
+**Analisi**
+
+La bliografia contine un articolo il quale contiene degli attori, un titilo e un giornale. Quest'ultimo il giornale ha dei attributi che sono associati a dei dati.
+
+
+
 ### Markups specifici di XML
 
 #### Le dichiarazioni XML
 
-Tutti i documenti xml iniziano con un prologo che contiene la dichiarazione xml, la Document Type Declaration che contiene la definizione del Document Model (se si vuole ottenere un documento valido oltre che ben formato) ed un set di dichiarazioni, a questi segue l’elemento radice del documento.
+Tutti i documenti xml iniziano con un prologo (che non è obbligatorio) che contiene la dichiarazione xml, la Document Type Declaration che contiene la definizione del Document Model (se si vuole ottenere un documento valido oltre che ben formato) ed un set di dichiarazioni, a questi segue l’elemento radice del documento.
 
 La dichiarazione xml rispetta la seguente sintassi:
 
@@ -364,10 +395,16 @@ Affinché un documento possa essere dichiarato valido occorre che il processo di
 
 Attualmente esistono due modi per definire il Document Model associato ad un documento XML:
 
-- mediante una DTD (Document Type Definition) che definisce quali tag possono essere utilizzati e cosa possono contenere...
+- mediante una DTD (Document Type Definition) che definisce quali tag possono essere utilizzati e cosa possono contenere e se devo avere o no un elmento (ad esempio).
 - mediante XSD (Xml Schema Definition) che è a sua volta un documento XML (rispetta quindi un determinato modello) che permette di definire dei template.
 
 Qualsiasi linguaggio di markup che viene creato utilizzando delle regole xml costituisce un’applicazione xml (ad esempio XHTML).
+
+In altre parole (in soldoni) per avere un documento XML valido, esso deve seguire le specifiche che si trovano nel DTD.
+
+In alcune applicazione non c'è bisogno del DTD file per XML.
+
+Il DTD è assai molto lasco per specificare delle regole sta di fatto che non si può dire ad esempio se un certo dato è un intero o altro.
 
 
 
@@ -375,9 +412,58 @@ Qualsiasi linguaggio di markup che viene creato utilizzando delle regole xml cos
 
 Il DTD è una sequenza di regole che descrivono componenti come _elementi_, _dichiarazioni_ e _dichiarazioni di attributi_. Le regole, come già detto, seguono la sintassi SGML con alcune restrizioni ed anche delle estensioni.
 
+Le regole si dividono in due grossi insiemi:
+1) regole che si riferiscono ad un elemento.
+2) regole che si riferiscono ad un attributo.
 
 
-### Esempio di DTD
+
+Un file DTD inizia con `<!DOCTYPE name DTD>` In questo caso si sta dicendo che il documento è un DTD e la root è  `name`  quindi ad esempio:
+`<!DOCTYPE simple SYSTEM “simple.dtd”>` si vuole dire che la root si chiama `simple`e che si ha un esterna definizione  e la parola `SYSTEM` significa `private` ossia non è in dominio publico e di solito si usa la parole `system` quando si vuole fare riferimento a documenti DTD che sono in locale, quindi la ULR per quel file non è una URL pubblica.
+
+Se invece il DTD è pubblico si deve usare la parola `PUBLIC` come in questo caso:
+`<!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01//EN” “http://www.w3.org/TR/html4/strict.dtd”>`
+
+E quindi i può inoltre inserire una riga per dichiarare a che cosa si riferisce il documento:
+`<!DOCTYPE HTML PUBLIC “-//W3C//DTD HTML 4.01//EN” “http://www.w3.org/TR/html4/strict.dtd”>`
+
+Le due stringe significano respitivamente:
+
+1) `“-//W3C//DTD HTML 4.01//EN”` è il nome pubblico del DTD.
+
+2) `“http://www.w3.org/TR/html4/strict.dtd”`è la URL di dove si trova il file.
+
+Un altro modo è di avere un interna definizione. Ossia il DTD text è incluso dentro al DOCTYPE tag:
+`<!DOCTYPE simple [ <!ELEMENT item (#PCDATA)>]> >`
+
+E c'è una sola regola che specifica il DTD ossia:
+`<!ELEMENT item (#PCDATA)>`
+
+
+
+### Esempio di DTD numero 1
+
+ ![17](immagini/lezione-02/17.png)
+
+
+
+In questo caso si ha:
+
+1) Element rules all'inizio del documento
+
+2) Regole per gli attributi che iniziano con `ATTLIST`.
+
+3)Ovviamente la prima riga è un commento.
+
+ 4) Ogni elemento viene specificato come viene chiamato e ad esempio si ha che nella seconda riga che l'elemento viene chiamto `directory` e a lato al il "contect model"  ossia `((user|contract)*)`Ossia quello che ci si aspetta dentro l'elemento. E più specificatamente significa qualche cosa con una sorta di espressione regolare. In questo caso dentro a `directory element`si ha ` user` o `contranct`element e questi possono essere ripetuti più volte a cause del simbolo `*` (zero o più elementi). Quindi si può avere 0 o 1 o più `user `oppure 0 o 1 o  più `contract `.
+
+5)`#PCDATA` sinifica che dentro l'elemento si ha solamente del testo.
+
+
+
+In agggiunta si possono anche dire se è obbligatorio inserire un elemento oppure no  `#REQUIRED`.
+
+### Esempio di DTD numero 2
 
 ```xml
 <!DOCTYPE NEWSPAPER [
@@ -437,6 +523,10 @@ La **molteplicità** può essere specificata usando gli operatori con la notazio
 
 
 
+
+Inoltre si possono usare le parentesi per ragruppare in sotto gruppi e fare cose più complesse.
+
+
 ### Esempi di modelli di elementi
 
 Un esempio di DTD che utilizza modelli semplici:
@@ -450,13 +540,19 @@ Un esempio di DTD che utilizza modelli semplici:
 <!ELEMENT dessert EMPTY>
 ```
 
-L'elemento `course` può essere uno o più dei tre specificati. Mentre l'elemento `meal` può essere presente 0, 1, 2, 3… volte e così via.
+L'elemento `course` può essere uno o più dei tre specificati (ossia può essere `first`o `second`o `dessert`). Mentre l'elemento `meal` può essere presente 0, 1, 2, 3… volte e così via.
+
+L'elemento ha senso dichiararlo vuoto quando si associa l'informazione all'attributo. Quindi si ha un elemento vuoto ma esso è un attributo. 
 
 Questo è un esempio di DTD in cui c'è un elemento con modelli composti:
 
 ```
 <!ELEMENT laboratory ( name, location, secretary?, (technician|operator)+)>
 ```
+
+L'elemento `laboratory`include una senquenza di elementi: `name`element, ecc..
+
+Ossia
 
 L'elemento `laboratory` ha una sequenza di attributi, dei quali `secretary` è opzionale e può avere uno o più tra `technician`oppure `operator`. In altre parole, nel linguaggio umano, diremmo:
 
@@ -466,7 +562,7 @@ L'elemento `laboratory` ha una sequenza di attributi, dei quali `secretary` è o
 
 ### Mixed models
 
-Nei modelli misti, possono essere specificati solo i nomi degli elementi ammessi ma non viene specificato nulla circa il loro ordine (non sequenzialità) e sulla loro molteplicità. Per cui, l'unica forma ammessa nei **mixed models** è la seguente:
+Nei modelli misti, possono essere specificati solo i nomi degli elementi ammessi ma non viene specificato nulla circa il loro ordine (non sequenzialità) e sulla loro molteplicità e questo è un limite per i DTD. Per cui, l'unica forma ammessa nei **mixed models** è la seguente:
 
 ```xml
 (#PCDATA | name1 | name2)*
@@ -481,6 +577,8 @@ Nei modelli misti, possono essere specificati solo i nomi degli elementi ammessi
 ```
 
 
+
+`#PCDATA` significa che è possibile usare qualsiasi dato.
 
 ### Dichiarazione di attributi
 
@@ -498,13 +596,38 @@ Per ciascun attributo posso specificare: **nome**, **tipo di valore** e ***dichi
 			type	(vector|matrix)	"vector">
 ```
 
+Più in particolare si ha:
 
+- `id` ,`type` : sono i nomi degli attributi,
+
+- `ID`, ` (vector|matrix)` : sono il tipo degli attributi
+
+- `#REQUIRED`: sono opzionali e specificano altre cose.
+
+  ​
 
 ### Specificare il tipo dei valori
 
 ![](immagini/lezione-02/03.png)
 
+Più in particolare si ha:
 
+- String: sono le stringhe
+
+- Token: Sono delle parole e quindi sequenza di caretteri senza  spazio. I singoli token sono:
+  `ID`, `IDREF`, `ENTITY` e ` NMTOKEN`.   Poi si hanno degli altri token che corrispondono a delle sequenze di token :  ` IDREFS`,` ENTITIES` e ` NMTOKENS`.
+
+  - `ID` significa  che il valore dell'attributo è usato come un unico identificatore.
+  - `IDREF` è collegato a `ID ` significa che il valore dell'attributo è un link (reference) ad un elemento attraverso un identificatore univoco.
+  - `ENTITY`è un altro link e si collega ad una entità.
+  - `NMTOKEN`è un generico token senza speciali significati.
+
+  - `IDREFS`,`ENTITIES` e `NMTOKENS` si usano quando si hanno delle sequenze dei primi (
+    `ID`, `IDREF`, `ENTITY` e ` NMTOKEN`).
+
+- `ENUMERATION` si può specificare cosa si può mettere in questo elemento come nella tabella ad esempio è possibile mettere solo `MR` o `MRS` o `Miss` altri valori non sono ammessi.
+
+  ​
 
 ### Significato dei vari tipi di *tokens*
 
@@ -537,6 +660,7 @@ Dunque, secondo questo schema, potrei scrivere:
 
 - ```<course code="A10" name="spaghetti">```
 - ``````<course code="A10" double="yes">```
+- `double`è assente quindi viene preso il valore di defualt che in questo caso è "no".
 
 invece non sarebbero validi, per esempio, le seguenti dichiarazioni:
 
@@ -545,8 +669,41 @@ invece non sarebbero validi, per esempio, le seguenti dichiarazioni:
 - ```<course>``` _(l'elemento **course** deve avere almeno l'attributo **code** definito!)_
 
 
-
 ## Esercizio
+
+Testo:
+
+Write a DTD describing the structure of documents that can store the data of a bank account, using the following rules: 
+
+– Each account is characterized by 
+• One and only one account number
+ • One or more account holders 
+• A sequence of operations, grouped by year 
+– Each operation is characterized by 
+​	• date and amount 
+and, optionally, by a description 
+– Each account holder is characterized by 
+• a name and an address
+
+Soluzione:
+
+Passo 1: Creare un albero
+
+ ![18](immagini/lezione-02/18.png)
+
+
+
+Passo 2: Mettere la molteplicità![19](immagini/lezione-02/19.png)
+
+
+
+Passo 3: Decidere se sono elementi o attributi ![20](immagini/lezione-02/20.png)
+
+
+
+Passo 4: Decidere il tipo se è un ID o altro ad esempio.
+
+Passo 5: Scrivere il file se guendo il disegno:
 
 ```
 <!DOCTYPE data_bank_account [
@@ -558,11 +715,37 @@ invece non sarebbero validi, per esempio, le seguenti dichiarazioni:
 
 
 
+Se si prende un file XML e lo si mette in un browser (come ad esempio firefox) non si vedrà il file cosi com'è ma bensi un file strutturato dall'applicazione:
+
+ ![21](immagini/lezione-02/21.png)
+
+
+
+Il file DTD della figura sopra:
+
+
+
+ ![22](immagini/lezione-02/22.png)
+
+
+
+Da notare che `<holder name=… />`che `holder`finisce per un `/`quindi è un empty element. E dentro ad esso non c'è nulla a parte gli attributi.
+
+**Esercizio da fare a casa**
+
+ ![23](immagini/lezione-02/23.png)
+
 ## Come viene processato un documento XML?
 
 La seguente figura mostra lo schema _generico_ di elaborazione di un documento XML:
 
 ![](immagini/lezione-02/05.png)
+
+Di solito si legge e si scrive un XML document per passarsi delle informazioni. Per fare ciò si ha un XML processor esso può essere ad esempio una libreria. Inoltre offrono sia la parte di lettura che di scrittura dei dati. Per lettura si intende quando si decodifica un XML ossia si estrae le informazioni. Mentre per scrittura si intende quando si serializa le informazioni.
+
+Quindi si ha che il file XML arriva al processore XML e viene decodificato e passato all API che lo passa all'aplicazione.
+
+Se XML document non è valido allora di solito viene scartato. In questo caso (nella figura) si genera un error-message.
 
 Le API sono importanti, perché vengono fornite dal sistema che sta utilizzando in quel momento l'XML. Per esempio, un server scritto in Java fornisce API diverse da un client che vuol tradurre l'XML in DOM magari scirtto in un altro linguaggio.
 
@@ -572,6 +755,38 @@ Ci sono due tipi di **XML processors**:
 - _validating processor_ controlla sia la corretta forma del documentosia la sua validità interna.
 
 Il tool **msxml** è un esempio di *non validating processor*, mentre **JAXP** è un esempio di *validating processor*.
+
+Ogni browser ha un processor XML per poter visualizare qualche cosa di carino. Inoltre se ci sono degli errori potrebbe comunicarceli e via discorendo.
+
+Come sempio di applicazione si guardi le due figure successive:
+
+ ![24](immagini/lezione-02/24.png)
+
+ma si può contrare:
+
+ ![25](immagini/lezione-02/25.png)
+
+
+
+Questo perché il browser non solamente ha un parser ma ha anche un applicazione che capisce e ci va vedere qualche cosa di più carino.
+
+
+
+Si può vedere il codice sorgente in questo modo:
+
+ ![26](immagini/lezione-02/26.png)
+
+
+
+codice sorgente:
+
+ ![27](immagini/lezione-02/27.png)
+
+
+
+In questo caso non ci sono particolari informazioni per la visualizazione (esempio il colore) quindi è il browser che per sua bontà ci fa vedere qualche colore.
+
+Tuttavia si vede come c'è sia il DTD del documento che il documento in se.
 
 #### SAX parsing
 
