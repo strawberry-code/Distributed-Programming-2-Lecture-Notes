@@ -1030,9 +1030,9 @@ Ad esempio per l'accesso hai dati è molto meno facile nel DOM perché si ha il 
 La _presentazione_ (ovvero la _grafica_ detto beceramente) di un documento XML viene specificata separatamente utilizzando uno dei due modi:
 
 - CSS: Cascading Style Sheet (come per HTML). CSS per XML è un pò complicato essendo che i tags sono personalizabili.
-- EXtensible Stylesheel Language (XLS)
+- EXtensible Stylesheel Language (XSL) è un XML application ossia se stesso è un XML application. Esso (XSL) non solamente definisce gli elementi che si possono avere nel XML ma anche include 
 
-Gli stili di rpesentazione vengono scritti su un documento a parte e poi inclusi all'inizio del file XML, ad esempio se ho due file di stile `mystyle.css` e `mystyle.xsl`potrò includerli nel seguente modo:
+Gli stili di presentazione vengono scritti su un documento a parte e poi inclusi all'inizio del file XML, ad esempio se ho due file di stile `mystyle.css` e `mystyle.xsl`potrò includerli nel seguente modo:
 
 ```
 <?xml:stylesheet type=“text/css” href=“mystyle.css”?>
@@ -1059,6 +1059,14 @@ XSL è certamente uno dei più importanti linguaggi standard del W3C. Esso risul
 ### Esempio di XSL
 
 ![](immagini/lezione-02/13.png)
+
+Nel primo esempio si hanno due file i quali passano per il XSLT processor e processa i documenti in altri documenti che in questo caso in un html che può essere visto attraverso un browser. E associato al html ci può essere un css file.
+
+
+
+Nel secondo caso si ha sempre un processore XSLT che fornisce in output un file che deve essere processato da qualche cosa (che nel disegno è rapresentato da un ovale vuoto) il quale fornisce in output il file desiderato in questo caso un .pdf.
+
+
 
 ## XSLT
 
