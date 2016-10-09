@@ -1089,22 +1089,54 @@ Più in particolare in ingresso si ha un .xml file (1), il quale passa attravers
 ### Esempio di XSLT
 
 ```xml
-<?xml version="1.0" encoding="ISO-8859-1"?> <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"> <xsl:template match="/">
-  <html>
-    <head><link rel="stylesheet" href="style.css"/></head> <body>
-    <h2>My Articles</h2>
-    <table>
-      <tr>
-        <th>Title</th>
-      </tr>
-      <xsl:for-each select="bibliography/article">
-        <tr>
-          <td><xsl:value-of select="title"/></td>
-        </tr>
-      </xsl:for-each>
-    </table>
-    </body></html>
-  </xsl:template>
-</xsl:stylesheet>
+01<?xml version="1.0" encoding="ISO-8859-1"?> 
+02 <xsl:stylesheet version="1.0"  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"> 
+03  <xsl:template match="/">
+04  <html>
+05    <head><link rel="stylesheet" href="style.css"/></head> <body>
+06    <h2>My Articles</h2>
+07    <table>
+08      <tr>
+09        <th>Title</th>
+10      </tr>
+11      <xsl:for-each select="bibliography/article">
+12        <tr>
+13          <td><xsl:value-of select="title"/></td>
+14       </tr>
+15      </xsl:for-each>
+16    </table>
+17    </body></html>
+18  </xsl:template>
+19 </xsl:stylesheet>
 ```
+
+
+
+
+
+- `<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"> <xsl:template match="/">`denominato come `name space`.
+- la radice del documento è `</xsl:stylesheet>`.
+- In questo esempio c'è una singola regola cha va dalla riga 03 alla riga 18 denominata `template`.
+- `match="/"` per il matching della regola.
+- Dalla riga 04 alla riga 17 si ha il template della pagina htlm. All'interno di queste righe si hanno altri tags che specificano altre cose per XLST processor. Ad esempio alla riga 11 si ha:
+   `<xsl:for-each select="bibliography/article">` che significa  che per ogni `article` che si trova sotto a `bibliography`  viene applicata una regola. Il tutto si trova dentro ad una tabella come viene indicato alla riga 07. Quindi se si ha  una tabella nel file di input le righe veranno generate automaticamente insieme alla seguente istruzione:
+  `<xsl:value-of select="title"/>`
+
+
+
+**Esempio**:
+
+Prodotto finale:
+
+ ![32](immagini/lezione-02/32.png)
+
+
+
+Codice che genera il prodotto finale:
+
+ ![33](immagini/lezione-02/33.png)
+
+1) Dove viene "linkato" il file stylesheet. Se si rimuove questa riga si ottine un prodotto finale senza stile.
+
+Quindi si vede come questo file passa attraverso XSLT file (visto prima) e come a questo file vengano tolte delle informazioni e vengono mantenute altre. Più in particolare dalla tabella viene mantenuto solo il titolo.
 
