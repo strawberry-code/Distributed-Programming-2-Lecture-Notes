@@ -45,6 +45,8 @@ Ciascun **namespace** è un insieme di nomi univocamente definiti utilizzando un
 
 
 
+I documenti `unnamed namespace`sono quei documenti usati fino adesso.
+
 ### Qualified names
 
 Utilizzare nei nostri documenti XML direttamente ciascun **IRI** è davvero scomodo, si pensi a scrivere di fianco a ciascun *tagname* il relativo *IRI* che lo distingue: 
