@@ -965,11 +965,13 @@ consiste in 6 specifiche differenti:
 
 ### L'elemento <\<interface>>
 
+Queste interface vengono implementate dai vari DOM
+
 ![](immagini/lezione-02/10.png)
 
 ![](immagini/lezione-02/11.png)
 
-
+Si hanno tante interface a seconda di quello che si deve fare ad esempio per i commenti oppure per un elemento.
 
 ## Semplice API per XML (SAX)
 
