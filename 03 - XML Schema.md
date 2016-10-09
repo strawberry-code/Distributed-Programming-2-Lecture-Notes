@@ -61,6 +61,22 @@ Un *qualified name* può assumere due forme:
 2. **forma implicita** per esempio `tagname`, cioè il namespace non viene specificato e quindi si utilizza l'*unnamed namespace* (che sarebbe a dire il quarto senza nome nella figura sopra).
 
 
+In altre parole si preferisce creare una dichiarazione  a cui è associatato il nome della URL. Ossia si scrive la URL una sola volta nella dichiarazione e poi si usa questa dichiarazione del documento.
+
+In altre parole si usa un `small name` al posto della URL. E si crea una dichiacazione che è associatata al `short name` con la URL. Ossia si scrive una sola volta la URL nella dichiarazione  e poi si usa il `short name` nel documento.
+
+Quindi va da se che `short name`viene denominato come:
+`symbolic local identifier`.
+
+**Ad esempio si potrebbe avere:**
+
+`ns1:letter` dove `ns1`  è l'identificatore locale e `letter` è i nome. E vengono seperati dal "colon (`:`)".
+
+Idem per : `ns2:letter`  e per `ns3:letter` ma hanno un qualificatore diverso. E quindi sono diversi.
+
+Se invece  se si ha `letter` e quindi senza un prefisso allora il nome appartiene al default namespace.
+Ovviamente nel documento si ha un defualt namespace che verrà poi associato a quel nome.
+
 
 ### Dichiarazione dei namespace
 
@@ -77,31 +93,33 @@ Entrambe le forme comunque hanno un **nome** e un **valore**, facciamo due esemp
    dove: 
    - il *nome* (implicito) è **xmlns**
    - il *valore* è  **http://www.w3c.org**
+   - In questo caso si é dichiarato il default namespace perché non si è usato il `:`.
 2. `<section xmlns:ns1=“http://www.alpha.beta”xmlns:ns2=“http://www.alpha.gamma”> ... </section>` 
    dove:
    - i *nomi* (forma prefissa) sono **xmlns:ns1** e **xmlns:ns2**
    - i *valori* sono **http://www.alpha.beta** e **http://www.alpha.gamma**
+   - In questo caso si è associato la URL con il symbolic name. Quindi  si è associato `ns1` e `ns2`  e quindi si potrà usare nel documento `ns1:letter` come visto prima. 
 
 
 
 ### Esempio pratico
 
 ```xml
-<?xml version = "1.0"?>
-
-<directory xmlns = "http://www.polito.it/xml/plain"
-           xmlns:image = "http://www.polito.it/xml/image">
-  
-  <file filename="book.xml">
-    <description>A book list</description>
-  </file>
-  
-  <image:file filename="funny.jpg">
-    <image:description>A funny picture </image:description>
-    <image:size width="200" height="100"/>
-  </image:file>
-  
-</directory>
+01 <?xml version = "1.0"?>
+02
+03 <directory xmlns = "http://www.polito.it/xml/plain" 
+              xmlns:image = "http://www.polito.it/xml/image">
+04 
+05  <file filename="book.xml">
+06    <description>A book list</description>
+07 </file>
+08  
+09  <image:file filename="funny.jpg">
+10    <image:description>A funny picture </image:description>
+11    <image:size width="200" height="100"/>
+12  </image:file>
+13  
+14 </directory>
 ```
 
 dove:
@@ -127,6 +145,8 @@ dove:
   ```
 
   indicano elementi specificati nel name space **image** ovvero in **http://www.polito.it/xml/image**
+
+- alle riga 03 si dichiarano i default namespace e `image` namespace,
 
 
 
