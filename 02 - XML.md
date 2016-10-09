@@ -1114,7 +1114,7 @@ Più in particolare in ingresso si ha un .xml file (1), il quale passa attravers
 
 
 
-- `<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"> <xsl:template match="/">`denominato come `name space`.
+- `<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"> <xsl:template match="/">`denominato come `name space`. Ossia quando al root combaccia allora html viene generato. Mentre gli altri tags vengono usati all'interno del root elements.
 - la radice del documento è `</xsl:stylesheet>`.
 - In questo esempio c'è una singola regola cha va dalla riga 03 alla riga 18 denominata `template`.
 - `match="/"` per il matching della regola.
@@ -1139,4 +1139,6 @@ Codice che genera il prodotto finale:
 1) Dove viene "linkato" il file stylesheet. Se si rimuove questa riga si ottine un prodotto finale senza stile.
 
 Quindi si vede come questo file passa attraverso XSLT file (visto prima) e come a questo file vengano tolte delle informazioni e vengono mantenute altre. Più in particolare dalla tabella viene mantenuto solo il titolo.
+
+
 
