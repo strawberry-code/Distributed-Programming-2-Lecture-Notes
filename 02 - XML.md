@@ -860,7 +860,7 @@ SAX è un'API di basso livello il cui principale punto di forza è l'efficienza.
 
 ![](immagini/lezione-02/06.png)
 
- Quando un documento viene parsato usando SAX, una serie di eventi vengono generati e passati all'applicazione tramite l'utilizzo di callback handlers che implementano l'handler delle API SAX. Gli eventi generati sono di livello molto basso e devono essere gestiti dallo sviluppatore che, inoltre, deve mantenere le informazioni necessarie durante il processo di parsing. Oltre ad un utilizzo piuttosto complicato, SAX soffre di due limitazioni di rilievo: non può modificare il documento che sta elaborando e può procedere alla lettura solo "in avanti": non può tornare indietro. Quindi, quello che è stato letto è perso e non è possibile recuperarlo.
+ Quando un documento viene parsato usando SAX, una serie di eventi vengono generati e passati all'applicazione tramite l'utilizzo di callback handlers che implementano l'handler delle API SAX. Gli eventi generati sono di livello molto basso e devono essere gestiti dallo sviluppatore che, inoltre, deve mantenere le informazioni necessarie durante il processo di parsing. Oltre ad un utilizzo piuttosto complicato, SAX soffre di due limitazioni di rilievo: non può modificare il documento che sta elaborando e può procedere alla lettura solo "in avanti": non può tornare indietro. Quindi, quello che è stato letto è perso e non è possibile recuperarlo e si dice `push the data to the application` .  In questo caso è il processore XML che guida  l'applicazione. L'applicazione mette a disposizione alcune API che vengon chiamate al generare di un evento dal  processore XML. 
 
 #### DOM parsing
 
@@ -870,15 +870,23 @@ DOM, invece, ha come punto di forza la semplicità d'utilizzo.
 
 Una volta ricevuto il documento, il parser si occupa di costruire un albero di oggetti che rappresentano il contenuto e l'organizzazione dei dati contenuti. In questo caso l'albero esiste in memoria e l'applicazione può attraversarlo e modificarlo in ogni suo punto. Ovviamente il prezzo da pagare è il costo di computazione iniziale per la costruzione dell'albero ed il costo di memoria.
 
+Di solito si dice `pull the data to the application` In questo caso è l'applicazione che guida il processore xml.
+
 Esso viene usato per le pagine HTML.
+
+
+
+Il DOM è molto flessibile  mentre il SAX è molto più veloce. Perché il DOM deve prendere l'informazione e memorizzarla in memoria, mentre il SAX non appena arriva l'informazione la può subito farci il parsing. Quindi il tempo di latenza nel SAX è molto più piccolo rispetto al DOM. Inoltre nel DOM poiché si può navigare nell'albero si ha bisogno di più tempo per fare tutte queste operazioni che non si hanno nel SAX.
 
 #### StAX parsing
 
-StAX è un pull parser. 
+StAX è un pull parser e sta in mezzo ai due precedenti (DOM e SAX). 
 
 ![](immagini/lezione-02/08.png)
 
 A differenza di SAX, che è un push parser, non riceve passivamente i segnali inviati all'handler per elaborarli, ma è l'utente a controllare il flusso degli eventi. Questo significa che il client richiede (pull) i dati XML quando ne ha bisogno e nel momento in cui può gestirli, a differenza del modello push, dove è il parser a inviare i dati non appena li ha disponibili a prescindere che l'utente ne abbia bisogno o sia in grado di elaborarli. Le librerie pull parsing sono molto può semplici delle push parsing e questo permette di semplificare il lavoro dei programmatori, anche per documenti molto complessi. Inoltre è bidirezionale, nel senso che oltre a leggere dati XML è anche in grado di produrli. Rimane il limite di poter procedere solo "in avanti" nell'elaborazione del documento XML.
+
+Riassumendo si può dire che è simile all SAX per il pull ma è carraterizato dall'events base ossia come il DOM. Quindi il StAX può sia leggere che scrivere e non si ha nella memoria un albero come nel DOM. Quindi quando si leggono i dati si comporta similmente al SAX. Inolte è l'applicazione che chiede il prossimo "pezzo" di dato al processore XML.
 
 
 
