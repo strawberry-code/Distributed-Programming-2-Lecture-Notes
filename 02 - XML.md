@@ -1078,7 +1078,11 @@ Ci possono essere due casi specifici di trasformazione: da un documento XML a un
 
 Per generare una trasformazione XSLT occorrono due file: il documento da trasformare (in XML) ed un documento contenente il foglio di stile XSL, che fornisce la semantica per la trasformazione. Il foglio di stile XSLT vede un documento XML come una serie di nodi strutturati ad albero. È formato da un insieme di modelli (template) che contengono le regole di trasformazione dei tag del documento XML. Nella sintassi XSL, i template sono elementi, a ciascuno dei quali corrisponde l'attributo match, associato al nodo che verrà trasformato. In termini strutturali quindi il foglio di stile XSL specifica la trasformazione di un albero di nodi in un altro albero di nodi.
 
-È possibile anche aggiungere al documento trasformato elementi completamente nuovi o non prendere in considerazione determinati elementi del documento origine, riordinare gli elementi, fare elaborazioni in base al risultato di determinate condizioni, ecc.
+Più in particolare in ingresso si ha un .xml file (1), il quale passa attraverso un parser XML il quale crea un "DOM TREE" (2). Inseguito c'è un motore (3) per applicare le regole di trasformazione e  trasforma l'albero originale in qualcos'altro (4). Per poi essere serializato in un documento (5).
+
+
+
+È possibile anche aggiungere al documento trasformato elementi completamente nuovi o non prendere in considerazione determinati elementi del documento origine, estrapolare informazioni,  riordinare gli elementi, fare elaborazioni in base al risultato di determinate condizioni, ecc.
 
 ![](immagini/lezione-02/14.png)
 
