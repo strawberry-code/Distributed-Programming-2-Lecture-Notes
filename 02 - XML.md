@@ -1021,11 +1021,15 @@ StAX è comodo in quanto permette sia di **leggere** sia di **scrivere** dal/sul
 
 
 
+Ad esempio per l'accesso hai dati è molto meno facile nel DOM perché si ha il completto cotrollo dei dati: si può navigare nell'albero, si può decidere che dati si vuole prendere e quali dati non si vuole prendere e cosi via.
+
+
+
 ## Presentazione di un documento XML
 
 La _presentazione_ (ovvero la _grafica_ detto beceramente) di un documento XML viene specificata separatamente utilizzando uno dei due modi:
 
-- CSS: Cascading Style Sheet
+- CSS: Cascading Style Sheet (come per HTML). CSS per XML è un pò complicato essendo che i tags sono personalizabili.
 - EXtensible Stylesheel Language (XLS)
 
 Gli stili di rpesentazione vengono scritti su un documento a parte e poi inclusi all'inizio del file XML, ad esempio se ho due file di stile `mystyle.css` e `mystyle.xsl`potrò includerli nel seguente modo:
