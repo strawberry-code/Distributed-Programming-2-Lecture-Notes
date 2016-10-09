@@ -768,9 +768,19 @@ Questa è una limitazione del linguagio DTD.  Tuttavia si possono fare ulteriori
 
 
 
+**Soluzione in DTD**
+
+Nel `network`si ha sia il `group`che `host`i quali devono essere uno dietro l'altro tuttavia nessuno ci vieta di scrivere: `(group|host)*`quindi si avrebbe o un host o un gruppo con una multiplicità pari a 0 fino a n.
+
+Si può vedere che qui c'è un'incongruenza con quello visto prima ossia `interface` del host ha una multiplicità indicata con il `+`mentre prima era indicata con `*`.
+
+NMTOKEN non è un token unico ma c'è ne potrebbero essere altri nel documento uguali.
+
+Se si volesse che ci fosse un solo unico indirizzo Ip per ogni macchina allora si dovrebbe insirire un nuovo vincolo nel DTD. Tuttavia ID per i DTD iniziano con una lettera quindi si avrebbe dei problemi.
 
 
-## Come viene processato un documento XML?
+
+![31](immagini/lezione-02/31.png)Come viene processato un documento XML?
 
 La seguente figura mostra lo schema _generico_ di elaborazione di un documento XML:
 
