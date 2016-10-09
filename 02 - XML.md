@@ -735,6 +735,41 @@ Da notare che `<holder name=… />`che `holder`finisce per un `/`quindi è un em
 
  ![23](immagini/lezione-02/23.png)
 
+
+
+
+
+**Possibile soluzione:**
+
+Struttura base
+
+
+
+![28](immagini/lezione-02/28.png)
+
+In questa soluzione si ha una root la quale contiene due elementi: `group`e `host`
+
+Nel `group`si ha sia un `id`  e una descrizione che può essere opzionale. Nel `host` si ha un `id`"che viene puntato" dal `id` del `group`. Ossia `group` (del host) contiene un link a `group id`.  Come si può vedere nella figura sottostante:![29](immagini/lezione-02/29.png)
+
+
+
+Inoltre ci sono anche altre informazioni come ad esempio la scheda MAC che deve essere pari a 1 e cosi via.
+
+L'interfaccia dell host può essere sia 0 che più 1,2,3, ecc… questo perché alcuni pc potrebbero non avere di interfaccia.
+
+Si poteva anche (come possibile soluzione con i suoi pro e contro) togliere interfacia dell host e metter i suoi elementi dentro a host.
+
+Nel DTD c'è una limitazione ossia che se nel documento ci sono die ID come in questo caso (uni per il gruppo e l'altro per l'host ) ossia per il linguaggio DTD c'è un unico scope per il `unique ID` per tutto il documento. **Ossia non è possibile avere un ID del host uguale ad un ID del gruppo.** Quindi se si usa un validatore per DTD andrà a confrontare questi due ID come se fosse un unico ID.
+
+La cosa si ripercuote sul `group attribute`ossia essendo che va a puntare da qualche parte, il validatore non sa se deve puntare sul ID del host o del gruppo quindi per lui è tutto corretto se punta in uno dei due. 
+Questa è una limitazione del linguagio DTD.  Tuttavia si possono fare ulteriori test  usando altri strumenti come "schema".![30](immagini/lezione-02/30.png)
+
+
+
+
+
+
+
 ## Come viene processato un documento XML?
 
 La seguente figura mostra lo schema _generico_ di elaborazione di un documento XML:
