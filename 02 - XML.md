@@ -780,7 +780,11 @@ Se si volesse che ci fosse un solo unico indirizzo Ip per ogni macchina allora s
 
 
 
-![31](immagini/lezione-02/31.png)Come viene processato un documento XML?
+![31](immagini/lezione-02/31.png)
+
+
+
+**Come viene processato un documento XML?**
 
 La seguente figura mostra lo schema _generico_ di elaborazione di un documento XML:
 
@@ -833,6 +837,23 @@ In questo caso non ci sono particolari informazioni per la visualizazione (esemp
 
 Tuttavia si vede come c'è sia il DTD del documento che il documento in se.
 
+
+
+ ![05](immagini/lezione-02/05.png)
+
+
+
+
+
+Ripartendo da questa figura si può dire che il  XML processor legge e scrive i documenti XML e si prende cura della validazione del documento. Di solito questo processore è configurabile e quindi si può dire quello che si vuole ossia se il documento è  "well formed" o se è valido.
+
+Le applicazioni di solito leggono/scrivono le informazioni del XML processor attraverso una API.
+Inoltre l'applicazione può dare degli ordine al processore XML come ad esempio se deve leggere e cosi via.
+
+L'applicazione può prendere le informazioni che butta fuori il processore attraverso l'API.
+
+**Si hanno degli standard: SAX, DOM e StAX**
+
 #### SAX parsing
 
 SAX è un'API di basso livello il cui principale punto di forza è l'efficienza.
@@ -848,6 +869,8 @@ DOM, invece, ha come punto di forza la semplicità d'utilizzo.
 ![](immagini/lezione-02/07.png)
 
 Una volta ricevuto il documento, il parser si occupa di costruire un albero di oggetti che rappresentano il contenuto e l'organizzazione dei dati contenuti. In questo caso l'albero esiste in memoria e l'applicazione può attraversarlo e modificarlo in ogni suo punto. Ovviamente il prezzo da pagare è il costo di computazione iniziale per la costruzione dell'albero ed il costo di memoria.
+
+Esso viene usato per le pagine HTML.
 
 #### StAX parsing
 
