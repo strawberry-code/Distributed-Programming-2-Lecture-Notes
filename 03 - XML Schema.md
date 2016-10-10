@@ -154,7 +154,7 @@ dove:
 
 ## XML Schema
 
-La traduzione ~~schemi XML~~ è sbagliata, poichè **XML Schema** è un nome proprio che indica un linguaggio di descrizione del contenuto di un file XML, l'unico che finora abbia raggiunto la validazione ufficiale del W3C (la 1.1).
+La traduzione ~~schemi XML~~ è sbagliata, poichè **XML Schema** è un nome proprio che indica un linguaggio di descrizione del contenuto di un file XML, l'unico che finora abbia raggiunto la validazione ufficiale del W3C (la 1.1). In realtà ci sono vari linguaggio XML schema tuttavia in questo corso ne studieremmo uno solo.
 
 Come tutti i linguaggi di descrizione del contenuto XML, il suo scopo è delineare quali elementi sono permessi, quali tipi di dati sono ad essi associati e quale relazione gerarchica hanno fra loro gli elementi contenuti in un file XML.
 
@@ -164,31 +164,78 @@ Lo XML Schema permette inoltre l'estrazione da un file XML, o meglio una visione
 
 
 
+Gli standard sono:
+
+• Reference Namespace: http://www.w3.org/2001/XMLSchema
+
+• Reference DTD (non-normative):
+"-//W3C//DTD XMLSCHEMA 200102//EN""http://www.w3.org/2001/XMLSchema.dtd“
+
+• Reference schema (auto-description): http://www.w3.org/2001/XMLSchema.xsd
+Questo è "il reference".
+
+• Tutorial (reference for study):
+– XML Schema Part 0: Primer (W3C Recommendation)
+
+
+
+
+
 ### Struttura base di un XML Schema
 
 La struttura base che permette di produrre un **XML Schema** è la seguente:
 
 ```xml
-<xsd:schemaName
+01<xsd:schema
                 xmlns:xsd = "http://www.w3.org/2001/XMLSchema">
+02
+03  Annotazioni...
+04  Elementi glocabli e dichiarazioni di attributi...
+05  Tipi (dati/modelli) e definizioni di gruppi...
 
-  Annotazioni...
-  Elementi glocabli e dichiarazioni di attributi...
-  Tiupi (dati/modelli) e definizioni di gruppi...
-
-</xsd:schemaName>
+06</xsd:schema>
 ```
 
 dove:
 
-- *schemaName* è un nome scelto arbitrariamente,
+- 01 *schema* è per il linguaggio scelto che in questo caso è *schema*,
 - *xsd* è un acronimo che sta per ***X**ml **S**chema **D**efinition*.
+- xmlns:xsd = "http://www.w3.org/2001/XMLSchema" sarebbbe la dichiarazione del namespace. In questo caso il nome associato alla URL è xsd
+- Dentro alla root element possiamo trovare in qualsiasi ordine: 
+  - annotazioni (che sono delle annotazioni)  
+  - elementi globali e dichiarazioni di attributi che sono simili agli attributi e elementi che si hanno nei DTD. Gli elementi globali sono accessibili da tutto il documento e si ha la possibilità di referenziare a questi elementi. Ad esempio si può assegnare un nome e "riprenderlo" attraverso il suo nome
+  -  tipo (dati/modelli)   e definizioni di gruppo. In questo caso è possibile creare la sua propria definizione simile a quello che si fa nei linguaggi di programmazione e di assegnare il nome a quel tipo. La defizione di gruppo possono essere considerate delle  macro definizioni e definisce i gruppi di dichiarazioni o di definizione che possiamo referenziare dal documento stesso.
 
 
 
 ### Esempio di XML Schema
 
 ![](immagini/lezione-03/02.png)
+
+
+
+- Nelle annotazioni ci sono vari elementi di vario tipo che sono differenti dalla "annotation" e più in particoalre una "documentation" è qualche cosa che è leggibile da un essere umano.
+
+- `<xsd:element name="purchaseOrder" type="PurchaseOrderType"/>`  è una dichiarazione globale. Esso ha un nome `purchaseOrder`e un tipo `PurchaseOrderType` .  Il type include il "content model" e l'attributo dell'elemento che ha.
+
+- In verde si vede come `PurchaseOrderType` è collegato a`PurchaseOrderType` 
+
+  ​				
+  ​			
+  ​
+
+  ​
+
+  ​
+
+  ​
+
+  ​		
+  ​	
+
+
+
+
 
 
 
