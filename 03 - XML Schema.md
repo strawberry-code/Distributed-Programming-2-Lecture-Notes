@@ -2,6 +2,8 @@
 
 In questa lezione vedremo gli **XML schema** e i **namespace XML**.
 
+XML schema è un alternativa al DTD per specificare un linguaggio HTML o  applicazione HTML. E esso è molto più potente del DTD.
+
 
 
 ## XML Namespace
