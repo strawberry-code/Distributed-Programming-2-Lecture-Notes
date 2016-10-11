@@ -244,22 +244,29 @@ Si da ad un tipo un nome e un valore (stringa di caratteri).
 I tipi semplici contengono un markup mentre quelli complicati non lo contengono. 
 
 I tipi complessi descrivono il tipo degli elementi. Più in dettaglio dentro i tipi complessi si hanno gli atributi degli elementi e il contenuto dell'elemento.
-Ad esempio un elemento può essere (come visto prima )
+Ad esempio un elemento può essere (come visto prima):
 `<xsd:element name="purchaseOrder" type="PurchaseOrderType"/>`
+Il quale ha sia il suo nome `purchaseOrder` e il suo tipo `PurchaserOrderType`. Esso quindi contiene il suo "content model" e possibilmente il suo attributo.
+
+Il "complex type" o tipi complessi sono più generali rispetto al tipo semplice. Ossia il tipo semplice è un caso particolare del tipo complesso.
 
 Le seguenti sono regole formali che definiscono i cosiddetti **tipi** di un XML Schema:
 
 
 
-> I tipi sono strutturati secondo uno schema gerarchico.
+> I tipi sono strutturati secondo uno schema gerarchico simile a quello che si ha nei programmi ad oggetti. Tuttavia invece di avere il concetto dell'eredità, si hanno altri concetti. I quali sono chiamati  **restriction** e **extension**.
 
 
 
-> Il tipo radice viene chiamato `anyType`.
+**Restriction** è una stringa (visto che i tipi sono stringhe alla fine) che è più "ristretta" rispetto all'originale. Ossia la stringa amessa è un sotto-insieme della stringa-originale.  Come si vede dalla freccia blu in cui sia ha un riferimento gerarchico in blu.![09](immagini/lezione-03/09.png)
 
 
 
-> La sotto gerarchia di un *tipo semplice* ha sempre come radice il tipo `anySimpleType`.
+> Il tipo radice viene chiamato `anyType`. Corrisponde al DTD al  `any`. Ossia ogni stringa combacia con `anyType`. Ogni altra stringa è un sottoinsieme del `anyType` .
+
+
+
+> La sotto gerarchia di un *tipo semplice* ha sempre come radice il tipo `anySimpleType`. Sarebbe la radice degli elementi semplici. Quindi si potrebbe dire che il graffo è diviso in due parti: a destra ci sono gli elementi semplici mentre a sinistra ci sono gli elementi complicati.
 
 
 
@@ -372,7 +379,9 @@ Esempio:
 
 **Sinossi**: qui è stato definito un nuovo tipo di nome **IntegerAndDates** il quale è una sequenza di due semplici valori, nell'ordine: un **myInteger** e un **date**.
 
+#### 3. Extension
 
+E' per definire un nuovo tipo partendo da un'altro che esiste già. Ad esempio si può partire da un semplice elemento per definire un altro elemento (freccia verda). ![09](immagini/lezione-03/09.png)
 
 ### Il Facet dei tipi di dati
 
