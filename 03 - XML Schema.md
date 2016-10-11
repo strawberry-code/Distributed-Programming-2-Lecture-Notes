@@ -220,7 +220,7 @@ dove:
 
   - In verde si vede come `PurchaseOrderType` è collegato a`PurchaseOrderType` :	
   - 1 è il "content model". Si può notare che  `shipto` o come `billto` non è referenziabile in tutto in il documento.
-  -  3 è l'attributo dell'elemento.					  ![08](immagini/lezione-03/08.png)	
+    -  3 è l'attributo dell'elemento.				  ![08](immagini/lezione-03/08.png)	
   - 4 ->si può tuttavia referenciare grazie all'elemento globale `name="comment"`.
   - Inoltre gli elementi globali appaoiono nella root del documento.
 
@@ -582,6 +582,22 @@ Questo è ancora un terzo esempio in cui viene definito un tipo complesso:
 ```
 
 
+
+ ![11](immagini/lezione-03/11.png)
+
+1) è il `content model` ed è una sequenza di `singleUSAddress` (2)
+
+3) commento che è referenziato nella dichiarazione globale.  Da notare come `minOccours`  è pari a zero quindi essendo che il valore di default è zero e il valore minimo è zero, quindi si ha che il valore minimo è zero e che il valore massimo è 1.
+
+4)Items è associato al tipo di attributo. Quindi è un `Items` definito a livello globale che è referenziato qui.
+
+Quindi dentro a `PurchaseOrderType` si vuole avere un indirizzo, un  commento (3) e gli items.
+
+5) è il "complex type definition" che in questo caso è anonimo. E dentro si hanno una sequenza di 3 elementi che caratterizzano l'indirizzo. I primi due sono due stringhe l'ultimo è un decimale.
+
+Sotto invece si ha `country` che è un `MNTOKEN`, il quale in questo caso è fisso ed è `US`.
+
+Inoltre si può notare come non ci sono dei vincoli (min, max) e quindi di default si ha 1. Quindi si ha un solo `name` e un solo `address` e un sono `zip`
 
 ### Special models
 
