@@ -204,7 +204,7 @@ dove:
 - Dentro alla root element possiamo trovare in qualsiasi ordine: 
   - annotazioni (che sono delle annotazioni)  
   - elementi globali e dichiarazioni di attributi che sono simili agli attributi e elementi che si hanno nei DTD. Gli elementi globali sono accessibili da tutto il documento e si ha la possibilità di referenziare a questi elementi. Ad esempio si può assegnare un nome e "riprenderlo" attraverso il suo nome
-  -  tipo (dati/modelli)   e definizioni di gruppo. In questo caso è possibile creare la sua propria definizione simile a quello che si fa nei linguaggi di programmazione e di assegnare il nome a quel tipo. La defizione di gruppo possono essere considerate delle  macro definizioni e definisce i gruppi di dichiarazioni o di definizione che possiamo referenziare dal documento stesso.
+  - tipo (dati/modelli)   e definizioni di gruppo. In questo caso è possibile creare la sua propria definizione simile a quello che si fa nei linguaggi di programmazione e di assegnare il nome a quel tipo. La defizione di gruppo possono essere considerate delle  macro definizioni e definisce i gruppi di dichiarazioni o di definizione che possiamo referenziare dal documento stesso.
 
 
 
@@ -218,21 +218,11 @@ dove:
 
 - `<xsd:element name="purchaseOrder" type="PurchaseOrderType"/>`  è una dichiarazione globale. Esso ha un nome `purchaseOrder`e un tipo `PurchaseOrderType` .  Il type include il "content model" e l'attributo dell'elemento che ha.
 
-- In verde si vede come `PurchaseOrderType` è collegato a`PurchaseOrderType` 
-
-  ​				
-  ​			
-  ​
-
-  ​
-
-  ​
-
-  ​
-
-  ​		
-  ​	
-
+  - In verde si vede come `PurchaseOrderType` è collegato a`PurchaseOrderType` :	
+  - 1 è il "content model". Si può notare che  `shipto` o come `billto` non è referenziabile in tutto in il documento.
+  -  3 è l'attributo dell'elemento.					  ![08](immagini/lezione-03/08.png)	
+  - 4 ->si può tuttavia referenciare grazie all'elemento globale `name="comment"`.
+  - Inoltre gli elementi globali appaoiono nella root del documento.
 
 
 
