@@ -463,9 +463,12 @@ La dichiarazione degli attributi avviene secondo la seguente sintassi:
 #### Esempio
 
 1. `<xsd:attribute name= "code" type=“xsd:int" use="required"/>`
-   questo attributo è obbligatorio e non può essere omesso,
+
+   questo attributo è obbligatorio e non può essere omesso. Il tipo è un intero.
+
 2. `<xsd:attribute name= "country" type=“xsd:string" fixed=“Italy"/>`
-   questo attributo,
+   questo attributo è fisso. Il tipo è una stringa.
+
 3. `<xsd:attribute name= “length" type=“xsd:int" default=“0"/>` 
    in questo caso non è obbligatorio specificare l'attributo, se non lo farò allora verrà definito automaticamente con un valore di default pari a *0*.
 
@@ -490,7 +493,7 @@ La *frequenza* e l'*opzionalità* possono essere specificate utilizzando i segue
 <xsd:element name= “field" type=“fieldtype” default= “empty field“> ... <xsd:element/>
 ```
 
-
+Con il termine `unbounded`  si intende che non c'è un limite superiore a questo elemento.
 
 
 
@@ -502,7 +505,13 @@ I tipi complessi sono definiti mediante l'elemento **complexType** e in genere c
 
 ![](immagini/lezione-03/05.png)
 
+Si parte dall'alto con il `complexType` e dentro ad esso (in modo agreggato) ci sono gli elementi dell'attributo  `attribute`.
 
+Mentre il `Top-level Content model` può essere o un `Content model` oppure `all` .
+
+Un `content model`può essere un `choice` o una `sequence`.  Tuttavia sia  `choice` sia  `sequence` contengono `Content model` in termini di `choise` o `sequence` .
+
+In altre parole il graffo serve per sapere cosa sia lecito fare e cosa non sia lecito fare. Ovviamente nella realtà sarebbe molto più complicato.
 
 #### Esempio 1
 
@@ -528,7 +537,7 @@ Un elemento dichiarato con il tipo usAddress risulterebbe simile al seguente:
 <xsd:element name="ShipTo" type="usAddress"/>
 ```
 
-
+La keyword `sequence` significa che gli elementi devono comparire con quel ordine. 
 
 #### Esempio 2
 
