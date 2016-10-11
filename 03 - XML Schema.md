@@ -412,6 +412,12 @@ E' per definire un nuovo tipo partendo da un'altro che esiste già. Ad esempio s
 
 
 
+### Definizione dei tipi complessi
+
+Si hanno diverse possibilità come ad esempio per mezzo di una diretta costruzione (come visto prima).
+
+Oppure si può usare la "derivazione" con la "restriction" oppure con l "extensio".
+
 ### Il Facet dei tipi di dati
 
 I tipi semplici (sia incorporati che derivati) presentano dei **facet**. Il facet è un singolo aspetto di definizione che contribuisce a determinare l'insieme di valori di un tipo semplice. Ad esempio, **length**, **minInclusive** e **maxInclusive** sono facet per i tipi di dati incorporati. Tutti i facet per un tipo semplice definiscono l'**insieme di valori validi** per quel determinato tipo semplice.
