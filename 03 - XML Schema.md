@@ -741,7 +741,7 @@ Il meccanismo di restrizione è molto simile alla programmazione ad oggetti quan
 PurchaseOrder.xml:
 
 01 <?xml version="1.0"?>
-02 <purchaseOrder orderDate="1999-10-20"
+02 <purchaseOrder orderDate="1999-10-20"   <—Collegato X1
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="purchaseOrder.xsd">
 
@@ -785,9 +785,9 @@ Poi ci sono due items:
 
 
 
-- **documento XML**: PurchaseOrder.xml
 
-  ​
+
+PurchaseOrder.xsd:
 
 <?xml version="1.0"?>
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
@@ -800,9 +800,10 @@ Poi ci sono due items:
    <xsd:element ref="comment" minOccurs="0"/> 
    <xsd:element name="items" type="Items"/> 
   </xsd:sequence> 
-  <xsd:attribute name="orderDate" type="xsd:date"/>  
+  <xsd:attribute name="orderDate" type="xsd:date"/>  <—Collegato X1  
  </xsd:complexType> 
  <xsd:complexType name="USAddress"> 
+
   <xsd:sequence> 
    <xsd:element name="name" type="xsd:string"/> 
    <xsd:element name="street" type="xsd:string"/> 
@@ -842,6 +843,20 @@ Poi ci sono due items:
   </xsd:restriction> 
  </xsd:simpleType> 
 </xsd:schema> 
+
+
+
+C'è la radice che è: `purchaseOrder` :
+
+ Qui c'è la "type definition":![12](immagini/lezione-03/12.png)
+
+
+
+Dentro a `PurchaseOrderType` c'è una sequenza di: `shipto` e  `billTo` . Essi sono di tipo ` USAddress`.
+
+Inseguito si vede come c'è `xsd:date` che è collegato al file precedente
+
+
 
 
 
