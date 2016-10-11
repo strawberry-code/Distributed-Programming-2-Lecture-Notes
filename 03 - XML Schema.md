@@ -298,6 +298,14 @@ La seguente figura rappresenta la gerarchia di alcuni tipi predefiniti.
 
 Si può vedere dalla figura sia tipi interi che tipi decimali (1) e cosi via.
 
+Nel DTD si aveva il token (2) come qui che è sotto a stringa perché il token è una singola parola senza spazi.
+
+Per essere compatibile con le tecnologie passate si sono inserite i loro tipi (3).
+
+C'è anche la data (3).
+
+Inoltre per i caratteri ci sono le varie rapresentazoini tra cui il base64Binary e cosi via. Come pure `anyURI`.
+
 ### Restricion, List e Union
 
 Ora vediamo come possiamo definirei nuovi tipi in modo esplicito utilizzando *restriction*, *list* e *union*.
