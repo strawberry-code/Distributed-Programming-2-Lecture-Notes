@@ -424,7 +424,7 @@ I facet più comuni e importanti sono i seguenti:
 
 - lenght
 - minLenght, maxLenght
-- pattern
+- pattern ossia la possibilità di usare delle espressioni regolari.
 - enumeration
 - maxExclusive, maxInclusive, minExclusive, minInclusive
 - totalDigits, fractionDigits
