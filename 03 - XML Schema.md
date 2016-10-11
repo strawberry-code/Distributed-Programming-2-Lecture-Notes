@@ -644,7 +644,11 @@ La *derivazione* viene specificata introducendo un elemento **complexType** (opp
 
 <???>
 
+E' il diagramma di classe che corrisponde a che cosa si può fare con le restrizioni. Il quale parte da `complexType` e si mette dentro ad esso `complexContent`  o  `simpleContent`  . Il primo (`complexContent`) se si vuole partire dal `complexType`. Idemo per il `simpleContent`se si vuole partire  dal `simpletype`.
 
+La `restriction` è  possibile solo nel `simpleContent` e solo da li si può aggiungere un `facet`.
+
+ 
 
 #### Esempio: l'estensione di un tipo semplice
 
@@ -664,6 +668,12 @@ Si consideri il seguente tipo:
 
 <???>
 
+`simpleContent` il quale estende `simpleType`. Inoltre `base` è un decimale.
+
+Si va a estendere ` <xsd:attribute name="currency" type="xsd:string"/>` 
+
+Una possibile vista è:
+
 ```xml
 <internationalPrice currency="EUR">423.46</internationalPrice>
 ```
@@ -673,27 +683,27 @@ Si consideri il seguente tipo:
 #### Esempio: estensione di un tipo complesso
 
 ```xml
-<xsd:complexType name="Address">
-  <xsd:sequence>
-    <xsd:element name="name" type="xsd:string"/>
-    <xsd:element name="street" type="xsd:string"/>
-    <xsd:element name="city" type="xsd:string"/>
-  </xsd:sequence>
-</complexType>
-
-<xsd:complexType name="USAddress">
-  <xsd_complexContent>
-    <xsd:extension base="Address">
-      <xsd:sequence>
-        <xsd:element name="state" type="USState"/>
-        <xsd:element name="zip" type="xsd:positiveInteger"/>
-      </xsd:sequence>
-    </xsd:extension>
-    </xsd:complexContent>
-</xsd:complexType>
+01 <xsd:complexType name="Address">
+02   <xsd:sequence>
+03    <xsd:element name="name" type="xsd:string"/>
+04     <xsd:element name="street" type="xsd:string"/>
+05     <xsd:element name="city" type="xsd:string"/>
+06   </xsd:sequence>
+07 </complexType>
+08
+09 <xsd:complexType name="USAddress">
+10  <xsd_complexContent>
+11    <xsd:extension base="Address">
+12      <xsd:sequence>
+13        <xsd:element name="state" type="USState"/>
+14        <xsd:element name="zip" type="xsd:positiveInteger"/>
+15      </xsd:sequence>
+16    </xsd:extension>
+17    </xsd:complexContent>
+19 </xsd:complexType>
 ```
 
-
+Dalla riga 01 alla riga 07 (comprese) è la definizione originale. In qui si ha l'indirizzo che è una sequenza  di nomi: `name`, `street`, `city`.  La riga 09 viene definito un complexType di nome `USAaddress` la quale estende la definizione di prima. 
 
 #### Esempio: tipo equivalente definito da
 
@@ -717,7 +727,7 @@ Si consideri il seguente tipo:
 
 
 
-
+Il meccanismo di restrizione è molto simile alla programmazione ad oggetti quando si derivavano una nuova  classe con "l'overwritting". Mentre l'estensione è simile a quando si ha l' estensione e quando si aggiunge un nuovo attributo.
 
 #### Esempio di uno schema completo (The Purchase Order)
 
