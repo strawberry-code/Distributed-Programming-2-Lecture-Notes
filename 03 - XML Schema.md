@@ -740,43 +740,108 @@ Il meccanismo di restrizione è molto simile alla programmazione ad oggetti quan
 
 PurchaseOrder.xml:
 
-<?xml version="1.0"?>
-<purchaseOrder orderDate="1999-10-20"
+01 <?xml version="1.0"?>
+02 <purchaseOrder orderDate="1999-10-20"
  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:noNamespaceSchemaLocation="purchaseOrder.xsd">
 
-    <shipTo country="US">
-        <name>Alice Smith</name>
-        <street>123 Maple Street</street>
-        <city>Mill Valley</city>
-        <state>CA</state>
-        <zip>90952</zip>
-    </shipTo>
-    <billTo country="US">
-        <name>Robert Smith</name>
-        <street>8 Oak Avenue</street>
-        <city>Old Town</city>
-        <state>PA</state>
-        <zip>95819</zip>
-    </billTo>
-    <comment>Hurry, my lawn is going wild!</comment>
-    <items>
-        <item partNum="872-AA">
-            <productName>Lawnmower</productName>
-            <quantity>1</quantity>
-            <USPrice>148.95</USPrice>
-            <comment>Confirm this is electric</comment>
-        </item>
-        <item partNum="926-AA">
-            <productName>Baby Monitor</productName>
-            <quantity>1</quantity>
-            <USPrice>39.98</USPrice>
-            <shipDate>1999-05-21</shipDate>
-        </item>
-    </items>
+    03 <shipTo country="US">
+    04    <name>Alice Smith</name>
+    05    <street>123 Maple Street</street>
+    06    <city>Mill Valley</city>
+    07    <state>CA</state>
+    08    <zip>90952</zip>
+    09 </shipTo>
+    10 <billTo country="US">
+    11    <name>Robert Smith</name>
+    12    <street>8 Oak Avenue</street>
+    13    <city>Old Town</city>
+    14    <state>PA</state>
+    15    <zip>95819</zip>
+    16 </billTo>
+    17 <comment>Hurry, my lawn is going wild!</comment>
+    18 <items>
+    19    <item partNum="872-AA">
+    20        <productName>Lawnmower</productName>
+    21        <quantity>1</quantity>
+    22        <USPrice>148.95</USPrice>
+    23        <comment>Confirm this is electric</comment>
+    24    </item>
+    25    <item partNum="926-AA">
+    26        <productName>Baby Monitor</productName>
+    27        <quantity>1</quantity>
+    28        <USPrice>39.98</USPrice>
+    29        <shipDate>1999-05-21</shipDate>
+    30    </item>
+    31 </items>
 </purchaseOrder>
 
+In questo caso si hanno due indirizzi:
+`shipTo` (03/09)  e `billTo` (10/16).
 
+Poi ci sono due items:
+-(19/24) `partNum`
+-(25/30) `partNum`
+
+
+
+- **documento XML**: PurchaseOrder.xml
+
+  ​
+
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
+ <xsd:element name="purchaseOrder" type="PurchaseOrderType"/>  
+ <xsd:element name="comment" type="xsd:string"/> 
+ <xsd:complexType name="PurchaseOrderType"> 
+  <xsd:sequence> 
+   <xsd:element name="shipTo" type="USAddress"/> 
+   <xsd:element name="billTo" type="USAddress"/> 
+   <xsd:element ref="comment" minOccurs="0"/> 
+   <xsd:element name="items" type="Items"/> 
+  </xsd:sequence> 
+  <xsd:attribute name="orderDate" type="xsd:date"/>  
+ </xsd:complexType> 
+ <xsd:complexType name="USAddress"> 
+  <xsd:sequence> 
+   <xsd:element name="name" type="xsd:string"/> 
+   <xsd:element name="street" type="xsd:string"/> 
+   <xsd:element name="city" type="xsd:string"/> 
+   <xsd:element name="state" type="xsd:string"/> 
+   <xsd:element name="zip" type="xsd:decimal"/> 
+  </xsd:sequence>
+  <xsd:attribute name="country" type="xsd:NMTOKEN" fixed="US"/>  
+ </xsd:complexType>
+<xsd:complexType name="Items"> 
+  <xsd:sequence> 
+   <xsd:element name="item" minOccurs="0" maxOccurs="unbounded">     
+
+    <xsd:complexType> 
+     <xsd:sequence> 
+      <xsd:element name="productName" type="xsd:string"/> 
+      <xsd:element name="quantity"> 
+       <xsd:simpleType> 
+        <xsd:restriction base="xsd:positiveInteger">     
+         <xsd:maxExclusive value="100"/> 
+        </xsd:restriction> 
+       </xsd:simpleType> 
+      </xsd:element> 
+      <xsd:element name="USPrice" type="xsd:decimal"/>  
+      <xsd:element ref="comment" minOccurs="0"/> 
+      <xsd:element name="shipDate" type="xsd:date" minOccurs="0"/>
+     </xsd:sequence> 
+     <xsd:attribute name="partNum" type="SKU" use="required"/> 
+    </xsd:complexType> 
+   </xsd:element> 
+  </xsd:sequence> 
+ </xsd:complexType> 
+<!-- Stock Keeping Unit, a code for identifying products -->  
+ <xsd:simpleType name="SKU"> 
+  <xsd:restriction base="xsd:string"> 
+   <xsd:pattern value="\d{3}-[A-Z]{2}"/> 
+  </xsd:restriction> 
+ </xsd:simpleType> 
+</xsd:schema> 
 
 
 
