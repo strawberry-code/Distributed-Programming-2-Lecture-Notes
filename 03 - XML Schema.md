@@ -391,7 +391,7 @@ Esempio:
 </xsd:simpleType>
 ```
 
-**Sinossi**: qui è stato definito un nuovo tipo di nome **IntegerAndDates** il quale è una sequenza di due semplici valori, nell'ordine: un **myInteger** e un **date**.
+**Sinossi**: qui è stato definito un nuovo tipo di nome **IntegerAndDates** il quale è una sequenza di due semplici valori mixati come si vuole.
 
 #### 3. Extension
 
