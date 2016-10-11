@@ -228,8 +228,24 @@ dove:
 
 
 
-
 ### Tipi
+
+I tipi sono simile ai linguaggi di programazione l'unica differenza è che nel XML Schema si ha una rapresentazione sotto forma di caratteri mentre nei linguaggi di programmazione si usa la rapresentazione binaria.
+
+Se ad esempio si ha in integer in XML allora si hanno più modi per scriverlo:
+`1` oppure `01`. 
+
+Quindi nel linguaggio a caratteri si hanno molti modi per rapresentare qualchecosa. Ovviamente se si vuole fare dei confronti si dovranno fare in modo tale che tutto regga. Questa è in pratica l'unica differenza che c'è.
+
+Non si ha delle cose molto stringenti ma si hanno delle regole sintattiche come ad esempio un intero è una sequenza di stringhe.
+
+Si da ad un tipo un nome e un valore (stringa di caratteri).
+
+I tipi semplici contengono un markup mentre quelli complicati non lo contengono. 
+
+I tipi complessi descrivono il tipo degli elementi. Più in dettaglio dentro i tipi complessi si hanno gli atributi degli elementi e il contenuto dell'elemento.
+Ad esempio un elemento può essere (come visto prima )
+`<xsd:element name="purchaseOrder" type="PurchaseOrderType"/>`
 
 Le seguenti sono regole formali che definiscono i cosiddetti **tipi** di un XML Schema:
 
