@@ -383,6 +383,21 @@ Esempio:
 
 E' per definire un nuovo tipo partendo da un'altro che esiste già. Ad esempio si può partire da un semplice elemento per definire un altro elemento (freccia verda). ![09](immagini/lezione-03/09.png)
 
+
+
+
+
+1)Definizione dell'elemento.
+2) Definzione dell'attributo.
+
+1)+2)=> è la defizione di un nuovo elemento complesso.
+
+![10](immagini/lezione-03/10.png)
+
+
+
+
+
 ### Il Facet dei tipi di dati
 
 I tipi semplici (sia incorporati che derivati) presentano dei **facet**. Il facet è un singolo aspetto di definizione che contribuisce a determinare l'insieme di valori di un tipo semplice. Ad esempio, **length**, **minInclusive** e **maxInclusive** sono facet per i tipi di dati incorporati. Tutti i facet per un tipo semplice definiscono l'**insieme di valori validi** per quel determinato tipo semplice.
