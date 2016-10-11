@@ -296,6 +296,8 @@ La seguente figura rappresenta la gerarchia di alcuni tipi predefiniti.
 
 
 
+Si può vedere dalla figura sia tipi interi che tipi decimali (1) e cosi via.
+
 ### Restricion, List e Union
 
 Ora vediamo come possiamo definirei nuovi tipi in modo esplicito utilizzando *restriction*, *list* e *union*.
