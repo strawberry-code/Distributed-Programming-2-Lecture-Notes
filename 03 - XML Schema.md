@@ -329,15 +329,19 @@ La sintassi da utilizzare è la seguente:
 Per esempio:
 
 ```XML
-<xsd:simpleType name="myInteger">
-  <xsd:restriction base="xsd:integer">
-    <xsd:minInclusive value="10000"/>
-    <xsd:maxInclusive value="99999"/>
-  </xsd:restriction>
-</xsd:simpleType>
+01 <xsd:simpleType name="myInteger">
+02  <xsd:restriction base="xsd:integer">
+03     <xsd:minInclusive value="10000"/>
+04     <xsd:maxInclusive value="99999"/>
+05   </xsd:restriction>
+06 </xsd:simpleType>
 ```
 
-**Sinossi**: ho creato un nuovo tipo esplicitamente (utilizzando la *restriction*). Il nuovo tipo si chiama **myInteger** ed eredita dal tipo predefinito **integer**. Il nuovo tipo *myInteger* può assumere solo i valori da *10000* a *99999*.
+**Sinossi**: ho creato un nuovo tipo esplicitamente (utilizzando la *restriction*). Il nuovo tipo si chiama **myInteger** ed eredita dal tipo predefinito **integer**. Il nuovo tipo *myInteger* può assumere solo i valori da *10000* a *99999*.  
+
+La "Facet" sono i vincoli.
+
+Se si mettono le righe 01 e 06 allora la definizione è referenziabile in tutto il documento.
 
  
 
@@ -361,7 +365,7 @@ Esempio:
 </xsd:simpleType>
 ```
 
-**Sinossi**: ho appena definitio un nuovo tipo di nome **ListOfMyIntType** che rappresenta una sequenza di valori tutti di tipo **myInteger**, secondo la definizione fatta prima, ciascuno diu questi valori sono compresi tra *10000* e *99999*.
+**Sinossi**: ho appena definitio un nuovo tipo di nome **ListOfMyIntType** che rappresenta una sequenza di valori tutti di tipo **myInteger** (che è stato definito prima), secondo la definizione fatta prima, ciascuno di questi valori sono compresi tra *10000* e *99999*.
 
 
 
