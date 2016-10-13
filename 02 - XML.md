@@ -735,7 +735,56 @@ Da notare che `<holder name=… />`che `holder`finisce per un `/`quindi è un em
 
  ![23](immagini/lezione-02/23.png)
 
-## Come viene processato un documento XML?
+
+
+
+
+**Possibile soluzione:**
+
+Struttura base
+
+
+
+![28](immagini/lezione-02/28.png)
+
+In questa soluzione si ha una root la quale contiene due elementi: `group`e `host`
+
+Nel `group`si ha sia un `id`  e una descrizione che può essere opzionale. Nel `host` si ha un `id`"che viene puntato" dal `id` del `group`. Ossia `group` (del host) contiene un link a `group id`.  Come si può vedere nella figura sottostante:![29](immagini/lezione-02/29.png)
+
+
+
+Inoltre ci sono anche altre informazioni come ad esempio la scheda MAC che deve essere pari a 1 e cosi via.
+
+L'interfaccia dell host può essere sia 0 che più 1,2,3, ecc… questo perché alcuni pc potrebbero non avere di interfaccia.
+
+Si poteva anche (come possibile soluzione con i suoi pro e contro) togliere interfacia dell host e metter i suoi elementi dentro a host.
+
+Nel DTD c'è una limitazione ossia che se nel documento ci sono die ID come in questo caso (uni per il gruppo e l'altro per l'host ) ossia per il linguaggio DTD c'è un unico scope per il `unique ID` per tutto il documento. **Ossia non è possibile avere un ID del host uguale ad un ID del gruppo.** Quindi se si usa un validatore per DTD andrà a confrontare questi due ID come se fosse un unico ID.
+
+La cosa si ripercuote sul `group attribute`ossia essendo che va a puntare da qualche parte, il validatore non sa se deve puntare sul ID del host o del gruppo quindi per lui è tutto corretto se punta in uno dei due. 
+Questa è una limitazione del linguagio DTD.  Tuttavia si possono fare ulteriori test  usando altri strumenti come "schema".![30](immagini/lezione-02/30.png)
+
+
+
+
+
+**Soluzione in DTD**
+
+Nel `network`si ha sia il `group`che `host`i quali devono essere uno dietro l'altro tuttavia nessuno ci vieta di scrivere: `(group|host)*`quindi si avrebbe o un host o un gruppo con una multiplicità pari a 0 fino a n.
+
+Si può vedere che qui c'è un'incongruenza con quello visto prima ossia `interface` del host ha una multiplicità indicata con il `+`mentre prima era indicata con `*`.
+
+NMTOKEN non è un token unico ma c'è ne potrebbero essere altri nel documento uguali.
+
+Se si volesse che ci fosse un solo unico indirizzo Ip per ogni macchina allora si dovrebbe insirire un nuovo vincolo nel DTD. Tuttavia ID per i DTD iniziano con una lettera quindi si avrebbe dei problemi.
+
+
+
+![31](immagini/lezione-02/31.png)
+
+
+
+**Come viene processato un documento XML?**
 
 La seguente figura mostra lo schema _generico_ di elaborazione di un documento XML:
 
@@ -788,13 +837,30 @@ In questo caso non ci sono particolari informazioni per la visualizazione (esemp
 
 Tuttavia si vede come c'è sia il DTD del documento che il documento in se.
 
+
+
+ ![05](immagini/lezione-02/05.png)
+
+
+
+
+
+Ripartendo da questa figura si può dire che il  XML processor legge e scrive i documenti XML e si prende cura della validazione del documento. Di solito questo processore è configurabile e quindi si può dire quello che si vuole ossia se il documento è  "well formed" o se è valido.
+
+Le applicazioni di solito leggono/scrivono le informazioni del XML processor attraverso una API.
+Inoltre l'applicazione può dare degli ordine al processore XML come ad esempio se deve leggere e cosi via.
+
+L'applicazione può prendere le informazioni che butta fuori il processore attraverso l'API.
+
+**Si hanno degli standard: SAX, DOM e StAX**
+
 #### SAX parsing
 
 SAX è un'API di basso livello il cui principale punto di forza è l'efficienza.
 
 ![](immagini/lezione-02/06.png)
 
- Quando un documento viene parsato usando SAX, una serie di eventi vengono generati e passati all'applicazione tramite l'utilizzo di callback handlers che implementano l'handler delle API SAX. Gli eventi generati sono di livello molto basso e devono essere gestiti dallo sviluppatore che, inoltre, deve mantenere le informazioni necessarie durante il processo di parsing. Oltre ad un utilizzo piuttosto complicato, SAX soffre di due limitazioni di rilievo: non può modificare il documento che sta elaborando e può procedere alla lettura solo "in avanti": non può tornare indietro. Quindi, quello che è stato letto è perso e non è possibile recuperarlo.
+ Quando un documento viene parsato usando SAX, una serie di eventi vengono generati e passati all'applicazione tramite l'utilizzo di callback handlers che implementano l'handler delle API SAX. Gli eventi generati sono di livello molto basso e devono essere gestiti dallo sviluppatore che, inoltre, deve mantenere le informazioni necessarie durante il processo di parsing. Oltre ad un utilizzo piuttosto complicato, SAX soffre di due limitazioni di rilievo: non può modificare il documento che sta elaborando e può procedere alla lettura solo "in avanti": non può tornare indietro. Quindi, quello che è stato letto è perso e non è possibile recuperarlo e si dice `push the data to the application` .  In questo caso è il processore XML che guida  l'applicazione. L'applicazione mette a disposizione alcune API che vengon chiamate al generare di un evento dal  processore XML. 
 
 #### DOM parsing
 
@@ -804,13 +870,23 @@ DOM, invece, ha come punto di forza la semplicità d'utilizzo.
 
 Una volta ricevuto il documento, il parser si occupa di costruire un albero di oggetti che rappresentano il contenuto e l'organizzazione dei dati contenuti. In questo caso l'albero esiste in memoria e l'applicazione può attraversarlo e modificarlo in ogni suo punto. Ovviamente il prezzo da pagare è il costo di computazione iniziale per la costruzione dell'albero ed il costo di memoria.
 
+Di solito si dice `pull the data to the application` In questo caso è l'applicazione che guida il processore xml.
+
+Esso viene usato per le pagine HTML.
+
+
+
+Il DOM è molto flessibile  mentre il SAX è molto più veloce. Perché il DOM deve prendere l'informazione e memorizzarla in memoria, mentre il SAX non appena arriva l'informazione la può subito farci il parsing. Quindi il tempo di latenza nel SAX è molto più piccolo rispetto al DOM. Inoltre nel DOM poiché si può navigare nell'albero si ha bisogno di più tempo per fare tutte queste operazioni che non si hanno nel SAX.
+
 #### StAX parsing
 
-StAX è un pull parser. 
+StAX è un pull parser e sta in mezzo ai due precedenti (DOM e SAX). 
 
 ![](immagini/lezione-02/08.png)
 
 A differenza di SAX, che è un push parser, non riceve passivamente i segnali inviati all'handler per elaborarli, ma è l'utente a controllare il flusso degli eventi. Questo significa che il client richiede (pull) i dati XML quando ne ha bisogno e nel momento in cui può gestirli, a differenza del modello push, dove è il parser a inviare i dati non appena li ha disponibili a prescindere che l'utente ne abbia bisogno o sia in grado di elaborarli. Le librerie pull parsing sono molto può semplici delle push parsing e questo permette di semplificare il lavoro dei programmatori, anche per documenti molto complessi. Inoltre è bidirezionale, nel senso che oltre a leggere dati XML è anche in grado di produrli. Rimane il limite di poter procedere solo "in avanti" nell'elaborazione del documento XML.
+
+Riassumendo si può dire che è simile all SAX per il pull ma è carraterizato dall'events base ossia come il DOM. Quindi il StAX può sia leggere che scrivere e non si ha nella memoria un albero come nel DOM. Quindi quando si leggono i dati si comporta similmente al SAX. Inolte è l'applicazione che chiede il prossimo "pezzo" di dato al processore XML.
 
 
 
@@ -889,11 +965,13 @@ consiste in 6 specifiche differenti:
 
 ### L'elemento <\<interface>>
 
+Queste interface vengono implementate dai vari DOM
+
 ![](immagini/lezione-02/10.png)
 
 ![](immagini/lezione-02/11.png)
 
-
+Si hanno tante interface a seconda di quello che si deve fare ad esempio per i commenti oppure per un elemento.
 
 ## Semplice API per XML (SAX)
 
@@ -943,14 +1021,18 @@ StAX è comodo in quanto permette sia di **leggere** sia di **scrivere** dal/sul
 
 
 
+Ad esempio per l'accesso hai dati è molto meno facile nel DOM perché si ha il completto cotrollo dei dati: si può navigare nell'albero, si può decidere che dati si vuole prendere e quali dati non si vuole prendere e cosi via.
+
+
+
 ## Presentazione di un documento XML
 
 La _presentazione_ (ovvero la _grafica_ detto beceramente) di un documento XML viene specificata separatamente utilizzando uno dei due modi:
 
-- CSS: Cascading Style Sheet
-- EXtensible Stylesheel Language (XLS)
+- CSS: Cascading Style Sheet (come per HTML). CSS per XML è un pò complicato essendo che i tags sono personalizabili.
+- EXtensible Stylesheel Language (XSL) è un XML application ossia se stesso è un XML application. Esso (XSL) non solamente definisce gli elementi che si possono avere nel XML ma anche include 
 
-Gli stili di rpesentazione vengono scritti su un documento a parte e poi inclusi all'inizio del file XML, ad esempio se ho due file di stile `mystyle.css` e `mystyle.xsl`potrò includerli nel seguente modo:
+Gli stili di presentazione vengono scritti su un documento a parte e poi inclusi all'inizio del file XML, ad esempio se ho due file di stile `mystyle.css` e `mystyle.xsl`potrò includerli nel seguente modo:
 
 ```
 <?xml:stylesheet type=“text/css” href=“mystyle.css”?>
@@ -978,6 +1060,14 @@ XSL è certamente uno dei più importanti linguaggi standard del W3C. Esso risul
 
 ![](immagini/lezione-02/13.png)
 
+Nel primo esempio si hanno due file i quali passano per il XSLT processor e processa i documenti in altri documenti che in questo caso in un html che può essere visto attraverso un browser. E associato al html ci può essere un css file.
+
+
+
+Nel secondo caso si ha sempre un processore XSLT che fornisce in output un file che deve essere processato da qualche cosa (che nel disegno è rapresentato da un ovale vuoto) il quale fornisce in output il file desiderato in questo caso un .pdf.
+
+
+
 ## XSLT
 
 L'XSLT (eXtensible Stylesheet Language Transformations) è il linguaggio di trasformazione dell'XML, diventato uno standard web con una direttiva (Recommendation) W3C del 16 novembre 1999.
@@ -988,29 +1078,67 @@ Ci possono essere due casi specifici di trasformazione: da un documento XML a un
 
 Per generare una trasformazione XSLT occorrono due file: il documento da trasformare (in XML) ed un documento contenente il foglio di stile XSL, che fornisce la semantica per la trasformazione. Il foglio di stile XSLT vede un documento XML come una serie di nodi strutturati ad albero. È formato da un insieme di modelli (template) che contengono le regole di trasformazione dei tag del documento XML. Nella sintassi XSL, i template sono elementi, a ciascuno dei quali corrisponde l'attributo match, associato al nodo che verrà trasformato. In termini strutturali quindi il foglio di stile XSL specifica la trasformazione di un albero di nodi in un altro albero di nodi.
 
-È possibile anche aggiungere al documento trasformato elementi completamente nuovi o non prendere in considerazione determinati elementi del documento origine, riordinare gli elementi, fare elaborazioni in base al risultato di determinate condizioni, ecc.
+Più in particolare in ingresso si ha un .xml file (1), il quale passa attraverso un parser XML il quale crea un "DOM TREE" (2). Inseguito c'è un motore (3) per applicare le regole di trasformazione e  trasforma l'albero originale in qualcos'altro (4). Per poi essere serializato in un documento (5).
+
+
+
+È possibile anche aggiungere al documento trasformato elementi completamente nuovi o non prendere in considerazione determinati elementi del documento origine, estrapolare informazioni,  riordinare gli elementi, fare elaborazioni in base al risultato di determinate condizioni, ecc.
 
 ![](immagini/lezione-02/14.png)
 
 ### Esempio di XSLT
 
 ```xml
-<?xml version="1.0" encoding="ISO-8859-1"?> <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"> <xsl:template match="/">
-  <html>
-    <head><link rel="stylesheet" href="style.css"/></head> <body>
-    <h2>My Articles</h2>
-    <table>
-      <tr>
-        <th>Title</th>
-      </tr>
-      <xsl:for-each select="bibliography/article">
-        <tr>
-          <td><xsl:value-of select="title"/></td>
-        </tr>
-      </xsl:for-each>
-    </table>
-    </body></html>
-  </xsl:template>
-</xsl:stylesheet>
+01<?xml version="1.0" encoding="ISO-8859-1"?> 
+02 <xsl:stylesheet version="1.0"  xmlns:xsl="http://www.w3.org/1999/XSL/Transform"> 
+03  <xsl:template match="/">
+04  <html>
+05    <head><link rel="stylesheet" href="style.css"/></head> <body>
+06    <h2>My Articles</h2>
+07    <table>
+08      <tr>
+09        <th>Title</th>
+10      </tr>
+11      <xsl:for-each select="bibliography/article">
+12        <tr>
+13          <td><xsl:value-of select="title"/></td>
+14       </tr>
+15      </xsl:for-each>
+16    </table>
+17    </body></html>
+18  </xsl:template>
+19 </xsl:stylesheet>
 ```
+
+
+
+
+
+- `<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"> <xsl:template match="/">`denominato come `name space`. Ossia quando al root combaccia allora html viene generato. Mentre gli altri tags vengono usati all'interno del root elements.
+- la radice del documento è `</xsl:stylesheet>`.
+- In questo esempio c'è una singola regola cha va dalla riga 03 alla riga 18 denominata `template`.
+- `match="/"` per il matching della regola.
+- Dalla riga 04 alla riga 17 si ha il template della pagina htlm. All'interno di queste righe si hanno altri tags che specificano altre cose per XLST processor. Ad esempio alla riga 11 si ha:
+   `<xsl:for-each select="bibliography/article">` che significa  che per ogni `article` che si trova sotto a `bibliography`  viene applicata una regola. Il tutto si trova dentro ad una tabella come viene indicato alla riga 07. Quindi se si ha  una tabella nel file di input le righe veranno generate automaticamente insieme alla seguente istruzione:
+  `<xsl:value-of select="title"/>`
+
+
+
+**Esempio**:
+
+Prodotto finale:
+
+ ![32](immagini/lezione-02/32.png)
+
+
+
+Codice che genera il prodotto finale:
+
+ ![33](immagini/lezione-02/33.png)
+
+1) Dove viene "linkato" il file stylesheet. Se si rimuove questa riga si ottine un prodotto finale senza stile.
+
+Quindi si vede come questo file passa attraverso XSLT file (visto prima) e come a questo file vengano tolte delle informazioni e vengono mantenute altre. Più in particolare dalla tabella viene mantenuto solo il titolo.
+
+
 
