@@ -263,5 +263,3 @@ Per avere la lode è necessario fare l'orale.
   - [email](serena.spinoso@polito.it)
   - telefono ufficio: 011 090 7098
   - riceve su appuntamento
-  
-  queta è una prova
